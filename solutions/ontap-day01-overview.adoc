@@ -1,0 +1,109 @@
+---
+sidebar: sidebar 
+permalink: solutions/ontap-day01-overview.html 
+keywords: bluexp automation catalog, netapp automation solutions, ontap day 0/1, overview, introduction 
+summary: ONTAP Day 0/1 자동화 솔루션을 사용하여 Ansible을 사용하여 ONTAP 클러스터를 구축하고 구성할 수 있습니다. 
+---
+= ONTAP Day 0/1 솔루션 개요
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ONTAP Day 0/1 자동화 솔루션을 사용하여 Ansible을 사용하여 ONTAP 클러스터를 구축하고 구성할 수 있습니다. 이 솔루션은 에서 사용할 link:https://console.bluexp.netapp.com/automationCatalog["BlueXP 자동화 카탈로그"^]수 있습니다.
+
+
+
+== 유연한 ONTAP 구축 옵션
+
+요구사항에 따라 온프레미스 하드웨어를 사용하거나 ONTAP를 시뮬레이션하여 Ansible을 사용하여 ONTAP 클러스터를 구축 및 구성할 수 있습니다.
+
+.온프레미스 하드웨어
+FAS 또는 AFF 시스템과 같이 ONTAP을 실행하는 온프레미스 하드웨어를 사용하여 이 솔루션을 배포할 수 있습니다. Ansible을 사용하여 ONTAP 클러스터를 구축하고 구성하려면 Linux VM을 사용해야 합니다.
+
+.ONTAP 시뮬레이션
+ONTAP 시뮬레이터를 사용하여 이 솔루션을 구축하려면 NetApp Support 사이트에서 Simulate ONTAP의 최신 버전을 다운로드해야 합니다. Simulate ONTAP는 ONTAP 소프트웨어용 가상 시뮬레이터입니다. ONTAP는 Windows, Linux 또는 Mac 시스템의 VMware 하이퍼바이저에서 실행됩니다. Windows 및 Linux 호스트의 경우 VMware Workstation 하이퍼바이저를 사용하여 이 솔루션을 실행해야 합니다. Mac OS를 사용하는 경우 VMware Fusion 하이퍼바이저를 사용하십시오.
+
+
+
+== 레이어드 디자인
+
+Ansible 프레임워크는 자동화 실행 및 논리 작업의 개발과 재사용을 간소화합니다. 프레임워크는 의사 결정 작업(논리 계층)과 자동화의 실행 단계(실행 계층)를 구별합니다. 이러한 레이어의 작동 방식을 이해하면 구성을 사용자 정의할 수 있습니다.
+
+Ansible "플레이북"은 처음부터 끝까지 일련의 작업을 실행합니다.  `site.yml`플레이북에는 플레이북 및 `execution.yml` 플레이북이 포함되어 `logic.yml` 있습니다.
+
+요청이 실행되면 `site.yml` Playbook은 먼저 Playbook을 호출한 `logic.yml` 다음 `execution.yml` Playbook을 호출하여 서비스 요청을 실행합니다.
+
+프레임워크의 논리 계층을 사용할 필요는 없습니다. 논리 계층은 실행을 위해 하드 코드된 값 이상으로 프레임워크의 기능을 확장하는 옵션을 제공합니다. 따라서 필요한 경우 프레임워크 기능을 사용자 지정할 수 있습니다.
+
+.로직 레이어
+논리 계층은 다음과 같이 구성됩니다.
+
+* 플레이북 `logic.yml`
+* 디렉토리 내의 논리 작업 파일 `logic-tasks`
+
+
+논리 계층은 중대한 맞춤형 통합(예: ServiceNow에 연결) 없이도 복잡한 의사 결정을 위한 기능을 제공합니다. 논리 계층은 구성 가능하며 마이크로서비스에 입력을 제공합니다.
+
+논리 계층을 우회하는 기능도 제공됩니다. 논리 계층을 무시하려면 변수를 정의하지 마십시오 `logic_operation`. 플레이북을 직접 호출하면 `logic.yml` 실행 없이 일부 수준의 디버깅을 수행할 수 있습니다. "debug" 문을 사용하여 의 값이 올바른지 확인할 수 `raw_service_request` 있습니다.
+
+중요 고려 사항:
+
+*  `logic.yml`플레이북에서 `logic_operation` 변수를 검색합니다. 변수가 요청에 정의되어 있으면 디렉터리에서 작업 파일을 `logic-tasks` 로드합니다. 작업 파일은 .yml 파일이어야 합니다. 일치하는 작업 파일이 없고 변수가 정의된 경우 `logic_operation` 논리 계층이 실패합니다.
+* 변수의 `logic_operation` 기본값은 입니다 `no-op`. 변수가 명시적으로 정의되지 않은 경우 기본값은 로 설정되며, 이 경우 `no-op` 아무 작업도 실행되지 않습니다.
+* 변수가 이미 정의되어 있으면 `raw_service_request` 실행이 실행 계층으로 진행됩니다. 변수가 정의되지 않으면 논리 계층이 실패합니다.
+
+
+.실행 계층
+실행 계층은 다음과 같이 구성됩니다.
+
+* 플레이북 `execution.yml`
+
+
+실행 계층은 ONTAP 클러스터를 구성하기 위해 API를 호출합니다.  `execution.yml`Playbook을 사용하려면 실행 시 변수를 정의해야 `raw_service_request` 합니다.
+
+
+
+== 사용자 지정 지원
+
+요구 사항에 따라 다양한 방법으로 이 솔루션을 사용자 지정할 수 있습니다.
+
+사용자 지정 옵션은 다음과 같습니다.
+
+* Ansible 플레이북 수정
+* 역할을 추가하는 중입니다
+
+
+.Ansible 파일 사용자 지정
+다음 표에서는 이 솔루션에 포함된 사용자 지정 가능한 Ansible 파일을 설명합니다.
+
+[cols="25,75"]
+|===
+| 위치 | 설명 
+
+
+ a| 
+`playbooks/inventory/hosts`
+| 호스트 및 그룹 목록이 포함된 단일 파일을 포함합니다. 
+
+
+ a| 
+`playbooks/group_vars/all/*`
+| Ansible을 사용하면 여러 호스트에 변수를 한 번에 간편하게 적용할 수 있습니다. 이 폴더에 있는 , `clusters.yml`, `defaults.yml`, , `services.yml`, `standards.yml` 및 `vault.yml` 를 포함한 모든 파일을 수정할 수 `cfg.yml` 있습니다. 
+
+
+ a| 
+`playbooks/logic-tasks`
+| Ansible 내에서 의사 결정 작업을 지원하고 논리와 실행의 분리를 유지합니다. 관련 서비스에 해당하는 파일을 이 폴더에 추가할 수 있습니다. 
+
+
+ a| 
+`playbooks/vars/*`
+| Ansible 플레이북 및 역할에 사용되는 동적인 가치를 제공하여 커스터마이징, 유연성 및 구성 재사용을 지원합니다. 필요한 경우 이 폴더의 모든 파일을 수정할 수 있습니다. 
+|===
+.역할을 사용자 정의합니다
+마이크로서비스라고도 하는 Ansible 역할을 추가 또는 변경하여 솔루션을 사용자 지정할 수도 있습니다. 자세한 내용은 을 참조하십시오link:ontap-day01-customize.html["사용자 정의"].

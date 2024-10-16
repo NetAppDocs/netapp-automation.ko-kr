@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: support/get-help.html 
+keywords: help, support, netapp support, technical support, kb, communities 
+summary: 'NetApp은 제품과 클라우드 서비스를 다양한 방식으로 지원합니다. 기술 자료(KB) 기사 및 커뮤니티 포럼과 같은 광범위한 무료 셀프 지원 옵션이 24x7 제공됩니다.' 
+---
+= 도움을 받으십시오
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp은 제품과 클라우드 서비스를 다양한 방식으로 지원합니다. 기술 자료(KB) 기사 및 커뮤니티 포럼과 같은 광범위한 무료 셀프 지원 옵션이 24x7 제공됩니다.
+
+
+
+== 자체 지원 옵션
+
+* https://kb.netapp.com/["기술 자료"^]
++
+기술 문서를 검색하여 문제를 해결하는 데 도움이 되는 문서를 찾습니다.
+
+* http://community.netapp.com/["커뮤니티"^]
++
+NetApp 커뮤니티에 가입하여 진행 중인 토론을 팔로우하거나 새 토론을 만드십시오.
+
+* https://mysupport.netapp.com/["NetApp 지원"^]
++
+문제 해결 도구, 문서 및 기술 지원 지원을 이용할 수 있습니다.
+
+

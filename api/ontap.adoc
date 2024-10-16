@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: api/ontap.html 
+keywords: netapp products, product api, rest, rest api, ontap, ontap 9 
+summary: NetApp ONTAP는 클라우드 및 사내 구축 모두를 위한 업계 최고의 데이터 관리 소프트웨어입니다. ONTAP에는 매 릴리즈에서 계속해서 확장되고 향상되는 단일 공통 REST API가 포함되어 있습니다. ONTAP 배포 자동화를 시작하려면 아래 제공된 설명서 및 관련 리소스를 참조하십시오. 
+---
+= ONTAP 9 를 참조하십시오
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp ONTAP는 클라우드 및 사내 구축 모두를 위한 업계 최고의 데이터 관리 소프트웨어입니다. ONTAP에는 매 릴리즈에서 계속해서 확장되고 향상되는 단일 공통 REST API가 포함되어 있습니다. ONTAP REST API를 사용한 ONTAP 배포 자동화를 시작하려면 아래 제공된 설명서 및 관련 리소스를 참조하십시오.
+
+.ONTAP REST API를 참조하십시오
+REST API를 사용하여 ONTAP 배포 관리를 자동화할 수 있습니다.
+
+* https://docs.netapp.com/us-en/ontap-automation/["ONTAP 자동화 문서"^]
+
+
+.ONTAP 제품군
+ONTAP 제품군 설명서에는 ONTAP 배포를 설치하고 관리하는 데 필요한 모든 내용이 포함되어 있습니다.
+
+* https://docs.netapp.com/us-en/ontap-family/["ONTAP 제품 설명서"^]
+

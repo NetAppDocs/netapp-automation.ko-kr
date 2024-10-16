@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: support/additional-resources.html 
+keywords: addition resources, additional information, netapp documentation 
+summary: 클라우드 서비스와 NetApp 제품에 대한 자세한 정보를 얻고 이러한 도움말을 보기 위해 사용할 수 있는 추가 리소스가 있습니다. 
+---
+= 추가 리소스
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+클라우드 서비스와 NetApp 제품에 대한 자세한 정보를 얻고 이러한 도움말을 보기 위해 사용할 수 있는 추가 리소스가 있습니다.
+
+
+
+== NetApp 개발자 리소스
+
+* https://devnet.netapp.com/["NetApp DevNet을 참조하십시오"^]
++
+NetApp 파트너 및 고객을 지원하는 개발자 리소스를 제공하는 중앙 위치입니다.
+
+* https://netapp.io/["NetApp 입출력 - 펍"^]
++
+개발자 및 관리자를 지원하기 위한 블로그 문서 및 기타 리소스.
+
+
+
+
+
+== NetApp 클라우드 리소스
+
+* https://bluexp.netapp.com/["NetApp BlueXP"^]
++
+NetApp 클라우드 솔루션을 위한 중앙 사이트
+
+* https://services.cloud.netapp.com/redirect-to-login?startOnSignup=false["NetApp Cloud Central 콘솔"^]
++
+NetApp Cloud Central 서비스 콘솔(로그인 포함)
+
+

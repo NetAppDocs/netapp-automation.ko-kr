@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+  <block id="fe83b5bb680363dfa2e7469ad32ab2a2" category="summary">NetApp은 자동화 솔루션, 제품 REST API 및 관련 소프트웨어를 정기적으로 업데이트하여 새로운 기능, 개선 및 버그 수정을 제공합니다.</block>
+  <block id="eb61a516e22f11288267df691cf1b923" category="doc">NetApp 자동화의 새로운 기능</block>
+  <block id="bcceca8869689ff6b9a64bbe278abd0c" category="section-title">2023년 7월 27일</block>
+  <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="paragraph-title">Cloud Volumes ONTAP</block>
+  <block id="80f04f9588f7f688eede752c575378eb" category="paragraph">Cloud Volumes ONTAP 지원은 퍼블릭 클라우드 환경별로 구성됩니다. 새로운 솔루션은 다음과 같은 클라우드 환경에 제공됩니다.</block>
+  <block id="6f1c0c750e9768b867971c7aec4b802a" category="inline-link-macro">Google Cloud용 Cloud Volumes ONTAP - 클라우드 사용 급증</block>
+  <block id="51b1fcf610d89fbb7fcc404e66170c46" category="list-text"><block ref="51b1fcf610d89fbb7fcc404e66170c46" category="inline-link-macro-rx"></block></block>
+  <block id="a6aef5e3bbd8b059764f33a4044e30d6" category="section-title">2023년 6월 4일</block>
+  <block id="2b86317cf346d1bf47abc8c04df6f353" category="inline-link">BlueXP 자동화 카탈로그</block>
+  <block id="4a6e9c26b5dcd413ed786dfb7f40048d" category="paragraph">NetApp<block ref="d5edd64e969d71f966838509aa534b4a" category="inline-link-rx"></block>는 BlueXP  웹 사용자 인터페이스를 통해 사용할 수 있습니다. 자동화 카탈로그는 NetApp 제품의 자동화된 배포 및 통합을 지원하는 솔루션에 액세스할 수 있습니다. 이러한 솔루션에 대한 문서는 아래에 설명된 대로 여러 가지 제품 또는 기능 영역으로 구성되어 있습니다.</block>
+  <block id="4d82a1ec1af02725042c8c785564ee7a" category="paragraph-title">NetApp ONTAP용 Amazon FSx</block>
+  <block id="dd2366f4769cebfaf4ff4e9a630568f3" category="paragraph">두 가지 Amazon FSx for NetApp ONTAP 솔루션이 다음과 같이 제공됩니다.</block>
+  <block id="2fd2fe753edead740ad217396fc3507d" category="inline-link-macro">Amazon FSx for NetApp ONTAP - 클라우드로의 버스트</block>
+  <block id="818c98202f75fa15bb74a5c187002203" category="list-text"><block ref="818c98202f75fa15bb74a5c187002203" category="inline-link-macro-rx"></block></block>
+  <block id="0a23ec395dc444cc8327a11e2b2c16ea" category="inline-link-macro">Amazon FSx for NetApp ONTAP - 재해 복구</block>
+  <block id="64ed0ae989e214d192d00f70b7b85023" category="list-text"><block ref="64ed0ae989e214d192d00f70b7b85023" category="inline-link-macro-rx"></block></block>
+  <block id="7450cfde7058dc5e1f7909d0280fd7ae" category="paragraph-title">Azure NetApp Files</block>
+  <block id="8d62054a2d10c801009b6dda6a47de89" category="paragraph">Azure NetApp Files와 함께 Oracle을 구축하는 데 도움이 되는 솔루션이 포함되어 있습니다.</block>
+  <block id="6aeba605d4356667f1779f834d402cf6" category="inline-link-macro">Azure NetApp Files를 사용하는 Oracle</block>
+  <block id="3acf7f6359b05661834e2dfc3aa166c2" category="list-text"><block ref="3acf7f6359b05661834e2dfc3aa166c2" category="inline-link-macro-rx"></block></block>
+  <block id="8eb6cbd72bce1921bec645ee43381791" category="paragraph">Cloud Volumes ONTAP 지원은 퍼블릭 클라우드 환경별로 구성됩니다. 초기 솔루션은 다음과 같이 두 가지 클라우드 환경에 제공됩니다.</block>
+  <block id="075b6c0934402a66775b6271f06d07e9" category="inline-link-macro">Cloud Volumes ONTAP AWS - 클라우드 사용 급증</block>
+  <block id="452c1dc28efab2b3bd2bdbcc4c7895b3" category="list-text"><block ref="452c1dc28efab2b3bd2bdbcc4c7895b3" category="inline-link-macro-rx"></block></block>
+  <block id="b055721f7167f124318a982243e345f4" category="inline-link-macro">Cloud Volumes ONTAP Azure - 클라우드 사용 급증</block>
+  <block id="ea656fded1696fa5bc4ba86be5575ba6" category="list-text"><block ref="ea656fded1696fa5bc4ba86be5575ba6" category="inline-link-macro-rx"></block></block>
+  <block id="2996204d011d1a19281f6a8dac674bb8" category="summary">Active IQ Unified Manager(이전의 OnCommand Unified Manager)는 ONTAP 시스템을 위한 포괄적인 관리 및 모니터링을 제공합니다. 또한 REST API가 포함되어 있어 이러한 작업을 자동화하고 지원 시스템에서 타사 통합을 지원할 수 있습니다.</block>
+  <block id="5ecb6b24c169667ff1a176768115659e" category="doc">Active IQ Unified Manager</block>
+  <block id="ab7e5b403a30f23c3ce89af26a47d7cb" category="section-title">REST API의 이점</block>
+  <block id="0197af9aefc696a588ad65a18ca5aa7e" category="paragraph">Active IQ Unified Manager와 함께 제공되는 REST API를 사용할 경우 몇 가지 이점이 있습니다.</block>
+  <block id="18ba77ed575ca418ccc98b89cc36afcd" category="paragraph-title">강력한 기능</block>
+  <block id="d3a93f1f6f515e356ddc3c45f110ec5a" category="paragraph">REST API를 사용하면 Active IQ Unified Manager 기능에 액세스하여 스토리지 가용성, 용량, 보안, 보호 및 성능 위험을 관리할 수 있습니다.</block>
+  <block id="abaff03d710267d4be810405db7ee2b0" category="paragraph-title">자동화 통합</block>
+  <block id="7ec408b5322b2a1e8905712b17244946" category="paragraph">워크로드를 프로비저닝하고 관리하는 데 단일 REST 엔드포인트를 사용할 수 있습니다. 이는 서비스 수준 목표 정책을 구현하고, 이벤트를 타사 툴로 리디렉션하고, API 게이트웨이 역할을 수행하여 개별 클러스터 수준에서 ONTAP REST API에 액세스할 수 있는 간단한 통합 접근 방식을 제공합니다.</block>
+  <block id="362087a9dd4e9fc754716d8cc9c17b39" category="paragraph-title">ONTAP 관리의 데이터 센터 수준 자동화</block>
+  <block id="d77bf4fbd936b7bff8d15d0fc46ada13" category="paragraph">데이터 센터 수준에서 ONTAP 프로비저닝 및 관리 워크플로우를 자동화할 수 있습니다. 모니터링 및 보고도 자동화할 수 있습니다. 따라서 효율성이 향상되고 데이터 센터 수준 집계를 위한 기반이 마련됩니다.</block>
+  <block id="bf07f432276ee2fe7e55f9ea12c2ba5a" category="section-title">자세한 정보를 확인하십시오</block>
+  <block id="75c92b6a932fa0b69e22776f82111fc7" category="paragraph">Active IQ Unified Manager REST API를 시작하는 데 도움이 되는 몇 가지 리소스가 있습니다.</block>
+  <block id="ffef03803be76fabe5b17e1b0cca3ca2" category="inline-link">Active IQ Unified Manager REST API 시작하기</block>
+  <block id="b0520d78b7fbab3be3c8c907503f292a" category="list-text"><block ref="b0520d78b7fbab3be3c8c907503f292a" category="inline-link-rx"></block></block>
+  <block id="4e7c6efa2c399d4a0407e2cd96f9d432" category="inline-link">Active IQ Unified Manager API 설명서</block>
+  <block id="200d17820d7891509722654947f03c8c" category="list-text"><block ref="200d17820d7891509722654947f03c8c" category="inline-link-rx"></block></block>
+  <block id="d01ffb84c3a4b21920fac864c694921c" category="inline-link">Ansible용 NetApp 모듈</block>
+  <block id="d4eb2098a66a5dfd4ca374a56189cd32" category="list-text"><block ref="d4eb2098a66a5dfd4ca374a56189cd32" category="inline-link-rx"></block></block>
+  <block id="379c1b2c5f736ef87c1e3f94f951b53d" category="summary">Astra Control은 여러 환경에서 Kubernetes 클러스터의 애플리케이션 인식 데이터 관리를 제공하는 NetApp 소프트웨어 제품입니다. 두 구축 모델은 공통 REST API를 공유합니다. Astra 배포의 자동화를 시작하려면 아래 제공된 설명서 및 관련 리소스를 참조하십시오.</block>
+  <block id="aabd9360d69086aa78c24d087317998e" category="doc">아스트라 컨트롤</block>
+  <block id="cd20c8579964fea43bbdc959d6350ba6" category="paragraph">Astra Control은 여러 환경에서 Kubernetes 클러스터의 애플리케이션 인식 데이터 관리를 제공하는 NetApp 소프트웨어 제품입니다. 두 구축 모델은 공통 REST API를 공유합니다. Astra Control REST API를 사용한 Astra 배포 자동화를 시작하려면 아래 제공된 문서 및 관련 리소스를 참조하십시오.</block>
+  <block id="676bd50e0f10e6725dc7a68e3041cfed" category="paragraph-title">Astra Control REST API</block>
+  <block id="bc8b1919523d4f7f0859e495e4897fca" category="paragraph">REST API를 사용하여 Astra Control Service 및 Astra Control Center 구축 관리를 자동화할 수 있습니다.</block>
+  <block id="1a0ca7f0a5aea880c24d544b4655d6ed" category="inline-link">Astra Control Automation 설명서</block>
+  <block id="faaa5531f226b4c786f8b3b21869030c" category="list-text"><block ref="faaa5531f226b4c786f8b3b21869030c" category="inline-link-rx"></block></block>
+  <block id="1b92d5678e266ca01e6cce8b6ab8a786" category="paragraph-title">아스트라 가족</block>
+  <block id="af9fe0e9b5ea86420daeb5098df7e9b9" category="paragraph">Astra 제품군 설명서에는 Astra 및 관련 소프트웨어를 설치하고 관리하는 데 필요한 모든 내용이 포함되어 있습니다.</block>
+  <block id="4b675e54aa1095b2b20f8c4019de37b0" category="inline-link">Astra 문서</block>
+  <block id="4d1e53b602f4f36aaeb2beabbbe99b9e" category="list-text"><block ref="4d1e53b602f4f36aaeb2beabbbe99b9e" category="inline-link-rx"></block></block>
+  <block id="8ea149be88a341fade2aeb68d94b862c" category="summary">NetApp BlueXP  BlueXP 는 온프레미스와 퍼블릭 클라우드 환경 모두에서 스토리지 및 데이터 서비스를 관리할 수 있는 하이브리드 멀티 클라우드 플랫폼을 제공하는 통합 컨트롤 플레인입니다. 서로 다른 여러 서비스 또는 구성 요소로 구성되며, 각 서비스 또는 구성 요소에는 관련 REST API가 노출됩니다. BlueXP  환경 자동화를 시작하려면 아래 제공된 설명서 및 관련 리소스를 참조하십시오.</block>
+  <block id="26181faa46a5ff13906f28fd43c2474c" category="doc">BlueXP  컨트롤 플레인</block>
+  <block id="f61db6f9b045e79f79499496d5acd04d" category="paragraph">NetApp BlueXP  BlueXP 는 온프레미스와 퍼블릭 클라우드 환경 모두에서 스토리지 및 데이터 서비스를 관리할 수 있는 하이브리드 멀티 클라우드 플랫폼을 제공하는 통합 컨트롤 플레인입니다. 서로 다른 여러 서비스 또는 구성 요소로 구성되며, 각 서비스 또는 구성 요소에는 관련 REST API가 노출됩니다. BlueXP  REST API를 사용하여 BlueXP  환경을 자동화하려면 아래 제공된 설명서 및 관련 리소스를 참조하십시오.</block>
+  <block id="9bd035b3034a7fcd5d8d82adcefd030c" category="paragraph-title">BlueXP  REST API</block>
+  <block id="eb039644918e25d625d499bf1ae3a949" category="paragraph">다양한 REST API를 사용하여 BlueXP 에서 관리하는 스토리지 및 데이터 서비스의 관리를 자동화할 수 있습니다.</block>
+  <block id="cfdec364233bc50bcbd67820cf4d5943" category="inline-link">BlueXP API 설명서</block>
+  <block id="16017eedea8732d7858f0907cb028a49" category="list-text"><block ref="16017eedea8732d7858f0907cb028a49" category="inline-link-rx"></block></block>
+  <block id="a8af7bb7f6fb22d8f1a96ec466769607" category="paragraph-title">BlueXP  제품군</block>
+  <block id="662574e5f356f9729de2c50ac6fb18a2" category="paragraph">BlueXP  제품군 설명서에는 BlueXP  컨트롤 플레인을 시작하는 데 필요한 모든 내용이 포함되어 있습니다.</block>
+  <block id="eeb8e055593f1709925a03e2ebb13265" category="inline-link">BlueXP 설명서</block>
+  <block id="1c74bcfdef9917ce07420aafab8bce83" category="list-text"><block ref="1c74bcfdef9917ce07420aafab8bce83" category="inline-link-rx"></block></block>
+  <block id="ff2f8ba07cc078fa269e736e685cf654" category="summary">NetApp ONTAP는 클라우드 및 사내 구축 모두를 위한 업계 최고의 데이터 관리 소프트웨어입니다. ONTAP에는 매 릴리즈에서 계속해서 확장되고 향상되는 단일 공통 REST API가 포함되어 있습니다. ONTAP 배포 자동화를 시작하려면 아래 제공된 설명서 및 관련 리소스를 참조하십시오.</block>
+  <block id="203165a49e3a391bdbc44e3a05d54279" category="doc">ONTAP 9 를 참조하십시오</block>
+  <block id="c681e8eddcefccf18ec60d7786f0e796" category="paragraph">NetApp ONTAP는 클라우드 및 사내 구축 모두를 위한 업계 최고의 데이터 관리 소프트웨어입니다. ONTAP에는 매 릴리즈에서 계속해서 확장되고 향상되는 단일 공통 REST API가 포함되어 있습니다. ONTAP REST API를 사용한 ONTAP 배포 자동화를 시작하려면 아래 제공된 설명서 및 관련 리소스를 참조하십시오.</block>
+  <block id="0ec641cfacd36c8e22a334135e2abdac" category="paragraph-title">ONTAP REST API를 참조하십시오</block>
+  <block id="93f081a7384e0c442cfe6f4ebbc38992" category="paragraph">REST API를 사용하여 ONTAP 배포 관리를 자동화할 수 있습니다.</block>
+  <block id="ec033dcf5fdadae0c2ee4fad5b7980ac" category="inline-link">ONTAP 자동화 문서</block>
+  <block id="556d06a351b4084e5ff2bf006ee89f0f" category="list-text"><block ref="556d06a351b4084e5ff2bf006ee89f0f" category="inline-link-rx"></block></block>
+  <block id="19c3aa80eb958bede5080c6e3909d52e" category="paragraph-title">ONTAP 제품군</block>
+  <block id="43b75dde49bffd1592bd3797a5bd4d18" category="paragraph">ONTAP 제품군 설명서에는 ONTAP 배포를 설치하고 관리하는 데 필요한 모든 내용이 포함되어 있습니다.</block>
+  <block id="274bc582ca884fc158ea9ac9f79f9067" category="inline-link">ONTAP 제품 설명서</block>
+  <block id="4b182de5b5a8774ae02c6590c4614991" category="list-text"><block ref="4b182de5b5a8774ae02c6590c4614991" category="inline-link-rx"></block></block>
+  <block id="d41d8cd98f00b204e9800998ecf8427e" category="summary"></block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">법적 고지</block>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">법적 고지 사항은 저작권 선언, 상표, 특허 등에 대한 액세스를 제공합니다.</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">저작권</block>
+  <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
+  <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">상표</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NetApp, NetApp 로고, NetApp 상표 페이지에 나열된 마크는 NetApp Inc.의 상표입니다. 기타 회사 및 제품 이름은 해당 소유자의 상표일 수 있습니다.</block>
+  <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
+  <block id="5d545fe5152641e2ebe654e336e520e5" category="paragraph"><block ref="5d545fe5152641e2ebe654e336e520e5" category="inline-link-macro-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">특허</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">NetApp 소유 특허 목록은 다음 사이트에서 확인할 수 있습니다.</block>
+  <block id="88e5eabd3917048b6927c42496b98f86" category="inline-link-macro"><block ref="88e5eabd3917048b6927c42496b98f86" category="inline-link-rx"></block></block>
+  <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">개인 정보 보호 정책</block>
+  <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
+  <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">오픈 소스</block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">통지 파일은 NetApp 소프트웨어에 사용된 타사의 저작권 및 라이센스에 대한 정보를 제공합니다.</block>
+  <block id="b2a8c873c342c10120e2b19ecdc226e4" category="summary">이 자동화 솔루션을 사용하여 Azure NetApp Files 볼륨을 프로비저닝하고 사용 가능한 가상 머신에 Oracle을 설치할 수 있습니다. 그런 다음 Oracle은 이 볼륨을 데이터 스토리지에 사용합니다.</block>
+  <block id="62db87571a424ff49bba9d68eafd08c2" category="doc">Azure NetApp Files를 사용하여 Oracle을 설치합니다</block>
+  <block id="8cced99bb2c53ac400085323c360c27d" category="paragraph-title">살펴봅니다</block>
+  <block id="29cd032c66e79cab77eb0fed6ee6cfdc" category="paragraph">이 솔루션과 함께 제공되는 자동화 코드는 개략적으로 다음과 같은 작업을 수행합니다.</block>
+  <block id="5ca0221f044a0157099e224110f2a8a6" category="list-text">Azure에서 NetApp 계정을 설정합니다</block>
+  <block id="7083799a2b6d70dc395a14e97eca2472" category="list-text">Azure에서 스토리지 용량 풀 설정</block>
+  <block id="e41e5069ad617c037d6ae3ba45555e87" category="list-text">정의에 따라 Azure NetApp Files 볼륨을 프로비저닝합니다</block>
+  <block id="fe70d326231fc7219c0a1203800af458" category="list-text">마운트 지점을 생성합니다</block>
+  <block id="4f17ac5934083c1358967dbbcfe5dfec" category="list-text">Azure NetApp Files 볼륨을 마운트 지점에 마운트합니다</block>
+  <block id="0f01d98bbad6fa979bb5dca30cdcab4d" category="list-text">Linux 서버에 Oracle을 설치합니다</block>
+  <block id="d0cde19ca841017fe525b0a0a12a1a41" category="list-text">수신기 및 데이터베이스를 만듭니다</block>
+  <block id="362e3754774846370b84b611ba85faf3" category="list-text">플러그형 데이터베이스(PDB) 만들기</block>
+  <block id="3ad3b48e0e608d3aa47ef6eb5a923fd2" category="list-text">Listener 및 Oracle 인스턴스를 시작합니다</block>
+  <block id="84535c3fc8745d85206dddd158e0ecf0" category="list-text">스냅샷을 생성하도록 유틸리티를 설치하고 구성합니다<block ref="f11c70e98fb3206ac6eeae40be288750" prefix=" " category="inline-code"></block></block>
+  <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">시작하기 전에</block>
+  <block id="ec2287b43dcb904e9e447bc893387f90" category="paragraph">설치를 완료하려면 다음이 필요합니다.</block>
+  <block id="fa9fd8ccee9b7746e7af45da8bae09fc" category="list-text">BlueXP  웹 UI를 통해 자동화 솔루션을 다운로드해야<block ref="0a8799be60006964a5d8d0bc1c2761c3" category="inline-link-rx"></block> 합니다. 솔루션은 파일로 패키지됩니다.<block ref="bc18238b0e7defc6245f2b37d9c3bf66" prefix=" " category="inline-code"></block></block>
+  <block id="f0ff28f900626e4afdc09ae17f91d944" category="list-text">다음과 같은 특성을 가진 Linux VM:</block>
+  <block id="ce7a9811f47fcf7e3d9c61ce01f5fec6" category="list-text">RHEL 8(Standard_D8s_v3-RHEL-8)</block>
+  <block id="9d173695cad8e6b2a0fd1bb066bc45fd" category="list-text">Azure NetApp Files 프로비저닝에 사용되는 것과 동일한 Azure 가상 네트워크에 배포됩니다</block>
+  <block id="74e40c1b4e03509a53b3fcbed5ad2cb7" category="list-text">Azure 계정</block>
+  <block id="cb537ea2ce9d8625b1479313f31317be" category="paragraph">자동화 솔루션은 이미지로 제공되며 Docker 및 Docker Compose를 사용하여 실행됩니다. 아래 설명과 같이 Linux 가상 머신에 이 두 가지를 모두 설치해야 합니다.</block>
+  <block id="bb4d5072606b7525a35f9a22fd7c8889" category="paragraph">또한 명령을 사용하여 RedHat에 VM을 등록해야<block ref="d4922d322768afb39986c3a3eddf0e84" prefix=" " category="inline-code"></block> 합니다. 이 명령을 실행하면 계정 자격 증명을 입력하라는 메시지가 표시됩니다. 필요한 경우 \https://developers.redhat.com/.에서 계정을 만들 수 있습니다</block>
+  <block id="cedcef2187befe8bcd075bbaba2c9c34" category="section-title">1단계: Docker 설치 및 구성</block>
+  <block id="7b2a727fa9f8e980896b4bd950853036" category="paragraph">RHEL 8 Linux 가상 머신에 Docker를 설치하고 구성합니다.</block>
+  <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">단계</block>
+  <block id="37f319257119e3cd2641cbf308f478eb" category="list-text">다음 명령을 사용하여 Docker 소프트웨어를 설치합니다.</block>
+  <block id="3f5202ac88435a5d78f647880e907be4" category="list-text">Docker를 시작하고 버전을 표시하여 설치가 성공적으로 완료되었는지 확인합니다.</block>
+  <block id="551124750acebb94da9141562d5e2213" category="list-text">필요한 Linux 그룹을 관련 사용자와 추가합니다.</block>
+  <block id="7fb2ecf00f626107bd95e9b977af6cce" category="paragraph">먼저 Linux 시스템에 * docker * 그룹이 있는지 확인하십시오. 그렇지 않으면 그룹을 만들고 사용자를 추가합니다. 기본적으로 현재 셸 사용자가 그룹에 추가됩니다.</block>
+  <block id="c9bee8fb002ac0a519ad37957028a0a2" category="list-text">새 그룹 및 사용자 정의를 활성화합니다</block>
+  <block id="979d80edc3cfd4bda3116c4e008c0f2a" category="paragraph">사용자와 함께 새 그룹을 만든 경우 정의를 활성화해야 합니다. 이렇게 하려면 Linux에서 로그아웃했다가 다시 로그인하거나 다음 명령을 실행할 수 있습니다.</block>
+  <block id="8ef3171d14be871238e0dbc33a85725e" category="section-title">2단계: Docker Compose 및 NFS 유틸리티 설치</block>
+  <block id="e5be632c59cc24eb32cfdade0bffa4b6" category="paragraph">Docker Compose를 NFS 유틸리티 패키지와 함께 설치 및 구성합니다.</block>
+  <block id="b403d13d8c4b4d9e637bc243bc8cb489" category="list-text">Docker를 설치하고 버전을 표시하여 설치가 성공적으로 완료되었는지 확인합니다.</block>
+  <block id="385010ae5bb45b8f03a98484e56a91f8" category="list-text">NFS 유틸리티 패키지를 설치합니다.</block>
+  <block id="bdaa0a85c21006e1621137e9e56663f4" category="section-title">3단계: Oracle 설치 파일을 다운로드합니다</block>
+  <block id="d0614abb6a37d0428057d9be3669c159" category="paragraph">필요한 Oracle 설치 및 패치 파일과<block ref="f11c70e98fb3206ac6eeae40be288750" prefix=" " category="inline-code"></block> 유틸리티를 다운로드합니다.</block>
+  <block id="0720a1d7f48eef8802843097cc7b9c3e" category="list-text">필요한 경우 Oracle 계정에 로그인합니다.</block>
+  <block id="57bece468bae14009bd89fe7f7c303cf" category="list-text">다음 파일을 다운로드합니다.</block>
+  <block id="0b27918290ff5323bea1e3b78a9cf04e" category="cell">파일</block>
+  <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">설명</block>
+  <block id="ef67f2edcee3ab2f251990fe6b44dde0" category="cell">LINUX.X64_193000_db_home.zip</block>
+  <block id="c29656fc9d1a5cae77ee5e76519ecac7" category="cell">19.3 기본 장착 공구</block>
+  <block id="743837609d6cbc2e8ea9463873a349b3" category="cell">p31281355_190000_Linux-x86-64.zip</block>
+  <block id="133520cf269609b74b607d28c66f535d" category="cell">19.8RU 패치</block>
+  <block id="63628571f2dfaeb6f0a0a676290e6e82" category="cell">p6880880_190000_Linux-x86-64.zip</block>
+  <block id="35fca6e17a1875f4771154a16de61781" category="cell">OPatch 버전 12.2.0.1.23</block>
+  <block id="3d16a3d1b8fc7ff5f84f8cb765aa44e0" category="cell">azacsnap_installer_v5.0.ru n 을 참조하십시오</block>
+  <block id="50d653389b281143f4c1075e227634b3" category="cell">azacsnap 설치 프로그램</block>
+  <block id="9c15f8078c76ae829f9eeb97772b6f37" category="list-text">모든 설치 파일을 폴더에<block ref="d66a510d21988f96fd9c018f6843c729" prefix=" " category="inline-code"></block>넣습니다.</block>
+  <block id="6fdc6835addb26829034b7905ecc6561" category="list-text">데이터베이스 서버의 모든 사용자가 폴더에 대한 모든 액세스 권한(읽기, 쓰기, 실행)을 갖는지 확인합니다.<block ref="d66a510d21988f96fd9c018f6843c729" prefix=" " category="inline-code"></block></block>
+  <block id="ea4ef193486d7b40f35a73482a455692" category="section-title">4단계: Docker 이미지 준비</block>
+  <block id="e61d612f0de70686d0c2414292fdbd56" category="paragraph">자동화 솔루션과 함께 제공된 Docker 이미지를 추출하여 로드해야 합니다.</block>
+  <block id="35825d38402b3adb74b49e6d3a4e627f" category="list-text">자동화 코드가 실행될 가상 머신에 솔루션 파일을<block ref="bc18238b0e7defc6245f2b37d9c3bf66" prefix=" " category="inline-code"></block> 복사합니다.</block>
+  <block id="abed44481571ba7bbe8763c70dc42715" category="paragraph">입력 매개<block ref="043160dcb5097e884764ebf29a002108" prefix=" " category="inline-code"></block> 변수는 Azure 가상 머신 인증에 사용되는 개인 키 파일입니다.</block>
+  <block id="8dee74621630c5c92f93f7148c6bc122" category="list-text">솔루션 파일이 있는 올바른 폴더로 이동하여 파일의 압축을 풉니다.</block>
+  <block id="019452dd5adfcf9935b476b0b06da646" category="list-text">압축 풀기 작업으로 생성된 새 폴더로<block ref="3c34406a304ad5dfa671ef73ad264a2c" prefix=" " category="inline-code"></block> 이동하여 파일을 나열합니다. 파일을 볼 수<block ref="44bc3f3b38963561d52575413ea33442" prefix=" " category="inline-code"></block> 있습니다.</block>
+  <block id="22dda4e93f7648d527141024523bfb07" category="list-text">Docker 이미지 파일을 로드합니다. 로드 작업은 일반적으로 몇 초 내에 완료됩니다.</block>
+  <block id="02a65a322fe420fffd5a963f14701fae" category="list-text">Docker 이미지가 로드되었는지 확인합니다.</block>
+  <block id="d09bd29196f4271748dd52cd6e978b34" category="paragraph">Docker<block ref="aaad05ca0732907813f9ee1688aecd5e" prefix=" " category="inline-code"></block> 이미지와 태그가<block ref="71ccb7a35a452ea8153b6d920f9f190e" prefix=" " category="inline-code"></block>표시됩니다.</block>
+  <block id="c3218dd8c5ef76776a81b58dc60150be" category="section-title">5단계: 외부 볼륨을 만듭니다</block>
+  <block id="463236aa823f732f65d83fb3c45562db" category="paragraph">Terraform 상태 파일과 기타 중요한 파일이 영구적으로 유지되도록 하려면 외부 볼륨이 필요합니다. Terraform에서 워크플로우 및 배포를 실행하려면 이러한 파일을 사용할 수 있어야 합니다.</block>
+  <block id="7cf47b074e255ec32fd1c18910740d6d" category="list-text">Docker Compose 외부에서 외부 볼륨을 생성합니다.</block>
+  <block id="984d9915587b25d25fb0606ce1ae0284" category="paragraph">명령을 실행하기 전에 볼륨 이름을 업데이트하십시오.</block>
+  <block id="1defe26da2049b6fbc267f6b9aeab973" category="list-text">다음 명령을 사용하여 외부 볼륨의 경로를 환경 파일에 추가합니다<block ref="f579cccc964135c7d644c7b2d3b0d3ec" prefix=" " category="inline-code"></block>.</block>
+  <block id="e43434c615e270f4ccc0dc59cbdbfb40" category="paragraph"><block ref="9fd5589b0f9a1dd3b3614dfe2ccefcd0" prefix="" category="inline-code"></block>..</block>
+  <block id="3cb6079ab5901726408fef321d94a6aa" category="paragraph">기존 파일 내용과 콜론 서식을 유지해야 합니다. 예를 들면 다음과 같습니다.</block>
+  <block id="b78cc54d0c2056d69472ad90e874e238" category="list-text">Terraform 변수를 업데이트합니다.</block>
+  <block id="bdc6b7957ca419bcdab972e07d23f2b7" category="list-text">폴더로<block ref="4d402ffa7c372a6f128c002083e358df" prefix=" " category="inline-code"></block>이동합니다.</block>
+  <block id="97a25108cfcfed4f0b1ff536617f3329" category="list-text">다음 두 파일이 있는지<block ref="b5f9e43085599050738084372b6e118c" prefix=" " category="inline-code"></block> 확인합니다. 및<block ref="c9ac8098c5ea9d3e6a9a596ff0c512a4" prefix=" " category="inline-code"></block>.</block>
+  <block id="613baf2d6e688ec1283d68dae6cfb6ee" category="list-text">사용자 환경에 필요한 대로 의 값을<block ref="b5f9e43085599050738084372b6e118c" prefix=" " category="inline-code"></block> 업데이트합니다.</block>
+  <block id="2e62a257574a484eecfda93c308f8bdc" category="section-title">6단계: Oracle을 설치합니다</block>
+  <block id="d43ffd976f88036c92262897c73e1d44" category="paragraph">이제 Oracle을 프로비저닝하고 설치할 수 있습니다.</block>
+  <block id="5ca29a07b0a619242090920640ac0492" category="list-text">다음 명령 시퀀스를 사용하여 Oracle을 설치합니다.</block>
+  <block id="27fa1b6b46b23860849e37ae2fc525ba" category="list-text">Bash 변수를 다시 로드하고 의 값을 표시하여<block ref="e1f651debac4f720c13ae930ff3ca14a" prefix=" " category="inline-code"></block> 확인합니다.</block>
+  <block id="87ffa2e9f3be49014dfdf5a8405740a7" category="list-text"><block ref="805cb08115ea35866092633125eb562f" prefix="" category="inline-code"></block></block>
+  <block id="13216747601217f01ee964d8f48a576f" category="list-text"><block ref="35014126f9193d9eaf983d129b92696a" prefix="" category="inline-code"></block></block>
+  <block id="fe54e73e7ef91fafaed363b549be97ac" category="list-text"><block ref="92d8bf20d4317412cbc8e11d376519ff" prefix="" category="inline-code"></block></block>
+  <block id="6fb91845c4456c82e4b147091807cb9c" category="list-text">Oracle에 로그인할 수 있어야 합니다.</block>
+  <block id="b717ef0930b21e08f325231b884b11f7" category="section-title">7단계: Oracle 설치를 검증합니다</block>
+  <block id="677e417cf18c088283647ac494763c5c" category="paragraph">Oracle 설치가 성공적으로 완료되었는지 확인해야 합니다.</block>
+  <block id="5adc0bc482e39ddfebafe21cbcc316ad" category="list-text">Linux Oracle 서버에 로그인하고 Oracle 프로세스 목록을 표시합니다. 이렇게 하면 설치가 예상대로 완료되었고 Oracle 데이터베이스가 실행 중임을 확인할 수 있습니다.</block>
+  <block id="a23c64f9f0cec5b000d379bccd90e16d" category="list-text">데이터베이스에 로그인하여 데이터베이스 구성을 검사하고 PDB가 제대로 생성되었는지 확인합니다.</block>
+  <block id="d0848afd8553c34945705222a97a4553" category="paragraph">다음과 유사한 출력이 표시됩니다.</block>
+  <block id="3c819d77bedaa0aa958c54f3fa3b4703" category="list-text">몇 가지 간단한 SQL 명령을 실행하여 데이터베이스를 사용할 수 있는지 확인합니다.</block>
+  <block id="bc777dbd9b10c524d2a56c3a81d35237" category="section-title">단계 8: azacsnap 유틸리티를 설치하고 스냅샷 백업을 수행합니다</block>
+  <block id="d3260476a07a46fb1a3d45f807dc9db2" category="paragraph">스냅샷 백업을 수행하려면 유틸리티를 설치하고 실행해야<block ref="f11c70e98fb3206ac6eeae40be288750" prefix=" " category="inline-code"></block> 합니다.</block>
+  <block id="b586044135ee4d26f0e2e2b26756ce17" category="list-text">컨테이너를 설치합니다.</block>
+  <block id="ad5653056322c220a0957b4579f3384c" category="list-text">스냅샷 사용자 계정으로 전환합니다.</block>
+  <block id="f63ca656bd0609cf06117323b5a130f9" category="list-text">스토리지 백업 세부 정보 파일을 구성합니다. 그러면 구성 파일이<block ref="8ed8c6bfea85d72bc4a36772490109c7" prefix=" " category="inline-code"></block> 생성됩니다.</block>
+  <block id="76845b7c1954015192bebaaae9ba2fa9" category="list-text">스냅샷 백업을 수행합니다.</block>
+  <block id="b7c0609220f6aeed4f1e0be47c445369" category="section-title">9단계: 필요에 따라 온프레미스 PDB를 클라우드로 마이그레이션합니다</block>
+  <block id="2306ea5679b875866345d5cc165d8dda" category="paragraph">필요에 따라 온프레미스 PDB를 클라우드로 마이그레이션할 수 있습니다.</block>
+  <block id="24e5245e95d27e0a56ef8b0706ba1553" category="list-text">환경에 필요한 대로 파일의 변수를<block ref="c08dfc5366dfe92564ab477174fbc285" prefix=" " category="inline-code"></block> 설정합니다.</block>
+  <block id="dbbd032a05e7a2cc75750ffa15afe4ba" category="list-text">PDB를 마이그레이션합니다.</block>
+  <block id="5d5c422de4bc6968c09f1deac44cb37d" category="summary">BlueXP  자동화 카탈로그는 NetApp 고객, 파트너 및 직원이 사용할 수 있는 자동화 솔루션의 모음입니다. 카탈로그에는 여러 가지 기능과 이점이 있습니다.</block>
+  <block id="9272cfe015b625847948709c69c5040d" category="doc">BlueXP  자동화 카탈로그 개요</block>
+  <block id="d617d59413c37e63a18a3c09c36ede0f" category="list-text">자동화를 위한 단일 위치</block>
+  <block id="082e649c1f4f3693f03821118af0ff91" category="list-text">BlueXP  웹 사용자 인터페이스를 통해 에 액세스할 수<block ref="d5edd64e969d71f966838509aa534b4a" category="inline-link-rx"></block> 있습니다. NetApp 제품과 서비스의 자동화 및 운영을 개선하는 데 필요한 스크립트, 플레이북 및 모듈을 확인할 수 있는 단일 위치를 제공합니다.</block>
+  <block id="68e20978991e52265eae03bf6a49ddc8" category="list-text">솔루션은 NetApp에서 만들고 테스트합니다</block>
+  <block id="e93a6ff860b35d16dc0e24aab5398232" category="list-text">모든 자동화 솔루션과 스크립트는 NetApp에 의해 생성 및 테스트되었습니다. 각 솔루션은 특정 고객 사용 사례 또는 요청을 대상으로 합니다. 대부분 NetApp 파일 및 데이터 서비스와의 통합에 중점을 둡니다.</block>
+  <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">문서화</block>
+  <block id="8354164813f5d7dbb1a6d0fa641acae8" category="list-text">각 자동화 솔루션에는 시작하는 데 도움이 되는 관련 문서가 포함되어 있습니다. 솔루션은 BlueXP  웹 인터페이스를 통해 액세스할 수 있지만 모든 설명서는 이 사이트에서 사용할 수 있습니다. 설명서는 NetApp 제품과 클라우드 서비스에 따라 구성되어 있습니다.</block>
+  <block id="4796a3d87ac5fd77d1747f897268a540" category="list-text">미래를 위한 견고한 기반</block>
+  <block id="0e7211eaf170083d4747e6ebb46d393d" category="list-text">NetApp은 고객이 데이터 센터와 클라우드 환경의 자동화를 개선하고 간소화하도록 돕기 위해 최선을 다하고 있습니다. BlueXP 은 고객의 요구사항, 기술 변경, 지속적인 제품 통합을 해결하기 위해 NetApp 자동화 카탈로그를 계속해서 개선할 것으로 예상됩니다.</block>
+  <block id="9c259c348b17e5bd2a52e94fd361100d" category="list-text">NetApp은 파트너 의견을 환영합니다</block>
+  <block id="13aa088e28b9f67de852da1222c36b63" category="list-text">NetApp 고객 경험 사무소(CXO) 자동화 팀이 연락을 드리면 됩니다. 피드백, 문제 또는 기능 요청이 있는 경우 mailto:ng-cxo-automation-administrators@NetApp.com[cXO 자동화 팀] 으로 이메일을 보내주시기 바랍니다.</block>
+  <block id="9b5b0f64861deda676862e1db6be31e7" category="summary">이 기사에서는 NetApp BlueXP  자동화 카탈로그 에서 NetApp Cloud Volumes ONTAP for AWS 자동화 솔루션을 지원합니다.</block>
+  <block id="59e592a2962656fc69880be2502776b2" category="doc">AWS용 Cloud Volumes ONTAP - 클라우드 사용 급증</block>
+  <block id="3a4376afda6ca829660672afe18b6de5" category="paragraph">AWS 환경을 위한 Cloud Volumes ONTAP 자동화 솔루션은 Terraform을 사용하여 Cloud Volumes ONTAP for AWS 환경을 컨테이너화된 구축을 자동화하므로 수동 개입 없이 AWS용 Cloud Volumes ONTAP를 빠르게 구축할 수 있습니다.</block>
+  <block id="f13444b5b367d7262a5c5505997cb8d8" category="list-text">BlueXP  웹 UI를 통해 자동화 솔루션을 다운로드해야 <block ref="9ee8084a1c708ecead6b0f7d8bc48da3" category="inline-link-macro-rx"></block>합니다. 솔루션은 다음과 같이 패키지되어 있습니다.<block ref="4620783dba91696483c654c28ea6a8d7" prefix=" " category="inline-code"></block></block>
+  <block id="2b36326223d2900805c35d98e3d81c1d" category="list-text">Cloud Volumes ONTAP와 동일한 네트워크에 Linux VM을 설치해야 합니다.</block>
+  <block id="e0d727cf98f7c74530660c9a1e2280ed" category="list-text">Linux VM을 설치한 후에는 이 솔루션의 단계에 따라 필요한 종속성을 설치해야 합니다.</block>
+  <block id="3ee8de22234672e3d0f52ff7c1f3ab55" category="section-title">1단계: Docker 및 Docker Compose를 설치합니다</block>
+  <block id="d2e76c80cf106b0ec7857ece4367a212" category="section-title">Docker를 설치합니다</block>
+  <block id="9be9325d47224c1c8ff38631630ab2dd" category="paragraph">다음 단계에서는 Ubuntu 20.04 Debian Linux 배포 소프트웨어를 예로 사용합니다. 실행하는 명령은 사용 중인 Linux 배포 소프트웨어에 따라 다릅니다. 해당 구성에 대한 자세한 내용은 해당 Linux 배포 소프트웨어 설명서를 참조하십시오.</block>
+  <block id="92d63d5360c525af100f9f03728b8d3b" category="list-text">다음 명령을 실행하여 Docker를<block ref="d338b3f0f405eb5e51c8cc1e5ca66f02" prefix=" " category="inline-code"></block> 설치합니다.</block>
+  <block id="fac4447e0ea2e4cd1a2d9e2fefeab694" category="list-text">설치를 확인합니다.</block>
+  <block id="2104cae55dcb2aec6e7f4612307e4df9" category="list-text">Linux 시스템에 "docker"라는 그룹이 생성되었는지 확인합니다. 필요한 경우 그룹을 생성합니다.</block>
+  <block id="a0ac620980e52d6ac2715407027f1a9b" category="list-text">Docker에 액세스해야 하는 사용자를 그룹에 추가합니다.</block>
+  <block id="2f63eeb45447284517beb4e4835bc2e5" category="list-text">변경 사항은 로그아웃한 후 터미널에 다시 로그인하면 적용됩니다. 또는 변경 사항을 즉시 적용할 수 있습니다.</block>
+  <block id="c583e829d6f0282964cf0ebe5eac92f1" category="section-title">Docker Compose를 설치합니다</block>
+  <block id="f26887d95a76ce86ada9f8988641c709" category="list-text">다음 명령을 실행하여 Docker Compose를<block ref="d338b3f0f405eb5e51c8cc1e5ca66f02" prefix=" " category="inline-code"></block> 설치합니다.</block>
+  <block id="56e32d166d1a573f9b08792b7a653b51" category="section-title">2단계: Docker 이미지 준비</block>
+  <block id="620215e6878400cbf70380299405d70b" category="list-text"><block ref="4620783dba91696483c654c28ea6a8d7" prefix=" " category="inline-code"></block>Cloud Volumes ONTAP를 배포하는 데 사용할 Linux VM에 폴더를 복사합니다.</block>
+  <block id="ae8df6b1b959f5f578630ddf635dc6ef" category="list-text"><block ref="043160dcb5097e884764ebf29a002108" prefix="" category="inline-code"></block> 은(는) 암호 없이 로그인할 수 있는 개인 키 파일입니다.</block>
+  <block id="f6e4822412dd761dcaefe45c5c54664d" category="list-text"><block ref="b59304cdfe1e7489e9baca584471d543" prefix="" category="inline-code"></block> VM 사용자 이름입니다.</block>
+  <block id="af97a8d4ad169030d4b7dd06ca4bc052" category="list-text"><block ref="a2da6c33cb2fe397a0cfd0198f0d1683" prefix="" category="inline-code"></block> VM IP 주소입니다.</block>
+  <block id="5a9219ef4f445c453ae0150a51d5359a" category="list-text"><block ref="06e7d55b4dad189a1aeb0337987d68f7" prefix="" category="inline-code"></block> 폴더가 복사될 위치입니다.</block>
+  <block id="fa3faa8aaf86229e70832b121911f53f" category="list-text">폴더 압축을<block ref="4620783dba91696483c654c28ea6a8d7" prefix=" " category="inline-code"></block> 풉니다. 현재 디렉터리나 사용자 지정 위치에서 폴더의 압축을 풀 수 있습니다.</block>
+  <block id="9d688d574c2a101a955ae0ab469efdc8" category="paragraph">현재 디렉터리에서 폴더를 추출하려면 다음을 실행합니다.</block>
+  <block id="edec814c365f90f2d412e951bac96c34" category="paragraph">사용자 지정 위치에서 폴더를 추출하려면 다음을 실행합니다.</block>
+  <block id="3d56d5579a4ec9144de6420476ee61c6" category="list-text">콘텐츠의 압축을 푼 후 폴더로<block ref="98bedd4e117f15dc3fb5920fae07ce4e" prefix=" " category="inline-code"></block> 이동하고 다음 명령을 실행하여 파일을 봅니다.</block>
+  <block id="95b082fe2053875cc65e1206c2522f0e" category="paragraph">다음 예제와 유사한 파일 목록이 표시됩니다.</block>
+  <block id="b080d722657d815fb2e8d3f2fe8c13f4" category="list-text">파일을 찾습니다<block ref="c90eb233d0112281bcd19addc4f291bb" prefix=" " category="inline-code"></block>. Cloud Volumes ONTAP for AWS를 구축하는 데 필요한 Docker 이미지가 포함되어 있습니다.</block>
+  <block id="b540e8e4cfa0951a311154d0bc5b99e1" category="list-text">파일의 압축을 풉니다.</block>
+  <block id="a8b1878bcbe7c30e2af3e0b564089817" category="list-text">Docker 이미지가 로드될 때까지 몇 분 기다린 다음 Docker 이미지가 성공적으로 로드되었는지 확인합니다.</block>
+  <block id="0fcdd1e3581872145aa2c2318fda6b15" category="paragraph">다음 예와 같이 태그와 함께<block ref="71ccb7a35a452ea8153b6d920f9f190e" prefix=" " category="inline-code"></block> 이름이 지정된 Docker 이미지가 표시됩니다<block ref="619b4acd40b16d36d704fde76818070e" prefix=" " category="inline-code"></block>.</block>
+  <block id="c026ab6890aa4ccf7465dae5685ece88" category="admonition">필요한 경우 Docker 이미지 이름을 변경할 수 있습니다. Docker 이미지 이름을 변경하는 경우 및<block ref="d2d2d84cc990f3db67559064ad417683" prefix=" " category="inline-code"></block> 파일에서 Docker 이미지 이름을 업데이트해야<block ref="a98cc579a6071589bad032a208de89ef" prefix=" " category="inline-code"></block> 합니다.</block>
+  <block id="f675348a6853d7e9d043d9b423d1bd91" category="section-title">3단계: 환경 변수 파일을 만듭니다</block>
+  <block id="4907ab7550daf17451a57fd36a5dd8cf" category="paragraph">이 단계에서는 두 개의 환경 변수 파일을 만들어야 합니다. 한 파일은 AWS 액세스 및 보안 키를 사용하는 AWS Resource Manager API 인증에 사용됩니다. 두 번째 파일은 BlueXP  Terraform 모듈이 AWS API를 찾고 인증할 수 있도록 환경 변수를 설정하는 것입니다.</block>
+  <block id="d54bca52695c5238346e9ac787ced46c" category="list-text">다음 위치에 파일을 만듭니다<block ref="35200b998d2a57ef482820eb891b56a0" prefix=" " category="inline-code"></block>.</block>
+  <block id="934107c08fbd7dc9f1eb616900ed8418" category="paragraph"><block ref="4a5dd949b6c97b60d75de1cd59561b2d" prefix="" category="inline-code"></block></block>
+  <block id="8425a09ec87ee927598c653ac9ae2043" category="list-text">파일에 다음 내용을<block ref="35200b998d2a57ef482820eb891b56a0" prefix=" " category="inline-code"></block> 추가합니다.</block>
+  <block id="f2bcaddf6f33b062c708e03ef59cb300" category="paragraph">access_key=&lt;&gt; secret_key=&lt;&gt;</block>
+  <block id="323a1d7ec44d6ba6cec116168cdbc7e5" category="paragraph">형식은 * 위에 표시된 것과 정확히 일치해야 합니다.</block>
+  <block id="8be04baa85c6b734add3c2badc946b0e" category="list-text">절대 파일 경로를<block ref="f579cccc964135c7d644c7b2d3b0d3ec" prefix=" " category="inline-code"></block> 파일에 추가합니다.</block>
+  <block id="70f7bdfaeef5fcb9eb5d4a05d8c18cee" category="paragraph">환경 변수에 해당하는 환경 파일의<block ref="b27e63237977193bd02ece4d310f350d" prefix=" " category="inline-code"></block> 절대 경로를<block ref="35200b998d2a57ef482820eb891b56a0" prefix=" " category="inline-code"></block> 입력합니다.</block>
+  <block id="7f99175ac18b1317ad7931e86dcc35e8" category="paragraph"><block ref="755289c269fc40ec9437047e656a9e83" prefix="" category="inline-code"></block></block>
+  <block id="e882fb727cd574bcadde7bb79d8406bc" category="list-text"><block ref="f777206e80adeaaf8e95745a5739489c" prefix=" " category="inline-code"></block>폴더로 이동하여 자격 증명 파일에서 액세스 및 비밀 키를 업데이트합니다.</block>
+  <block id="6720498ae50a74125359d84cb07d385e" category="paragraph">파일에 다음 내용을 추가합니다.</block>
+  <block id="8e6f72878836f39ae9cec5a1e294987a" category="paragraph">AWS_ACCESS_KEY_ID = &lt;&gt; AWS_SYSTEM_ACCESS_KEY=&lt;&gt;</block>
+  <block id="2f7ee2b0af179a53111a1b10a77a562b" category="section-title">4단계: BlueXP 에 Cloud Volumes ONTAP 라이선스를 추가하거나 BlueXP 에 가입합니다</block>
+  <block id="b0f2ae2e05e85f6d2485f41668ea391b" category="paragraph">Cloud Volumes ONTAP 라이선스를 BlueXP 에 추가하거나 AWS 마켓플레이스에서 NetApp BlueXP 를 구독할 수 있습니다.</block>
+  <block id="fe96b8625addca1fd2cb84fe5b784b8e" category="list-text">AWS 포털에서 * SaaS * 로 이동하고 * Subscribe to NetApp BlueXP  * 를 선택합니다.</block>
+  <block id="c72688c6e14b02d2351f47bd22bfb8d1" category="paragraph">Cloud Volumes ONTAP와 동일한 리소스 그룹을 사용하거나 다른 리소스 그룹을 사용할 수 있습니다.</block>
+  <block id="ced15717d3b4438763f2e2c261ca15be" category="list-text">BlueXP  포털을 구성하여 SaaS 구독을 BlueXP 로 가져옵니다.</block>
+  <block id="653620d293f08d43eeba7acae0a05434" category="paragraph">이 구성은 AWS 포털에서 직접 구성할 수 있습니다.</block>
+  <block id="a7274810106d6a3a365d0e8abe67167e" category="paragraph">구성을 확인하기 위해 BlueXP  포털로 리디렉션됩니다.</block>
+  <block id="f1d809d4ddadd0b980b4911f8b280f8e" category="list-text">BlueXP  포털에서 * 저장 * 을 선택하여 구성을 확인합니다.</block>
+  <block id="9eaade7d660bb23f4e0fd7b0f2feb5f0" category="paragraph">Terraform 상태 파일과 기타 중요한 파일을 영구적으로 유지하려면 외부 볼륨을 생성해야 합니다. Terraform에서 워크플로 및 배포를 실행하려면 파일을 사용할 수 있는지 확인해야 합니다.</block>
+  <block id="607c398d5c3d2cd43ca039ef926c8047" category="list-text">Docker 외부에서 외부 볼륨 생성 Compose:</block>
+  <block id="81eeab9506186e2dca8faefa78d54067" category="paragraph">예:</block>
+  <block id="56f167805228446310e6c9007d3b1985" category="list-text">다음 옵션 중 하나를 사용합니다.</block>
+  <block id="f83454c1fa0f8d7507dc008dc02233b0" category="list-text">환경 파일에 외부 볼륨 경로를 추가합니다<block ref="f579cccc964135c7d644c7b2d3b0d3ec" prefix=" " category="inline-code"></block>.</block>
+  <block id="b4c7dc0f63e2f70d7cc94b0be4a22191" category="paragraph">아래 표시된 형식을 정확히 따라야 합니다.</block>
+  <block id="fb2ea703b13d059f6b7ea5da806021df" category="paragraph">형식:</block>
+  <block id="710986866db54f7b377602bd5263c6f5" category="paragraph"><block ref="004a60502bb089fdaf4c0527e8578a85" prefix="" category="inline-code"></block></block>
+  <block id="9f196f19f0a31d3bce14c0205ec28b5c" category="paragraph">예:<block ref="1130be47ecb819bc4329770155d4535d" prefix=" " category="inline-code"></block></block>
+  <block id="0ebf85d762d08c6126a6f4fb5b389ee2" category="list-text">NFS 공유를 외부 볼륨으로 추가합니다.</block>
+  <block id="b6b2ff9aeb0d309ad68031cb8b3890ec" category="paragraph">Docker 컨테이너가 NFS 공유와 통신할 수 있으며 읽기/쓰기와 같은 올바른 권한이 구성되어 있는지 확인합니다.</block>
+  <block id="283d9532825369999cb3fabacaa592ac" category="list-text">다음과 같이 NFS 공유 경로를 Docker Compose 파일의 외부 볼륨에 대한 경로로 추가합니다. 형식:</block>
+  <block id="a194f6cf4dc27de5c5d3ed4b36cc309b" category="paragraph"><block ref="5590b61ca75eef1620ccfcead35f67fd" prefix="" category="inline-code"></block></block>
+  <block id="15062eb2e1e77d15ed0d106ac8c530b8" category="paragraph">예:<block ref="3877c15de52f32ab91ceeebe615e1ee1" prefix=" " category="inline-code"></block></block>
+  <block id="1a0aecc124b681c5351c79472ef6a6db" category="list-text"><block ref="3e39fe4d28b9a9d5f18f41a55b0725b8" prefix=" " category="inline-code"></block>폴더로 이동합니다.</block>
+  <block id="3d2e4eeeb956bf6b45ec5ac878efb9e4" category="paragraph">폴더에 다음 변수 파일이 표시됩니다.</block>
+  <block id="e5d545d828a9bcec1ba13e77aea61d15" category="list-text"><block ref="b5f9e43085599050738084372b6e118c" prefix="" category="inline-code"></block></block>
+  <block id="935f43837ab5913b0b20d03f1f629cdd" category="list-text"><block ref="c9ac8098c5ea9d3e6a9a596ff0c512a4" prefix="" category="inline-code"></block></block>
+  <block id="b10b322b96b589c3402bc7ad0bfba4cc" category="list-text">요구 사항에 따라 파일 내의 값을<block ref="b5f9e43085599050738084372b6e118c" prefix=" " category="inline-code"></block> 변경합니다.</block>
+  <block id="e789fee7876fa83156d8c98bbeb6f127" category="paragraph">파일의 변수 값을 수정할 때는 특정 지원 문서를 읽어야<block ref="b5f9e43085599050738084372b6e118c" prefix=" " category="inline-code"></block> 합니다. 값은 지역, 가용 영역 및 Cloud Volumes ONTAP for AWS에서 지원하는 기타 요인에 따라 달라질 수 있습니다. 여기에는 단일 노드에 대한 라이센스, 디스크 크기, VM 크기 및 고가용성(HA) 쌍이 포함됩니다.</block>
+  <block id="3fb2c016fa49bac3303eaec34d954144" category="paragraph">커넥터 및 Cloud Volumes ONTAP Terraform 모듈에 대한 모든 지원 변수가 파일에 이미 정의되어<block ref="c9ac8098c5ea9d3e6a9a596ff0c512a4" prefix=" " category="inline-code"></block> 있습니다. 파일에 추가하기 전에 파일의<block ref="b5f9e43085599050738084372b6e118c" prefix=" " category="inline-code"></block> 변수 이름을 참조해야<block ref="c9ac8098c5ea9d3e6a9a596ff0c512a4" prefix=" " category="inline-code"></block> 합니다.</block>
+  <block id="24fd5011eb6086c915eb6eb7c052f464" category="list-text">요구 사항에 따라 다음 옵션을 또는<block ref="68934a3e9455fa72420237eb05902327" prefix=" " category="inline-code"></block> 로 설정하여 FlexCache 및 FlexClone를 활성화하거나 비활성화할 수<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block> 있습니다.</block>
+  <block id="2d26bda51ed6b6c1343dbc83898511fa" category="paragraph">다음 예에서는 FlexCache 및 FlexClone를 사용합니다.</block>
+  <block id="a791d26e95a7543066f1215411f3e198" category="list-text"><block ref="7e64a2b0f580e2bb0e4092b9050c80a9" prefix="" category="inline-code"></block></block>
+  <block id="c66439a27001afb24f86dff64260d8d0" category="list-text"><block ref="195dd3fbf043d3bc4aa64f2903faafee" prefix="" category="inline-code"></block></block>
+  <block id="b1597526f2f04f45698bd283e02de400" category="section-title">6단계: AWS 환경을 위한 Cloud Volumes ONTAP를 구축합니다</block>
+  <block id="22c78f7ad6534907b06b548e72b969fe" category="paragraph">다음 단계에 따라 Cloud Volumes ONTAP for AWS를 구축하십시오.</block>
+  <block id="c513ca9a4cfd1f47bd8e3d1b65087c31" category="list-text">루트 폴더에서 다음 명령을 실행하여 배포를 트리거합니다.</block>
+  <block id="c94af3947355a642fb4b9e791480720a" category="paragraph">두 개의 컨테이너가 트리거되고 첫 번째 컨테이너가 Cloud Volumes ONTAP를 배포하며 두 번째 컨테이너가 원격 측정 데이터를 AutoSupport로 전송합니다.</block>
+  <block id="c09207e2e34e277460feaad7c4e413af" category="paragraph">두 번째 컨테이너는 첫 번째 컨테이너가 모든 단계를 성공적으로 완료할 때까지 대기합니다.</block>
+  <block id="a2a17553aa79d33c592684bb3dd2241e" category="list-text">로그 파일을 사용하여 배포 프로세스의 진행 상황을 모니터링합니다.</block>
+  <block id="c1f3663c97424660481f9cae6260cf7e" category="paragraph">이 명령은 실시간으로 출력을 제공하고 다음 로그 파일에 데이터를 캡처합니다.<block ref="ecb0093a5689314955e28495cd621753" prefix=" " category="inline-code"></block></block>
+  <block id="ae5f791e4facf4db8c45b04ff8181a54" category="paragraph"><block ref="cb5c149e6dfd332df9c42d156d8a5bf5" prefix="" category="inline-code"></block></block>
+  <block id="28b17baad4ccba3513402ae974cb8738" category="paragraph">다음 환경 변수를 사용하여 파일을 편집하여 이러한 로그 파일의 이름을 변경할 수<block ref="f579cccc964135c7d644c7b2d3b0d3ec" prefix=" " category="inline-code"></block> 있습니다.</block>
+  <block id="f0909a52755a160376099af766cbc78f" category="paragraph"><block ref="c5d1ae1057f05d40dd703a96c9da0064" prefix="" category="inline-code"></block></block>
+  <block id="3a04a6b4a8114b8076067c561a9c8634" category="paragraph"><block ref="354b0bf931af3ddcd894dc9861772396" prefix="" category="inline-code"></block></block>
+  <block id="77eccf81051f9619dd6c383e8451ecf1" category="paragraph">다음 예제에서는 로그 파일 이름을 변경하는 방법을 보여 줍니다.</block>
+  <block id="868d687be11f55726cb393815c0a97c8" category="paragraph"><block ref="9907078c7a7a5c629ebb236fd72acf2f" prefix="" category="inline-code"></block></block>
+  <block id="ca9b614d838e6ab43f124220eb65ecfa" category="paragraph"><block ref="69e253393eb5a75cee01dc64f5ccc88a" prefix="" category="inline-code"></block></block>
+  <block id="bd965e38a0c9cf27aa1bde099308e23f" category="paragraph-title">작업을 마친 후</block>
+  <block id="5f06879ec306c41acfb5daf594cdc322" category="paragraph">다음 단계에 따라 임시 환경을 제거하고 배포 프로세스 중에 만든 항목을 정리할 수 있습니다.</block>
+  <block id="13e00a7326a02dda84a8199ff8522864" category="list-text">FlexCache를 배포한 경우 변수 파일에서 다음 옵션을<block ref="b5f9e43085599050738084372b6e118c" prefix=" " category="inline-code"></block> 설정하면 FlexCache 볼륨이 정리되고 이전에 생성된 임시 환경이 제거됩니다.</block>
+  <block id="b0daaef681d22c99b9fb1e612a06a5a2" category="paragraph"><block ref="4baa594e2e77791216456fc2967e9123" prefix="" category="inline-code"></block></block>
+  <block id="d8d6e66d1218d547fb6fcd15ca9f03cc" category="admonition">가능한 옵션은 <block ref="078f40fa23e0672777adc7c05d4773dd" prefix=" " category="inline-code"></block>및<block ref="fb14982288108e1fbd6207ef55f05027" prefix=" " category="inline-code"></block>입니다.</block>
+  <block id="bb971a7068423c360afae4dd7661af1a" category="list-text">FlexClone를 배포한 경우 변수 파일에서 다음 옵션을<block ref="b5f9e43085599050738084372b6e118c" prefix=" " category="inline-code"></block> 설정하면 FlexClone 볼륨이 정리되고 이전에 생성된 임시 환경이 제거됩니다.</block>
+  <block id="17e54c96da836af03569986516f16bc7" category="paragraph"><block ref="a9d885708597a6229170ec5778eeff7a" prefix="" category="inline-code"></block></block>
+  <block id="085443c446415c0e8dfae8cfb8269629" category="admonition">가능한 옵션은<block ref="078f40fa23e0672777adc7c05d4773dd" prefix=" " category="inline-code"></block> 및<block ref="fb14982288108e1fbd6207ef55f05027" prefix=" " category="inline-code"></block>입니다.</block>
+  <block id="7d2c3c1ed5c6e6f809462f6397b24660" category="summary">이 자동화 솔루션을 사용하여 Terraform을 사용하여 Cloud Volumes ONTAP for Azure를 배포할 수 있습니다.</block>
+  <block id="e19943d1705ed16e36fb5b3a85dc2035" category="doc">Cloud Volumes ONTAP for Azure - 클라우드 사용 급증</block>
+  <block id="d4a0a8a5bbbee6db1cb9e06e8904ad42" category="paragraph">이 기사에서는 NetApp Cloud Volumes ONTAP for Azure Automation Solution을 지원하며, NetApp 고객은 BlueXP  자동화 카탈로그 에서 이용할 수 있습니다.</block>
+  <block id="fdf1da7025a12245364e391cff8fa55e" category="paragraph">Cloud Volumes ONTAP for Azure Automation 솔루션은 Terraform을 사용하여 Cloud Volumes ONTAP for Azure 컨테이너식 구축을 자동화하므로 수동 개입 없이 Azure용 Cloud Volumes ONTAP를 빠르게 배포할 수 있습니다.</block>
+  <block id="89f227d5fe904ef7a372dd0831cba23b" category="list-text">BlueXP  웹 UI를 통해 자동화 솔루션을 다운로드해야 <block ref="1ddb5ccfb0409f4b4310a1f2918594e3" category="inline-link-macro-rx"></block>합니다. 솔루션은 다음과 같이 패키지되어 있습니다.<block ref="c885be86fb876836f2cffef8e6f892c3" prefix=" " category="inline-code"></block></block>
+  <block id="c12e9e6aa9653bb2925f672aad5e2142" category="list-text"><block ref="c885be86fb876836f2cffef8e6f892c3" prefix=" " category="inline-code"></block>Cloud Volumes ONTAP를 배포하는 데 사용할 Linux VM에 폴더를 복사합니다.</block>
+  <block id="f6e6730d6997c7cec992891e4a1c8b0b" category="list-text"><block ref="5ff4fe5cb694d92583d391dd8529066d" prefix="" category="inline-code"></block> VM 사용자 이름입니다.</block>
+  <block id="e058c807e926d385e8f2c37c714fbfe0" category="list-text">폴더 압축을<block ref="c885be86fb876836f2cffef8e6f892c3" prefix=" " category="inline-code"></block> 풉니다. 현재 디렉터리나 사용자 지정 위치에서 폴더의 압축을 풀 수 있습니다.</block>
+  <block id="c7f1addae83f60eb21267becf5dea1e0" category="list-text">콘텐츠의 압축을 푼 후 폴더로<block ref="ea9df13e32359398d19d4196dfaf92a7" prefix=" " category="inline-code"></block> 이동하고 다음 명령을 실행하여 파일을 봅니다.</block>
+  <block id="b168f70e88cb4f49d4b3e0c7b1cd1dfa" category="list-text">파일을 찾습니다<block ref="a41388e75db0a56d2acb456bd9d6e37b" prefix=" " category="inline-code"></block>. Cloud Volumes ONTAP for Azure를 구축하는 데 필요한 Docker 이미지가 포함되어 있습니다.</block>
+  <block id="67d5e2ebef240ecc2ef42d0946157f14" category="paragraph">다음 예와 같이 태그와 함께<block ref="71ccb7a35a452ea8153b6d920f9f190e" prefix=" " category="inline-code"></block> 이름이 지정된 Docker 이미지가 표시됩니다<block ref="acf69c5b79bd41b1503b1d20a026c60b" prefix=" " category="inline-code"></block>.</block>
+  <block id="dd5960e7bffd99f7ee3b51e73670f175" category="paragraph">이 단계에서는 두 개의 환경 변수 파일을 만들어야 합니다. 한 파일은 서비스 사용자 자격 증명을 사용하여 Azure Resource Manager API를 인증하는 파일입니다. 두 번째 파일은 BlueXP  Terraform 모듈이 Azure API를 찾고 인증할 수 있도록 환경 변수를 설정하는 것입니다.</block>
+  <block id="4756c84ef3e46051e4d56ea0c6ae3e9d" category="list-text">서비스 보안 주체를 만듭니다.</block>
+  <block id="8574e8cb83343bdec6f5b86d21bfa16b" category="inline-link-macro">리소스에 액세스할 수 있는 Azure Active Directory 응용 프로그램 및 서비스 보안 주체를 만듭니다</block>
+  <block id="7d8b48ff4c2780be6cb609cf1ea71bdb" category="paragraph">환경 변수 파일을 만들려면 의 단계에 따라 서비스 보안 주체를 만들어야 <block ref="69db1b890a0765a504939c4d0eae8a36" category="inline-link-macro-rx"></block>합니다.</block>
+  <block id="af05d31ac013467a159a9675f1494b0b" category="list-text">새로 만든 서비스 사용자에게 * Contributor * 역할을 할당합니다.</block>
+  <block id="da08fbf09f81c35447b021d5ba6570ba" category="list-text">사용자 지정 역할을 만듭니다.</block>
+  <block id="7e2883875f0c47ed1504c2ff73a0959e" category="list-text"><block ref="613825aa03710312ab9dcfb50d31f1d1" prefix=" " category="inline-code"></block>파일을 찾아 나열된 작업 아래에서 필요한 권한을 확인합니다.</block>
+  <block id="30232e5cb1f7bdb808692b97dcaa9af4" category="list-text">이러한 권한을 삽입하고 사용자 지정 역할을 새로 만든 서비스 보안 주체에 연결합니다.</block>
+  <block id="44d682af238a9d605432564393f8ff8e" category="list-text">인증서 및 암호 * 로 이동하고 * 새 클라이언트 암호 * 를 선택하여 클라이언트 암호를 만듭니다.</block>
+  <block id="5149ee9771679036352bbe83445f0235" category="paragraph">클라이언트 암호를 만들 때 이 값을 다시 볼 수 없으므로 * 값 * 열의 세부 정보를 기록해야 합니다. 또한 다음 정보를 기록해야 합니다.</block>
+  <block id="76525f0f34b48475e5ca33f71d296f3b" category="list-text">클라이언트 ID입니다</block>
+  <block id="9bf79c7f10eadd0b612b8c354ad19bdc" category="list-text">구독 ID입니다</block>
+  <block id="7131a7a6bfe81200d21d5a33c64847b6" category="list-text">테넌트 ID입니다</block>
+  <block id="938983f3b962b074da554ec2dde5dc4c" category="paragraph">환경 변수를 생성하려면 이 정보가 필요합니다. 클라이언트 ID 및 테넌트 ID 정보는 서비스 사용자 UI의 * 개요 * 섹션에서 찾을 수 있습니다.</block>
+  <block id="b12b8124ed6df0323d47c3a8e0fb8339" category="list-text">환경 파일을 만듭니다.</block>
+  <block id="6f02aa9f8a6bd1269a82b1423fd7658a" category="list-text">다음 위치에 파일을 만듭니다<block ref="f347f541acdc7ffe7aaf353710c4c199" prefix=" " category="inline-code"></block>.</block>
+  <block id="c4b5e80f860790aa55733068a12557ca" category="paragraph"><block ref="6e707472edcb0598212b3be3cdad0ee6" prefix="" category="inline-code"></block></block>
+  <block id="f30fa1ee45dcce1d838fe347ed74ec39" category="paragraph">클라이언트 ID = &lt;&gt; clientSecret = &lt;&gt; 아래 첨자 ID = &lt;&gt; tenantId = &lt;&gt;</block>
+  <block id="ff2192fff6c8f023b72b92365182e240" category="paragraph">* 형식은 키와 값 사이에 공백을 제외하고 위에 표시된 것과 정확히 일치해야 합니다.</block>
+  <block id="e651887622096ee821bc34500ce4ad14" category="list-text">다음 위치에 파일을 만듭니다<block ref="b47b245422281b94869272778023ebcc" prefix=" " category="inline-code"></block>.</block>
+  <block id="d71ec0efcebd789bf788d8f4dd90c040" category="paragraph"><block ref="f1a6c8be075fc5d9e32025751ca4b563" prefix="" category="inline-code"></block></block>
+  <block id="dd878b546de6a3f87957f8884a3158a0" category="paragraph">Azure_Tenant_ID=&lt;&gt; Azure_client_secret=&lt;&gt; Azure_client_ID=&lt;&gt; Azure_subscription_ID=&lt;&gt;</block>
+  <block id="48df25e7372f846cd5fb45e094660427" category="list-text">절대 파일 경로를<block ref="f579cccc964135c7d644c7b2d3b0d3ec" prefix=" " category="inline-code"></block> 파일에 추가합니다.</block>
+  <block id="d5d4d66c8949c6e52027657a419ca18c" category="paragraph">환경 변수에 해당하는 파일에<block ref="a14dcc47dd67f15632978bb5b816e4c3" prefix=" " category="inline-code"></block> 환경 파일의<block ref="f579cccc964135c7d644c7b2d3b0d3ec" prefix=" " category="inline-code"></block> 절대 경로를 입력합니다<block ref="f347f541acdc7ffe7aaf353710c4c199" prefix=" " category="inline-code"></block>.</block>
+  <block id="ab12a0661762f3df9609da95580f5a25" category="paragraph"><block ref="da98aafd0446564054a74c778efdf4f0" prefix="" category="inline-code"></block></block>
+  <block id="65d5aaba759b969ac07758fa93ef2981" category="paragraph">환경 변수에 해당하는 파일에<block ref="d9b0717a1f49333f5743f1c418f98a3e" prefix=" " category="inline-code"></block> 환경 파일의<block ref="f579cccc964135c7d644c7b2d3b0d3ec" prefix=" " category="inline-code"></block> 절대 경로를 입력합니다<block ref="b47b245422281b94869272778023ebcc" prefix=" " category="inline-code"></block>.</block>
+  <block id="9551c07194db5add04408dcf9d4d7acf" category="paragraph"><block ref="585a7d6034855fee518db0083c875b49" prefix="" category="inline-code"></block></block>
+  <block id="115358289763fb9761317344e7b77a55" category="paragraph">Cloud Volumes ONTAP 라이선스를 BlueXP 에 추가하거나 Azure 마켓플레이스에서 NetApp BlueXP 에 가입할 수 있습니다.</block>
+  <block id="fc774a6f9a9bc37c66bbb04cf70cada4" category="list-text">Azure 포털에서 * SaaS * 로 이동하고 * Subscribe to NetApp BlueXP  * 를 선택합니다.</block>
+  <block id="dd7b8a7974111efbd549e4f54fc12e86" category="list-text">Cloud Manager(시간당 Cap PYGO, WORM 및 데이터 서비스 기준) * 계획을 선택합니다.</block>
+  <block id="5324339ba454f54b4d1c29a1bda97112" category="paragraph">Azure 포털에서 * 제품 및 계획 세부 정보 * 로 이동하고 * 지금 계정 구성 * 옵션을 선택하여 직접 구성할 수 있습니다.</block>
+  <block id="529559656bf7d5fc6d731f97dc3d9a18" category="paragraph">그런 다음 BlueXP  포털로 리디렉션되어 구성을 확인합니다.</block>
+  <block id="e6b1c26c73bcc445d9d2465d871ca623" category="paragraph"><block ref="02d1c3229f8cf2b68ce516c14597799f" prefix="" category="inline-code"></block></block>
+  <block id="3a27ce66bcd99829ec680c851e363a1e" category="paragraph">예:<block ref="f509563c40c925834f580e9269bb578f" prefix=" " category="inline-code"></block></block>
+  <block id="778c150d6dcb342c842f259bbbf4f078" category="paragraph"><block ref="78501e0409eec1c72d9cb57cf0fff414" prefix="" category="inline-code"></block></block>
+  <block id="3915199b6b9a0194835e4413ceca8cc9" category="paragraph">예:<block ref="23648d2651cf111587274985465b55fe" prefix=" " category="inline-code"></block></block>
+  <block id="c3ae6759e23ff9739c1af48f35676490" category="list-text"><block ref="45d65aaed11c172efc09beb2e1827680" prefix=" " category="inline-code"></block>폴더로 이동합니다.</block>
+  <block id="34c56ba854dc3d1f69e37339e3597af5" category="paragraph">폴더에 다음 변수 파일이 표시됩니다.</block>
+  <block id="bfe1388c9443f9e2a9584cacf3d38906" category="paragraph">파일의 변수 값을 수정할 때는 특정 지원 문서를 읽어야<block ref="b5f9e43085599050738084372b6e118c" prefix=" " category="inline-code"></block> 합니다. 값은 지역, 가용 영역 및 Cloud Volumes ONTAP for Azure에서 지원하는 기타 요인에 따라 달라질 수 있습니다. 여기에는 단일 노드에 대한 라이센스, 디스크 크기, VM 크기 및 고가용성(HA) 쌍이 포함됩니다.</block>
+  <block id="b81d0a8d18ff32d90c40581c2819c188" category="list-text">필요한 경우 Azure Active Directory 서비스에서 Terraform 변수의 값을 검색할 수 있습니다<block ref="d90d0c92bf7acb88d3f2d2e040d442a1" prefix=" " category="inline-code"></block>.</block>
+  <block id="3e3956907baaa7e42e65969a2549cd84" category="list-text">엔터프라이즈 애플리케이션 –&gt; 모든 애플리케이션 * 으로 이동하고 앞서 생성한 서비스 사용자 이름을 선택합니다.</block>
+  <block id="c91b4f0af93277281d14aded719f5cc1" category="list-text">객체 ID를 복사하고 Terraform 변수의 값을 삽입합니다.</block>
+  <block id="0ed54365d80c6cc6dd17763db8d74323" category="paragraph"><block ref="d90d0c92bf7acb88d3f2d2e040d442a1" prefix="" category="inline-code"></block></block>
+  <block id="75798b57349f1941756a680ee07a72fd" category="section-title">6단계: Azure용 Cloud Volumes ONTAP를 배포합니다</block>
+  <block id="a4c9ae864671c6db26a1b413d423c55d" category="paragraph">다음 단계에 따라 Azure용 Cloud Volumes ONTAP를 배포합니다.</block>
+  <block id="0e2bce33ef45726871a6e8e79943e6e1" category="paragraph">이 명령은 실시간으로 출력을 제공하고 다음 로그 파일에 데이터를 캡처합니다.</block>
+  <block id="98771aa4049dca5569244940caa12490" category="paragraph"><block ref="ecb0093a5689314955e28495cd621753" prefix="" category="inline-code"></block></block>
+  <block id="6741f7abf3aa6ef11e28ab2fc48d8716" category="list-text">FlexCache를 배포한 경우 파일에 다음 옵션을<block ref="b5f9e43085599050738084372b6e118c" prefix=" " category="inline-code"></block> 설정하면 FlexCache 볼륨이 지워지고 이전에 생성된 임시 환경이 제거됩니다.</block>
+  <block id="7ef493ae542ac9076ff2121ad70e93d1" category="list-text">FlexClone를 배포한 경우 파일에 다음 옵션을<block ref="b5f9e43085599050738084372b6e118c" prefix=" " category="inline-code"></block> 설정하면 FlexClone 볼륨이 지워지고 이전에 생성된 임시 환경이 제거됩니다.</block>
+  <block id="92e012e30683743460baae2798b7454e" category="summary">이 기사에서는 NetApp Cloud Volumes ONTAP for Google Cloud Automation 솔루션을 지원하며, NetApp 고객은 BlueXP  자동화 카탈로그 에서 이용할 수 있습니다.</block>
+  <block id="70d149d22386474d99caac533c68bb2c" category="paragraph">Google Cloud Automation용 Cloud Volumes ONTAP 솔루션은 Cloud Volumes ONTAP for Google Cloud를 컨테이너식으로 구축하여 수동 개입 없이 Google Cloud용 Cloud Volumes ONTAP를 빠르게 배포할 수 있도록 합니다.</block>
+  <block id="fb5a19b47f5459e975e6cc6ffbd55fcf" category="list-text">BlueXP  웹 UI를 통해 자동화 솔루션을 다운로드해야 <block ref="5bfe4bd3ce07304807e21420ac8726c8" category="inline-link-macro-rx"></block>합니다. 솔루션은 다음과 같이 패키지되어 있습니다.<block ref="3122a7091302712dc5048f11784a1882" prefix=" " category="inline-code"></block></block>
+  <block id="c1d4ac611e9e2f13ac71771c15839512" category="list-text">다음 명령을 실행하여 Docker를 설치합니다.</block>
+  <block id="2620ba84e9ee2d605267499de9ec8744" category="list-text"><block ref="3122a7091302712dc5048f11784a1882" prefix=" " category="inline-code"></block>Cloud Volumes ONTAP를 배포하는 데 사용할 Linux VM에 폴더를 복사합니다.</block>
+  <block id="e047207feed5047a9ff3f134f8ae8321" category="list-text"><block ref="375fec901ac1e8809111e0226ae2a5c4" prefix="" category="inline-code"></block> VM 사용자 이름입니다.</block>
+  <block id="681c4ae20b42bf3728670d4a787eb84e" category="list-text">폴더 압축을<block ref="3122a7091302712dc5048f11784a1882" prefix=" " category="inline-code"></block> 풉니다. 현재 디렉터리나 사용자 지정 위치에서 폴더의 압축을 풀 수 있습니다.</block>
+  <block id="4f45e1e98187e625cd06bdf1ffcde462" category="list-text">콘텐츠를 추출한 후 다음 명령을 실행하여 파일을 봅니다.</block>
+  <block id="466c902cf97ef9a5ab8173d37ce3d506" category="list-text">파일을 찾습니다<block ref="38a8a3d51d0b479771f0513bd2b7ed6d" prefix=" " category="inline-code"></block>. Cloud Volumes ONTAP for Google Cloud를 구축하는 데 필요한 Docker 이미지가 포함되어 있습니다.</block>
+  <block id="b9152045b1db31914d123f1f9c1a399d" category="paragraph">다음 예와 같이 태그와 함께<block ref="71ccb7a35a452ea8153b6d920f9f190e" prefix=" " category="inline-code"></block> 이름이 지정된 Docker 이미지가 표시됩니다<block ref="8236710f6b62c27a24080753638685cb" prefix=" " category="inline-code"></block>.</block>
+  <block id="f9a153283596e6c7e8753cacd765f1fc" category="section-title">단계 3: JSON 파일을 업데이트합니다</block>
+  <block id="42ce67a66fde45352e3db41a1a57d54b" category="paragraph">이 단계에서는 Google Cloud 공급자를 인증하기 위해 서비스 계정 키로 파일을 업데이트해야<block ref="af92bf6bf5f4928b321d7738a6068dd1" prefix=" " category="inline-code"></block> 합니다.</block>
+  <block id="b1f47b1cf9db709b4fec668b6c9f071c" category="inline-link-macro">서비스 계정 만들기에 대해 자세히 알아보십시오.</block>
+  <block id="89cda20d6e97cfeb4f5d372a42e68a56" category="list-text">Cloud Volumes ONTAP 및 BlueXP  커넥터를 배포할 수 있는 권한이 있는 서비스 계정을 만듭니다. <block ref="c2b6aba427b8cb58071597c60cc5709a" category="inline-link-macro-rx"></block></block>
+  <block id="fbcb4d651023bd547106a64a43f3c29b" category="list-text">계정의 키 파일을 다운로드하고 주요 파일 정보로 파일을 업데이트합니다<block ref="af92bf6bf5f4928b321d7738a6068dd1" prefix=" " category="inline-code"></block>. <block ref="af92bf6bf5f4928b321d7738a6068dd1" prefix=" " category="inline-code"></block>파일이<block ref="f377976945af1ad2c6e2801d01115448" prefix=" " category="inline-code"></block> 폴더에 있습니다.</block>
+  <block id="0a52730597fb4ffa01fc117d9e71e3a9" category="listing-title">예</block>
+  <block id="81904f89da8f471c6d21a35183df68b0" category="paragraph">파일 형식은 위에 표시된 것과 정확히 일치해야 합니다.</block>
+  <block id="065049e1e2c0df20f3148f5d46462d11" category="section-title">4단계: BlueXP 에 가입합니다</block>
+  <block id="ffcc69297f0e07a9e942b6631079ad1b" category="paragraph">Google Cloud 마켓플레이스에서 NetApp BlueXP 을 구독할 수 있습니다.</block>
+  <block id="b6c8b93a52d1fa156e7be803518b8c9a" category="inline-link-macro">Google Cloud 콘솔</block>
+  <block id="5f2574b27d98802030b4c26a3135e1b7" category="list-text">로 <block ref="9e380fd6b80c64d2f38ea11babc2a93b" category="inline-link-macro-rx"></block>이동하여 * NetApp BlueXP 에 가입 * 을 선택합니다.</block>
+  <block id="26514414412b5fd8cd03fe7fe2e9adf6" category="paragraph">이 구성은 Google Cloud Platform에서 직접 구성할 수 있습니다. 구성을 확인하기 위해 BlueXP  포털로 리디렉션됩니다.</block>
+  <block id="f691281f53b81c9f5d73a97dc7c334fd" category="inline-link-macro">BlueXP용 Google Cloud 자격 증명 및 구독을 관리합니다</block>
+  <block id="9b64915299dcdbacf95e82a84ddd599c" category="paragraph">자세한 내용은 을 <block ref="671ef92e8206128f563d24d2bbbcdfc6" category="inline-link-macro-rx"></block>참조하십시오.</block>
+  <block id="d601067f56f2e95e5bf3179dcc7e13f9" category="section-title">5단계: 필요한 Google Cloud API를 활성화합니다</block>
+  <block id="ff14c8d55e1e81c87ceda218290d4821" category="paragraph">Cloud Volumes ONTAP 및 Connector를 배포하려면 프로젝트에서 다음 Google Cloud API를 활성화해야 합니다.</block>
+  <block id="d82c8fcef9b6dd8fb6808c96dcbc5bb5" category="list-text">Cloud Deployment Manager V2 API</block>
+  <block id="1439ef482dee1b1e4b2daac93de36c44" category="list-text">클라우드 로깅 API</block>
+  <block id="9e636409b20980fb5089c87705851b4d" category="list-text">Cloud Resource Manager API를 참조하십시오</block>
+  <block id="1101b09020ade12e90a562489e315c8d" category="list-text">컴퓨팅 엔진 API</block>
+  <block id="71660685d00034957db3f9a31c160978" category="list-text">IAM(Identity and Access Management) API</block>
+  <block id="c4a2f53e2e855fe1a931c14e79ff748f" category="inline-link-macro">API 사용에 대해 자세히 알아보십시오</block>
+  <block id="9a4933dab62c28def309db02f8334811" category="paragraph"><block ref="9a4933dab62c28def309db02f8334811" category="inline-link-macro-rx"></block></block>
+  <block id="5c7a8eac17283ba8c069e778aa4a2353" category="section-title">6단계: 외부 볼륨을 만듭니다</block>
+  <block id="ec41e24cd982172090f6487971825486" category="paragraph">Terraform 상태 파일 및 기타 중요한 파일을 영구적으로 유지하려면 외부 볼륨을 만들어야 합니다. Terraform에서 워크플로 및 배포를 실행하려면 파일을 사용할 수 있는지 확인해야 합니다.</block>
+  <block id="523c9460d099acb848d91f07f3d24754" category="paragraph"><block ref="23ef7fcdbc191ce4ed60a464dae052aa" prefix="" category="inline-code"></block></block>
+  <block id="cb619db2ca2bdbda88b47be68b437af9" category="paragraph">예:<block ref="b78d0db204b814e3205132ba8471f78e" prefix=" " category="inline-code"></block></block>
+  <block id="86a625a2eed126582e80b8c0423622a5" category="paragraph"><block ref="00d628aa5c57c6446f45d49cac66e210" prefix="" category="inline-code"></block></block>
+  <block id="aa2402dda06933a599b24c463de8fc2e" category="paragraph">예:<block ref="f81460ac35b80a183d9ac2432c366f0f" prefix=" " category="inline-code"></block></block>
+  <block id="b002c5630e4c947461f3d458820e8e5e" category="list-text"><block ref="f377976945af1ad2c6e2801d01115448" prefix=" " category="inline-code"></block>폴더로 이동합니다.</block>
+  <block id="6c3d77c0ba95eace73701b123d7d9be6" category="paragraph">폴더에 다음 파일이 표시됩니다.</block>
+  <block id="7373b50406798190e26a2e832c7ad6f4" category="paragraph">파일의 변수 값을 수정할 때는 특정 지원 문서를 읽어야<block ref="b5f9e43085599050738084372b6e118c" prefix=" " category="inline-code"></block> 합니다. 값은 지역, 가용 영역 및 Cloud Volumes ONTAP for Google Cloud에서 지원하는 기타 요인에 따라 달라질 수 있습니다. 여기에는 단일 노드에 대한 라이센스, 디스크 크기, VM 크기 및 고가용성(HA) 쌍이 포함됩니다.</block>
+  <block id="2fb90271c759d19e087baa9b216a5221" category="section-title">7단계: Google Cloud용 Cloud Volumes ONTAP를 배포합니다</block>
+  <block id="78987e3939dc92928d12fd92823e2a80" category="paragraph">다음 단계에 따라 Google Cloud용 Cloud Volumes ONTAP를 구축하십시오.</block>
+  <block id="2180e03803676ed25b3cac70a6100443" category="summary">이 자동화 솔루션을 사용하여 볼륨 및 관련 FlexCache에 Amazon FSx for NetApp ONTAP을 프로비저닝할 수 있습니다.</block>
+  <block id="4a56403c32c948e8f251c29bddd22609" category="admonition">Amazon FSx for NetApp ONTAP는 * FSx for ONTAP * 라고도 합니다.</block>
+  <block id="f031372e35714d1e925dfc1451a4dbee" category="list-text">대상 FSx for ONTAP 파일 시스템을 프로비저닝합니다</block>
+  <block id="54da27626cf7b1185f954edeb0f8aee9" category="list-text">파일 시스템에 대한 SVM(Storage Virtual Machine)을 프로비저닝합니다</block>
+  <block id="e8f2e9290ff73ca9340d8c33cd025ef2" category="list-text">소스 시스템과 타겟 시스템 간에 클러스터 피어링 관계를 생성합니다</block>
+  <block id="a9fd96236b32a7953a7257de1b7acfa5" category="list-text">소스 시스템과 FlexCache용 타겟 시스템 간에 SVM 피어링 관계를 생성합니다</block>
+  <block id="e10694b23ab3a6cda3acf14535694230" category="list-text">선택적으로 FSx for ONTAP를 사용하여 FlexVol 볼륨을 생성합니다</block>
+  <block id="30a0e039abe0e6915900958cfc9a66ac" category="list-text">온프레미스 스토리지를 가리키는 FlexCache 볼륨을 FSx for ONTAP에서 생성합니다</block>
+  <block id="6ea161ba14b946634c32e79f22a5283a" category="paragraph">자동화는 아래 설명과 같이 Linux 가상 머신에 설치해야 하는 Docker 및 Docker Compose를 기반으로 합니다.</block>
+  <block id="09275d882e41e4724e4e23aa722475d2" category="paragraph">프로비저닝 및 구성을 완료하려면 다음이 있어야 합니다.</block>
+  <block id="62262322522d94d533310fe97363ebca" category="list-text">BlueXP  웹 UI를 통해 자동화 솔루션을 다운로드해야<block ref="008001527290ebd3bc25df4cac35bcaf" category="inline-link-rx"></block> 합니다. 솔루션은 파일로 패키지됩니다.<block ref="e2e5a273eb632b27931109b94363bfa4" prefix=" " category="inline-code"></block></block>
+  <block id="7d0450eaaf9623244d38bd6d4628c3f7" category="list-text">소스 시스템과 대상 시스템 간의 네트워크 연결</block>
+  <block id="9e21305b31d9f067e02bcff89baf7413" category="list-text">데비안 기반 리눅스 배포판</block>
+  <block id="2ce89591e385788ef7048bb31059c087" category="list-text">FSx for ONTAP 프로비저닝에 사용되는 동일한 VPC 서브셋에 구축됩니다</block>
+  <block id="b9de3fae9c5a76a62363013a9788ca02" category="list-text">AWS 계정.</block>
+  <block id="d8750f31afc325726074aab0a9895b0b" category="paragraph">데비안 기반 Linux 가상 머신에 Docker를 설치하고 구성합니다.</block>
+  <block id="a685a0e8f5d9e33244117ebbb1597f65" category="list-text">환경을 준비합니다.</block>
+  <block id="1e55e69d806f234dd3bb4e97d2b1014d" category="list-text">Docker를 설치하고 설치를 확인합니다.</block>
+  <block id="161b6b633ce732d5453fce927318e4de" category="section-title">2단계: Docker 구성 설치</block>
+  <block id="87a139cb423c279d0e83a45db55695f0" category="paragraph">Docker Compose를 데비안 기반 Linux 가상 머신에 설치합니다.</block>
+  <block id="fc97618a162a28f8a16700252994245d" category="list-text">Docker Compose를 설치합니다.</block>
+  <block id="1066a778d893ab2a450bad93e96ff7f6" category="list-text">설치가 성공적으로 완료되었는지 확인합니다.</block>
+  <block id="59bd66df580d523ff75f2f14d71cbfba" category="section-title">3단계: Docker 이미지 준비</block>
+  <block id="1583e6f28b5a94010ccbff4b211cf164" category="list-text">자동화 코드가 실행될 가상 머신에 솔루션 파일을<block ref="e2e5a273eb632b27931109b94363bfa4" prefix=" " category="inline-code"></block> 복사합니다.</block>
+  <block id="a9cee25f8101a0b7e8bc418e553db115" category="paragraph">input 매개 변수는<block ref="043160dcb5097e884764ebf29a002108" prefix=" " category="inline-code"></block> AWS 가상 머신 인증(EC2 인스턴스)에 사용되는 개인 키 파일입니다.</block>
+  <block id="5bf6ad91952b7b410f614bf4f47ee74d" category="list-text">압축 풀기 작업으로 생성된 새 폴더로<block ref="804b3b576c8aedfaa09cc28be60f1097" prefix=" " category="inline-code"></block> 이동하여 파일을 나열합니다. 파일을 볼 수<block ref="7f21d511f3ea5ac118017dac851e5a60" prefix=" " category="inline-code"></block> 있습니다.</block>
+  <block id="031ddc5e28574d7beef407bb3a376abb" category="paragraph">Docker<block ref="81c70cfb21f45bc2a3c41f0d2ed0003c" prefix=" " category="inline-code"></block> 이미지와 태그가<block ref="71ccb7a35a452ea8153b6d920f9f190e" prefix=" " category="inline-code"></block>표시됩니다.</block>
+  <block id="bea5b0eda245fd21f1bd3174f88309f6" category="section-title">4단계: AWS 자격 증명에 대한 환경 파일을 생성합니다</block>
+  <block id="85ab87e6125fceec8f3f9e633f04a9fd" category="paragraph">액세스 및 비밀 키를 사용하여 인증할 로컬 변수 파일을 만들어야 합니다. 그런 다음 파일을<block ref="f579cccc964135c7d644c7b2d3b0d3ec" prefix=" " category="inline-code"></block> 파일에 추가합니다.</block>
+  <block id="873ad79df92c6b0df440ed58e44300b5" category="paragraph">형식은 * 와(과<block ref="2063c1608d6e0baf80249c42e2be5804" prefix=" " category="inline-code"></block>) 사이의 공백을 제외하고 위에 표시된 것과 정확히<block ref="3c6e0b8a9c15224a8228b9a98ca1531d" prefix=" " category="inline-code"></block> 일치해야 합니다.</block>
+  <block id="423e06db3953a640c8e0c5ab2eb01548" category="list-text">변수를 사용하여 절대 파일 경로를 파일에<block ref="b27e63237977193bd02ece4d310f350d" prefix=" " category="inline-code"></block> 추가합니다<block ref="f579cccc964135c7d644c7b2d3b0d3ec" prefix=" " category="inline-code"></block>. 예를 들면 다음과 같습니다.</block>
+  <block id="700069552231d0e34cbcaa73f9eeb396" category="paragraph">명령을 실행하기 전에 볼륨 이름(마지막 매개 변수)을 적절한 값으로 업데이트해야 합니다.</block>
+  <block id="08ca2d9e8619b21704ee99b0a0e48780" category="paragraph"><block ref="3fb369c4eb9902db9fb4d00dde0037b9" prefix="" category="inline-code"></block></block>
+  <block id="304b5291bcb766f7317eb5ae2bdd4019" category="paragraph">대신 다음과 같은 명령을 사용하여 NFS 공유를 외부 볼륨으로 추가할 수 있습니다.</block>
+  <block id="60bb8f59340b0540e615ba401eb6f342" category="paragraph"><block ref="42b28ae88d0c406dc3dd7176c2a9b744" prefix="" category="inline-code"></block></block>
+  <block id="c8aec0081255af21649b84533e594b33" category="list-text">폴더로<block ref="b148c96a50867a6f53a047e40dd52f0f" prefix=" " category="inline-code"></block>이동합니다.</block>
+  <block id="dfaffc9af3fdd1bca808fa0c6e5d7a71" category="inline-link">Terraform 리소스: AWS_FSX_ONTAP_FILE_SYSTEM</block>
+  <block id="4ba7a7578e05d12d7f279565f5f83301" category="paragraph">자세한 내용은 을<block ref="9b30e1cf19d336589953be1634689dbb" category="inline-link-rx"></block> 참조하십시오.</block>
+  <block id="3a8fcfd918302105b53502e9b246954c" category="section-title">6단계: Amazon FSx for NetApp ONTAP 및 FlexCache 프로비저닝</block>
+  <block id="20914d72ffe8f6cd37a7498b6c69ee4d" category="paragraph">Amazon FSx for NetApp ONTAP 및 FlexCache를 프로비저닝할 수 있습니다.</block>
+  <block id="734d8f47d8017558876620cba1f85ef8" category="list-text">폴더 루트(AWS_FSXN_BTC)로 이동하여 provisioning 명령을 실행합니다.</block>
+  <block id="232a9206f868eb2f8bf150cfcafac72e" category="paragraph">이 명령은 두 개의 컨테이너를 만듭니다. 첫 번째 컨테이너에서 FSx for ONTAP를 구축하고 두 번째 컨테이너에서 클러스터 피어링, SVM 피어링, 타겟 볼륨 및 FlexCache를 생성합니다.</block>
+  <block id="b121988a991077eff9b8fab3833d17c9" category="list-text">프로비저닝 프로세스를 모니터링합니다.</block>
+  <block id="6a5c4fa24efdb93a23ec6867c1681a70" category="paragraph">이 명령은 실시간으로 출력을 제공하지만 파일을 통해 로그를 캡처하도록<block ref="ecb0093a5689314955e28495cd621753" prefix=" " category="inline-code"></block> 구성되었습니다. 파일을 편집하고 변수를 업데이트하여<block ref="c5d1ae1057f05d40dd703a96c9da0064" prefix=" " category="inline-code"></block> 이러한 로그 파일의 이름을 변경할 수<block ref="f579cccc964135c7d644c7b2d3b0d3ec" prefix=" " category="inline-code"></block> 있습니다.</block>
+  <block id="2f7df027134d1eac67df16674e7de843" category="section-title">7단계: Amazon FSx for NetApp ONTAP 및 FlexCache를 폐기합니다</block>
+  <block id="65e99bdb541de0d7f87a527201891f0c" category="paragraph">필요에 따라 Amazon FSx for NetApp ONTAP 및 FlexCache을 삭제하고 제거할 수 있습니다.</block>
+  <block id="df00ee6e5793390a9bf8499863d1b627" category="list-text"><block ref="b5f9e43085599050738084372b6e118c" prefix=" " category="inline-code"></block>파일의 변수를<block ref="5d5e8f80b073e02bba21ac9d801fc018" prefix=" " category="inline-code"></block> "destroy"로 설정합니다.</block>
+  <block id="b09bcceed36b91fd5e644ee4cb5cdf12" category="list-text">루트 폴더(AWS_FSXN_BTC)로 이동하여 다음 명령을 실행합니다.</block>
+  <block id="eb4ca443b43911bd41a972146ea8aeb9" category="paragraph">이 명령은 두 개의 컨테이너를 만듭니다. 첫 번째 컨테이너에서 FlexCache을 삭제하고 두 번째 컨테이너에서 FSx for ONTAP을 삭제합니다.</block>
+  <block id="22c8fb002c798abcdaf4fdfd18455233" category="summary">이 자동화 솔루션을 사용하면 Amazon FSx for NetApp ONTAP을 사용하여 소스 시스템의 재해 복구 백업을 수행할 수 있습니다.</block>
+  <block id="f4ee6b957e5f8546975ddd27ba00b1bd" category="list-text">소스 시스템과 SnapMirror용 타겟 시스템 간에 SVM 피어링 관계를 생성합니다</block>
+  <block id="2f061612da9689d76bf56673168e2297" category="list-text">대상 볼륨을 생성합니다</block>
+  <block id="dbb08ca779fd51a560153cc09df81650" category="list-text">소스 볼륨 및 타겟 볼륨 간에 SnapMirror 관계를 생성합니다</block>
+  <block id="eeaef5d40a1542106e9663a57c6482dc" category="list-text">소스 볼륨과 타겟 볼륨 간에 SnapMirror 전송을 시작한다</block>
+  <block id="f71e567e0fe1a0701e68250c9840e0f6" category="list-text">BlueXP  웹 UI를 통해 자동화 솔루션을 다운로드해야<block ref="c208e09af5b3f1aa2f6ca7adecbcd891" category="inline-link-rx"></block> 합니다. 솔루션은 다음과 같이 패키지되어 있습니다.<block ref="d588083a4963fc0f1cdbef6c659ba457" prefix=" " category="inline-code"></block> 이 zip에는 이 문서에 설명된 솔루션을 배포하는 데 사용할 파일이 포함되어<block ref="b0de125824ad7cd9060627a012eaff36" prefix=" " category="inline-code"></block> 있습니다.</block>
+  <block id="ab09fa6df19fb24ca880041bdb3f02ab" category="list-text">AWS 계정.</block>
+  <block id="b2d8334d3cf3b13276df502c705f15fb" category="paragraph">먼저 Linux 시스템에 * docker * 그룹이 있는지 확인하십시오. 그룹이 없는 경우 그룹을 만들고 사용자를 추가합니다. 기본적으로 현재 셸 사용자가 그룹에 추가됩니다.</block>
+  <block id="7635c17776cd29c2e15ffd362c18e458" category="list-text">자동화 코드가 실행될 가상 머신에 솔루션 파일을<block ref="b0de125824ad7cd9060627a012eaff36" prefix=" " category="inline-code"></block> 복사합니다.</block>
+  <block id="4f54d55f70d6f1d62f43648351d5c5dd" category="list-text">압축 풀기 작업으로 생성된 새 폴더로<block ref="f7aff7c7618f7ee27560577fe98c2833" prefix=" " category="inline-code"></block> 이동하여 파일을 나열합니다. 파일을 볼 수<block ref="fe7ff676a12aed3dc13a09258ef628d6" prefix=" " category="inline-code"></block> 있습니다.</block>
+  <block id="cc2fa4c7352d39d9795e3542476310c9" category="paragraph">Docker<block ref="e7562d34ac9593df3f0c93af6aa7b455" prefix=" " category="inline-code"></block> 이미지와 태그가<block ref="71ccb7a35a452ea8153b6d920f9f190e" prefix=" " category="inline-code"></block>표시됩니다.</block>
+  <block id="f785d2a0081b2bce36e7fe1271cc703d" category="paragraph"><block ref="92324740c7590fac3dbf74d6249765f1" prefix="" category="inline-code"></block></block>
+  <block id="29b9385593b2b1db0f42dd84ee0368a4" category="section-title">6단계: 백업 솔루션을 배포합니다</block>
+  <block id="2b046f31ccf6a832feec7ccc6d559ba7" category="paragraph">재해 복구 백업 솔루션을 배포하고 프로비저닝할 수 있습니다.</block>
+  <block id="ae02081afe9376facc1c24f22653d5ea" category="list-text">루트 폴더(AWS_FSxN_Bck_Prov)로 이동하여 provisioning 명령을 실행합니다.</block>
+  <block id="5f8f895f15cbad16f2c5089a5d5bbac7" category="paragraph">이 명령은 세 개의 컨테이너를 만듭니다. 첫 번째 컨테이너에서 FSx for ONTAP을 구축합니다. 두 번째 컨테이너는 클러스터 피어링, SVM 피어링 및 대상 볼륨을 생성합니다. 세 번째 컨테이너에서 SnapMirror 관계를 생성하고 SnapMirror 전송을 시작합니다.</block>
+  <block id="3a60832c3a8b212f3149f020ee5f00e0" category="summary">요구사항에 맞게 ONTAP Day 0/1 솔루션을 사용자 정의하려면 Ansible 역할을 추가하거나 변경할 수 있습니다.</block>
+  <block id="a39db44ed3ee84ca1e655864af327c3e" category="doc">ONTAP Day 0/1 솔루션을 사용자 지정합니다</block>
+  <block id="e519ebda2f8e2f99e9eccd1619f73b70" category="paragraph">역할은 Ansible 프레임워크 내의 마이크로서비스를 나타냅니다. 각 마이크로서비스는 하나의 작업을 수행합니다. 예를 들어 ONTAP Day 0은 여러 마이크로서비스를 포함하는 서비스입니다.</block>
+  <block id="5f7cdbeb93ee6dbc2da088eaf5272b60" category="section-title">Ansible 역할을 추가합니다</block>
+  <block id="9792cb53e29ccfe60864042b000be1d6" category="paragraph">Ansible 역할을 추가하여 환경에 맞게 솔루션을 사용자 지정할 수 있습니다. 필수 역할은 Ansible 프레임워크 내의 서비스 정의에 의해 정의됩니다.</block>
+  <block id="a4c415112930d2714fbb9cd04e95cc02" category="paragraph">마이크로서비스로 사용하려면 역할이 다음 요구 사항을 충족해야 합니다.</block>
+  <block id="fde86c0e208385fd48041a1c96807460" category="list-text">변수의 인수 목록을 수락합니다<block ref="a956af09162870af6ce4ebe0f12ccaf8" prefix=" " category="inline-code"></block>.</block>
+  <block id="853bdd8adea7e8a24dfdf6a209c707fc" category="list-text">각 블록에 대한 특정 요구 사항이 있는 Ansible "블록, 구조, 항상" 구조를 사용합니다.</block>
+  <block id="612e6816ac28fd812b5a75965bcd8cff" category="list-text">단일 Ansible 모듈을 사용하여 블록 내의 단일 작업을 정의합니다.</block>
+  <block id="de506dee9c2ba21aa15fcdf0c6f5e1c8" category="list-text">이 섹션에 설명된 요구 사항에 따라 사용 가능한 모든 모듈 매개 변수를 구현합니다.</block>
+  <block id="a748d0bfc8e8beaa635093f03194c9ca" category="paragraph-title">필수 마이크로서비스 구조</block>
+  <block id="f99f3d12f5810dc19a13a174d710f42d" category="paragraph">각 역할은 다음 변수를 지원해야 합니다.</block>
+  <block id="20e6dc62b50f7c05457523951458f137" category="list-text"><block ref="15d61712450a686a7f365adf4fef581f" prefix="" category="inline-code"></block>: 모드가 역할로 설정된 경우<block ref="098f6bcd4621d373cade4e832627b4f6" prefix=" " category="inline-code"></block> 을(를) 가져오려고 시도하면<block ref="d894ed67e2008e18887400a33f7d82b3" prefix=" " category="inline-code"></block> 실제로 해당 역할이 실행되지 않고 어떤 작업을 수행하는지를 보여줍니다.</block>
+  <block id="ae7003ac7a09f4e5c1fb23855df75426" category="admonition">특정 상호 의존성 때문에 이를 항상 구현할 수는 없습니다.</block>
+  <block id="9a9837c4ea5cfa11237d274bceb29741" category="list-text"><block ref="9acb44549b41563697bb490144ec6258" prefix="" category="inline-code"></block>: Playbook 실행의 전반적인 상태. 값이 역할로 설정되지 않으면<block ref="260ca9dd8a4577fc00b7bd5810298076" prefix=" " category="inline-code"></block> 실행되지 않습니다.</block>
+  <block id="289d7b4bb2feab502d9a212b42c3f1ab" category="list-text"><block ref="a956af09162870af6ce4ebe0f12ccaf8" prefix="" category="inline-code"></block> : 역할 매개 변수 이름과 일치하는 키가 있는 역할별 사전 목록입니다.</block>
+  <block id="8ff5878883120865a2941e0cf77da607" category="list-text"><block ref="87d8e5afbdd7faa9a2b44f295592971e" prefix="" category="inline-code"></block>: 플레이북 실행 중 로그 메시지를 수집합니다. 역할이 실행될 때마다 하나의 항목이 생성됩니다.</block>
+  <block id="b981ebb97f66df09ada4ee7fe994d8a6" category="list-text"><block ref="29e2220ac62f78edcd3a3d7ed0b894e7" prefix="" category="inline-code"></block>: 항목 내에서 역할을 참조하는 데 사용되는 이름입니다<block ref="87d8e5afbdd7faa9a2b44f295592971e" prefix=" " category="inline-code"></block>.</block>
+  <block id="706e8ac67577228b7301f337c05d5a4c" category="list-text"><block ref="ed67d6416808c5142fcb0f0db0f273cd" prefix="" category="inline-code"></block>: 역할에 대한 간단한 설명입니다.</block>
+  <block id="aca98bf9e54f0ede5f65c9ebc282b285" category="list-text"><block ref="e2641a3869c87d3c55be62d8e27bf2ec" prefix="" category="inline-code"></block>: 각 역할이 실행되는 시간을 추적하는 데 사용되는 타임 스탬프입니다.</block>
+  <block id="b009de5267784e1110b6d73ff7e5b7a5" category="list-text"><block ref="77a7926065db32b18bfdba747eb7ba4f" prefix="" category="inline-code"></block>: Ansible 플레이북의 상태.</block>
+  <block id="7167aa2942be3244d7682117b5024474" category="list-text"><block ref="b9b72b2d657acc4011b17d4e3538cb6a" prefix="" category="inline-code"></block>: 역할 출력을 포함하고 항목 내의 각 메시지에 포함되는 변수입니다.<block ref="87d8e5afbdd7faa9a2b44f295592971e" prefix=" " category="inline-code"></block></block>
+  <block id="1284b4625c389dc1b799e9bf9797893f" category="section-title">역할 구조의 예</block>
+  <block id="a461ddc90e22526056d19b7d7c3b5c9b" category="paragraph">다음 예제에서는 마이크로서비스를 구현하는 역할의 기본 구조를 제공합니다. 이 예제에서는 설정을 위해 변수를 변경해야 합니다.</block>
+  <block id="6015ee0c3c4dbc37f534783a65239e72" category="example-title">예제 보기</block>
+  <block id="986565251a5990a48b0de976914c9096" category="paragraph">기본 역할 구조:</block>
+  <block id="0f117eeba57be664f9a6c864330a9c1a" category="list-title">예제 역할에 사용되는 변수:</block>
+  <block id="acde94a0a700ea5f58a8fcc3b8d78626" category="list-text"><block ref="244f00a3349fd07fa67e97687a6da12c" prefix="" category="inline-code"></block>: 각 마이크로서비스에 대해 제공되어야 하는 대체 가능한 값입니다.</block>
+  <block id="32496e6f80092291104d27c1e90558a9" category="list-text"><block ref="56eeefca8463ee1da9f9b0eba1c6175c" prefix="" category="inline-code"></block>: 로깅 목적으로 사용되는 역할의 짧은 형식 이름입니다. <block ref="afe6113beecc2e4b6d286b1e804a6a33" prefix=" " category="inline-code"></block>예를 들어,</block>
+  <block id="e0a3b145d88b714c50323406ae15a92c" category="list-text"><block ref="deb4d3f15e76769fb73b181140196dc2" prefix="" category="inline-code"></block>: 마이크로 서비스가 수행하는 작업에 대한 간략한 설명.</block>
+  <block id="a2fefb64f669ce7b58d5e1da02ec0c98" category="list-text"><block ref="430ff63a80ab0e4a3320ca6508a37b7f" prefix="" category="inline-code"></block>: 작업에 대한 Ansible 모듈 이름.</block>
+  <block id="6b77599ae9c0d693379047b3d7feac8b" category="admonition">최상위<block ref="ca380769ec32e06471564ff621abee10" prefix=" " category="inline-code"></block> Playbook에서<block ref="4642aad555bac9e7c3ceacc049add95a" prefix=" " category="inline-code"></block> 컬렉션을 지정합니다. 모듈이 컬렉션의 일부인 경우<block ref="4642aad555bac9e7c3ceacc049add95a" prefix=" " category="inline-code"></block> 모듈 이름을 완전히 지정할 필요가 없습니다.</block>
+  <block id="1b3b183ab186bc2a94760b8c3e2a81ba" category="list-text"><block ref="1b527b09eaa84948eb79a1abe367c022" prefix="" category="inline-code"></block>: 마이크로 서비스를 구현하는 데 사용되는 모듈에 고유한 Ansible 모듈 매개 변수입니다. 다음 목록에서는 매개 변수 유형과 매개 변수를 그룹화하는 방법을 설명합니다.</block>
+  <block id="17fc137b5ff827b9eefa4695248573aa" category="list-text">필수 매개변수: 모든 필수 매개변수는 기본값 없이 지정됩니다.</block>
+  <block id="9a5f377982427a95d81521189b77053b" category="list-text">마이크로서비스에 고유한 기본값을 갖는 매개 변수(모듈 설명서에 지정된 기본값과 다름)</block>
+  <block id="655959bde6a9d49a2baf7033bcefd581" category="list-text">나머지 모든 매개 변수는<block ref="f78c4f59c75aec8866555b66ada905fb" prefix=" " category="inline-code"></block> 기본값으로 사용됩니다.</block>
+  <block id="b08cf9df52f3fb9947bcaefcecbbd6ba" category="section-title">다중 수준 사전을 모듈 매개 변수로 사용</block>
+  <block id="03b5547049df79453fe5e11a76bbfe9f" category="paragraph">일부 NetApp에서 제공하는 Ansible 모듈은 모듈 매개 변수에 대해 다중 수준 사전을 사용합니다(예: 고정 및 적응형 QoS 정책 그룹).</block>
+  <block id="24949ded3f8c8b9cca35801089ab0a3a" category="paragraph">이러한 사전이 둘 이상 있고 서로 배타적인 경우에는 을<block ref="f78c4f59c75aec8866555b66ada905fb" prefix=" " category="inline-code"></block> 단독으로 사용할 수 없습니다.</block>
+  <block id="15e05a9805c3c7a5a71192b2361781df" category="paragraph">다중 수준 사전을 모듈 매개 변수로 사용해야 하는 경우 각 사전이 관련 사전에 대해 최소 1개의 2단계 사전 값을 제공하도록 여러 마이크로서비스(역할)로 기능을 분할해야 합니다.</block>
+  <block id="dc357c0de7db7f1fe49991f341ba86f8" category="paragraph">다음 예에서는 고정 및 적응형 QoS 정책 그룹이 두 마이크로서비스로 분할되는 것을 보여 줍니다.</block>
+  <block id="e77d1458585cd30e68a9487151a71165" category="paragraph">첫 번째 마이크로서비스에는 고정된 QoS 정책 그룹 값이 포함되어 있습니다.</block>
+  <block id="54eb726b1e7e38131ecee9d32b28d8fb" category="paragraph">두 번째 마이크로서비스에는 적응형 QoS 정책 그룹 값이 포함됩니다.</block>
+  <block id="e79beacb3282b51439b4d5e221311a93" category="summary">준비 및 계획을 완료하면 ONTAP Day 0/1 솔루션을 사용하여 Ansible을 사용하여 ONTAP 클러스터를 신속하게 구성할 수 있습니다.</block>
+  <block id="f67f58fc21115bd09b9463ac656ce110" category="doc">솔루션을 사용하여 ONTAP 클러스터를 구축합니다</block>
+  <block id="69b2879edec7d7d492c706f433d5deb7" category="paragraph">이 섹션의 단계 중 언제든지 요청을 실제로 실행하는 대신 테스트할 수 있습니다. 요청을 테스트하려면 명령줄에서 플레이북을 로<block ref="c465de0cece63ea8509a647e635b17c0" prefix=" " category="inline-code"></block> 변경합니다<block ref="b53526f58340b9c206b05605d2b1fe6c" prefix=" " category="inline-code"></block>.</block>
+  <block id="e00f84decc9d1cd24a745516ec4a5e49" category="admonition"><block ref="2ee3552b051b566d8312af57f2034131" prefix=" " category="inline-code"></block>위치에는 이 절차 전반에 걸쳐 사용된 모든 서비스 요청의 최종 버전이 포함되어 있습니다. 서비스 요청을 실행하는 데 문제가 있는 경우 파일에서<block ref="2044da948b210fe1889f181b5a033756" prefix=" " category="inline-code"></block> 위치로 관련 요청을 복사하고 필요에 따라 하드 코드된 값(IP 주소, 집계 이름 등)을 수정할 수<block ref="a0fc56426902bfdb72c7acbeac39719a" prefix=" " category="inline-code"></block> 있습니다. 그러면 요청을 성공적으로 실행할 수 있습니다.</block>
+  <block id="c9e5905fedbc45ca50f5c9ede628d435" category="list-text">Ansible을 설치해야 합니다.</block>
+  <block id="f6e47baa20f1f0c323313252c9e8d7ab" category="list-text">ONTAP DAY 0/1 솔루션을 다운로드하고 Ansible 제어 노드의 원하는 위치에 폴더를 추출해야 합니다.</block>
+  <block id="a92146f18a239f92bddf6a3bc7e2ebf8" category="list-text">ONTAP 시스템 상태는 요구사항을 충족해야 하고 필요한 자격 증명이 있어야 합니다.</block>
+  <block id="f8199556cf6a62ca9268aa50c99b34a1" category="inline-link-macro">준비</block>
+  <block id="1f28ed1870574f51474f77f9d5b2c698" category="list-text">섹션에 요약된 모든 필수 작업을 완료해야 <block ref="eb9c90d38e8e698db4ffdbac399d48c6" category="inline-link-macro-rx"></block>합니다.</block>
+  <block id="ce970e2ff4bee8dbd3d0a9776df11598" category="admonition">이 솔루션의 예에서는 두 클러스터의 이름으로 "Cluster_01"과 "Cluster_02"를 사용합니다. 이러한 값은 사용자 환경에서 클러스터의 이름으로 대체해야 합니다.</block>
+  <block id="650657963088846925a0dd3f945ce0d5" category="section-title">1단계: 초기 클러스터 구성</block>
+  <block id="6e307cdbec6ddb2aca911decf071f15b" category="paragraph">이 단계에서는 몇 가지 초기 클러스터 구성 단계를 수행해야 합니다.</block>
+  <block id="8442e825230af99cf8cb6ccdd197e3e1" category="list-text">위치로<block ref="2044da948b210fe1889f181b5a033756" prefix=" " category="inline-code"></block> 이동하여<block ref="4075a5feda217c763e9e712e95ccf833" prefix=" " category="inline-code"></block> 파일의 요청을 검토합니다. 사용자 환경에 필요한 변경 작업을 수행합니다.</block>
+  <block id="69341bfc4436ad6cfdd7fba4ae4fd7fb" category="list-text">서비스 요청에 대한 폴더에 파일을 만듭니다<block ref="75b40fb77b55e9fe6e2bb6ad402cc693" prefix=" " category="inline-code"></block>. 예를 들어, 이라는 파일을<block ref="cc66140a9c85195d9b5780f76cea37f5" prefix=" " category="inline-code"></block> 만듭니다.</block>
+  <block id="fa7a74ea26d6c9a3d11e899a90816dbd" category="paragraph">다음 줄을 새 파일에 복사합니다.</block>
+  <block id="4e202a287500f248a8dba98539c186ba" category="list-text"><block ref="91cec0838312497faa7f8d043e2229cf" prefix=" " category="inline-code"></block>변수를 정의합니다.</block>
+  <block id="04cfb6cf58293b27630847fca25c5230" category="paragraph">다음 옵션 중 하나를 사용하여 폴더에 만든 파일의<block ref="75b40fb77b55e9fe6e2bb6ad402cc693" prefix=" " category="inline-code"></block> 변수를<block ref="cc66140a9c85195d9b5780f76cea37f5" prefix=" " category="inline-code"></block> 정의할 수<block ref="91cec0838312497faa7f8d043e2229cf" prefix=" " category="inline-code"></block> 있습니다.</block>
+  <block id="9dd1ebd472dc0668ef5d1147e72199d6" category="list-text">* 옵션 1 *: 변수를 수동으로<block ref="91cec0838312497faa7f8d043e2229cf" prefix=" " category="inline-code"></block> 정의합니다.</block>
+  <block id="fc44b323d2e2c6aadc0437412fe935c8" category="paragraph"><block ref="3461e44ced274386745e784100511ebe" prefix=" " category="inline-code"></block>편집기를 사용하여 파일을 열고 11줄의 콘텐츠를 165줄로 복사합니다. 다음 예제와 같이 새 파일의 변수<block ref="cc66140a9c85195d9b5780f76cea37f5" prefix=" " category="inline-code"></block> 아래에 내용을 붙여 넣습니다<block ref="ae535a1f68fef75ba074b896974a8e79" prefix=" " category="inline-code"></block>.</block>
+  <block id="de78ec69d5ad007d9fe2110bbb7879e4" category="image-alt">복사할 파일 줄의 이미지</block>
+  <block id="82dff18b57e8b99bf3c5dcbc03d4b75c" category="paragraph"><block ref="cc66140a9c85195d9b5780f76cea37f5" prefix=" " category="inline-code"></block>예제 파일:</block>
+  <block id="02a091477c2501ad0eea45426059dbd3" category="list-text">* 옵션 2 * : Jinja 템플릿을 사용하여 요청을 정의합니다.</block>
+  <block id="495ec5c0cd7348747fd87b2c4c38fd4d" category="paragraph">다음 Jinja 템플릿 형식을 사용하여 값을 가져올 수도<block ref="91cec0838312497faa7f8d043e2229cf" prefix=" " category="inline-code"></block> 있습니다.</block>
+  <block id="066dd7189f56f66200b95c7f4c963c68" category="paragraph"><block ref="04803a0d395d6a68dfa183b3e2f9dddd" prefix="" category="inline-code"></block></block>
+  <block id="39077ab007feb403becaf82ad87afc4a" category="list-text">첫 번째 클러스터에 대한 초기 클러스터 구성을 수행합니다.</block>
+  <block id="1cbcb619066878e333e196e202b44c14" category="paragraph">계속하기 전에 오류가 없는지 확인하십시오.</block>
+  <block id="51c3257d8ec827eb37c1d9f0f2f9383f" category="list-text">두 번째 클러스터에 대해 명령을 반복합니다.</block>
+  <block id="1cff109803812329479e0fe02d8e7ddf" category="paragraph">두 번째 클러스터에 오류가 없는지 확인합니다.</block>
+  <block id="3ae0f4832bf179ac0a43fa4dfc95d1f0" category="paragraph">Ansible 출력 시작 부분으로 스크롤하면 다음 예제에 표시된 것처럼 프레임워크로 전송된 요청을 볼 수 있습니다.</block>
+  <block id="819e1f156c541ecae0ae4609b3496108" category="list-text">각 ONTAP 인스턴스에 로그인하고 요청이 성공했는지 확인합니다.</block>
+  <block id="2adacdb601b88549a0f1dc89d9d25ba2" category="section-title">2단계: 인터클러스터 LIF를 구성합니다</block>
+  <block id="5a928b79c0673c1a389f077dcd5b171d" category="paragraph">이제 LIF 정의를 요청에 추가하고<block ref="4d4f0ae7533bf91e88e218470fe3e24f" prefix=" " category="inline-code"></block> 마이크로서비스를 정의하여 인터클러스터 LIF를 구성할 수 있습니다<block ref="4075a5feda217c763e9e712e95ccf833" prefix=" " category="inline-code"></block>.</block>
+  <block id="0cea20abe6de06fa5cf8df07d530dd52" category="paragraph">서비스 정의와 요청이 함께 작동하여 조치를 결정합니다.</block>
+  <block id="af3a6b7880274100b3d2be21426637a2" category="list-text">서비스 정의에 없는 마이크로서비스에 대한 서비스 요청을 제공하면 요청이 실행되지 않습니다.</block>
+  <block id="4ed447076130b2808cbe68f3298ee7dd" category="list-text">서비스 정의에 정의된 마이크로서비스가 하나 이상 있지만 요청에서 생략된 서비스 요청을 제공하는 경우 요청이 실행되지 않습니다.</block>
+  <block id="69fc382406c927aaf2d5902194965ca8" category="paragraph"><block ref="2d844918803992959a71cda35d64dffa" prefix=" " category="inline-code"></block>Playbook은 나열된 순서대로 마이크로서비스 목록을 스캔하여 서비스 정의를 평가합니다.</block>
+  <block id="1dc39b4cf693cc9595d041c7d1dd142e" category="list-text">요청에 마이크로서비스 정의에 포함된 항목과 일치하는 사전 키가 있는 항목이 있으면<block ref="a956af09162870af6ce4ebe0f12ccaf8" prefix=" " category="inline-code"></block> 요청이 실행됩니다.</block>
+  <block id="d4ccf687cc03bc10652fbb8929777fcf" category="list-text">서비스 요청에 일치하는 항목이 없으면 오류 없이 요청을 건너뜁니다.</block>
+  <block id="6f24c1d6b08712bd4a5c8faf37887789" category="list-text"><block ref="cc66140a9c85195d9b5780f76cea37f5" prefix=" " category="inline-code"></block>이전에 만든 파일로 이동하고 요청 정의에 다음 행을 추가하여 요청을 수정합니다.</block>
+  <block id="606ba6d5810c04f45a2192f720b50a14" category="list-text">다음 명령을 실행합니다.</block>
+  <block id="d85bd58c3ce8654defcea61071d345f4" category="list-text">각 인스턴스에 로그인하여 LIF가 클러스터에 추가되었는지 확인합니다.</block>
+  <block id="e978a126dc89b4a4d15dec7ddd351646" category="paragraph">출력은 LIF가 추가되지 않았음을 보여줍니다 *. 이는 마이크로 서비스를<block ref="445ee136220060a93c1410f85d1e7e15" prefix=" " category="inline-code"></block> 파일에 정의해야 하기<block ref="4d4f0ae7533bf91e88e218470fe3e24f" prefix=" " category="inline-code"></block> 때문입니다.</block>
+  <block id="2bae3366bf5f504191a14bdba48a85a6" category="list-text">LIF가 변수에 추가되었는지 확인<block ref="91cec0838312497faa7f8d043e2229cf" prefix=" " category="inline-code"></block></block>
+  <block id="6dc58b658c17753826ea5f3f33b34e73" category="paragraph">다음 예제는 LIF가 요청에 추가되었음을 보여줍니다.</block>
+  <block id="ba3b4961689715ebaed3f4b107d4277a" category="list-text"><block ref="4d4f0ae7533bf91e88e218470fe3e24f" prefix=" " category="inline-code"></block><block ref="445ee136220060a93c1410f85d1e7e15" prefix=" " category="inline-code"></block>파일에서 마이크로서비스를<block ref="4075a5feda217c763e9e712e95ccf833" prefix=" " category="inline-code"></block> 정의합니다.</block>
+  <block id="5f2ab8a2913a0db2656f0e5e3d5432fb" category="paragraph">마이크로서비스를 정의하려면 파일에 다음 줄을 복사합니다.</block>
+  <block id="0bfae174d20ef063149ab1a0d60e3387" category="list-text">이제 마이크로 서비스가 요청과<block ref="445ee136220060a93c1410f85d1e7e15" prefix=" " category="inline-code"></block> 파일에 정의되었으므로<block ref="4d4f0ae7533bf91e88e218470fe3e24f" prefix=" " category="inline-code"></block> 요청을 다시 실행합니다.</block>
+  <block id="d62201a84050b402a8d6a9ec708ff042" category="list-text">각 ONTAP 인스턴스에 로그인하여 LIF가 추가되었는지 확인합니다.</block>
+  <block id="1c421df8aefb3356ffce48460222fd75" category="section-title">3단계: 필요에 따라 여러 클러스터를 구성합니다</block>
+  <block id="654e9f9901e61bfa439190f10289473a" category="paragraph">필요한 경우 동일한 요청으로 여러 클러스터를 구성할 수 있습니다. 요청을 정의할 때 각 클러스터에 대해 가변 이름을 제공해야 합니다.</block>
+  <block id="d053a339a8945b4aa572d57310bc6062" category="list-text">파일에 두 번째 클러스터에 대한 항목을<block ref="cc66140a9c85195d9b5780f76cea37f5" prefix=" " category="inline-code"></block> 추가하여 동일한 요청에서 두 클러스터를 구성합니다.</block>
+  <block id="6446e2c8dbc0beba2da4c4ac96e18373" category="paragraph">다음 예제에서는<block ref="19334c88089d5ea4e8506abe09d5b472" prefix=" " category="inline-code"></block> 두 번째 항목이 추가된 후 필드를 표시합니다.</block>
+  <block id="68a3961071cd0a8094e3a7d4acc40b29" category="list-text">에서 다른 모든 항목에 대한 변경 내용을<block ref="4075a5feda217c763e9e712e95ccf833" prefix=" " category="inline-code"></block> 적용합니다.</block>
+  <block id="e3c1b92d03512d5293cb4e2f6c1f6721" category="list-text">다음 줄을 파일에 복사하여 요청에 클러스터 피어링을 추가합니다.</block>
+  <block id="5bc28ff93a21c0137307fb2c166a1458" category="list-text">Ansible 요청 실행:</block>
+  <block id="30359ba1c52f3d753222c4469c7f0594" category="section-title">4단계: 초기 SVM 구성</block>
+  <block id="e22176e5619444348b1ab7bd5e2f4269" category="paragraph">절차의 이 단계에서는 클러스터에서 SVM을 구성합니다.</block>
+  <block id="95d81c02e358f35a77c4aad25d7dd103" category="list-text"><block ref="f14a772fde5537d27292c54b80919a99" prefix=" " category="inline-code"></block>파일에서 요청을<block ref="3461e44ced274386745e784100511ebe" prefix=" " category="inline-code"></block> 업데이트하여 SVM 및 SVM 피어 관계 구성</block>
+  <block id="8cb40aaf00c7c610fdbd0bbf87f06cf1" category="paragraph">다음을 구성해야 합니다.</block>
+  <block id="69e1645b8055ac8ea719f16a6f3091dc" category="list-text">SVM은</block>
+  <block id="9ea7cf33328cfa7bb683441d396cb22c" category="list-text">SVM 피어 관계</block>
+  <block id="1f7a4d29c185488ee3d592347a65678b" category="list-text">각 SVM의 SVM 인터페이스</block>
+  <block id="4a9bad9bdb9fa8186b9e4a420e3681aa" category="list-text">요청 정의에서 변수 정의를<block ref="f14a772fde5537d27292c54b80919a99" prefix=" " category="inline-code"></block> 업데이트합니다. 다음 변수 정의를 수정해야 합니다.</block>
+  <block id="051c98386222ef9fb89d416e57eb2805" category="list-text"><block ref="5e2a4388baff5eb83d977b60b6839556" prefix="" category="inline-code"></block></block>
+  <block id="8a76bbb28d793676c66fb69c9d34fb8a" category="list-text"><block ref="d6d2e75e827fff3babc66bc7cd4d2c4b" prefix="" category="inline-code"></block></block>
+  <block id="7c227587d32475a2d0d8e5e431b4e47b" category="list-text"><block ref="2ab00d4b4709660c84910c33ff93860a" prefix="" category="inline-code"></block></block>
+  <block id="131624c8a5a85e9a5df79a6f44b99855" category="list-text"><block ref="6d8e93e3a531c84036d8ee6c4a7193ac" prefix="" category="inline-code"></block></block>
+  <block id="a4d223e5959f843452a82b618cd92d46" category="paragraph">정의를 업데이트하려면 정의에 대한<block ref="f14a772fde5537d27292c54b80919a99" prefix=" " category="inline-code"></block> 뒤에 * '{}' * 를<block ref="da2510542fb040c37348fd55a4e2968f" prefix=" " category="inline-code"></block> 제거하고 올바른 정의를 추가하십시오.</block>
+  <block id="018937c21bd55f94415514135b002565" category="list-text">서비스 요청에 대한 폴더에 파일을 만듭니다<block ref="75b40fb77b55e9fe6e2bb6ad402cc693" prefix=" " category="inline-code"></block>. 예를 들어, 이라는 파일을<block ref="11a2eefe20333eac60316832140464f6" prefix=" " category="inline-code"></block> 만듭니다.</block>
+  <block id="31ea89e921d85abb958143fb889cbb8e" category="paragraph">다음 줄을 파일에 복사합니다.</block>
+  <block id="f518da1d3a997752c071b843cb1b8cdb" category="paragraph">다음 옵션 중 하나를 사용하여<block ref="75b40fb77b55e9fe6e2bb6ad402cc693" prefix=" " category="inline-code"></block> 폴더에서 변수를<block ref="f14a772fde5537d27292c54b80919a99" prefix=" " category="inline-code"></block> 정의할 수<block ref="91cec0838312497faa7f8d043e2229cf" prefix=" " category="inline-code"></block> 있습니다.</block>
+  <block id="911c51f9fb5e1251196aaf5017421f0b" category="paragraph"><block ref="3461e44ced274386745e784100511ebe" prefix=" " category="inline-code"></block>편집기를 사용하여 파일을 열고 179줄의 내용을 222줄로 복사합니다. 다음 예제와 같이 새 파일의 변수<block ref="11a2eefe20333eac60316832140464f6" prefix=" " category="inline-code"></block> 아래에 내용을 붙여 넣습니다<block ref="ae535a1f68fef75ba074b896974a8e79" prefix=" " category="inline-code"></block>.</block>
+  <block id="03667813c9aaf8235354c44762e0ed49" category="paragraph"><block ref="11a2eefe20333eac60316832140464f6" prefix=" " category="inline-code"></block>예제 파일:</block>
+  <block id="0666626e7a5943cfd93e34b0a55b0be2" category="list-text">다음 요청을 실행합니다.</block>
+  <block id="a9b23522afae517d956137ad503da0fe" category="list-text">각 ONTAP 인스턴스에 로그인하고 구성을 검증합니다.</block>
+  <block id="2f92edaa02c5e3fa054b2e288b2680d0" category="list-text">SVM 인터페이스를 추가합니다.</block>
+  <block id="1240c38988872a372fd80a55e15b3991" category="paragraph"><block ref="4d4f0ae7533bf91e88e218470fe3e24f" prefix=" " category="inline-code"></block><block ref="445ee136220060a93c1410f85d1e7e15" prefix=" " category="inline-code"></block>파일에서 서비스를<block ref="f14a772fde5537d27292c54b80919a99" prefix=" " category="inline-code"></block> 정의하고 요청을 다시 실행합니다.</block>
+  <block id="662981063523ce176fcc480860d6b83d" category="list-text">각 ONTAP 인스턴스에 로그인하고 SVM 인터페이스가 구성되었는지 확인합니다.</block>
+  <block id="70df61d65a1e824b4177a7e573225775" category="section-title">5단계: 필요에 따라 서비스 요청을 동적으로 정의합니다</block>
+  <block id="a23e8024f106ce4b582a7daabb77419e" category="paragraph">이전 단계에서<block ref="91cec0838312497faa7f8d043e2229cf" prefix=" " category="inline-code"></block> 변수는 하드 코딩됩니다. 이 기능은 학습, 개발 및 테스트에 유용합니다. 서비스 요청을 동적으로 생성할 수도 있습니다.</block>
+  <block id="969c0418de9f75151db7be27414cccd5" category="paragraph">다음 섹션에서는 Required 를 상위 시스템과 통합하지 않으려는 경우 동적으로 생성할 수 있는 옵션을<block ref="91cec0838312497faa7f8d043e2229cf" prefix=" " category="inline-code"></block> 제공합니다.</block>
+  <block id="099966be35e7652ef3a75a0578c1ca06" category="list-text">명령에서 변수가 정의되지 않은<block ref="c465de0cece63ea8509a647e635b17c0" prefix=" " category="inline-code"></block> 경우<block ref="007b8516a35384c54a7acc9f37b55a7e" prefix=" " category="inline-code"></block> 파일은 폴더에서 파일을 가져오지<block ref="75b40fb77b55e9fe6e2bb6ad402cc693" prefix=" " category="inline-code"></block> 않습니다. 이는<block ref="91cec0838312497faa7f8d043e2229cf" prefix=" " category="inline-code"></block> Ansible 외부에서 정의되고 실행 프레임워크에 제공되어야 함을 의미합니다.</block>
+  <block id="785835eab4b5b4b0798993e4ae435f31" category="list-text">폴더의 작업 파일 이름은<block ref="75b40fb77b55e9fe6e2bb6ad402cc693" prefix=" " category="inline-code"></block> .yml 확장자가 없는 변수 값과 일치해야<block ref="007b8516a35384c54a7acc9f37b55a7e" prefix=" " category="inline-code"></block> 합니다.</block>
+  <block id="8ad63d7609d350d4452da54371d404d4" category="list-text">폴더의 작업 파일이<block ref="75b40fb77b55e9fe6e2bb6ad402cc693" prefix=" " category="inline-code"></block> 동적으로 을<block ref="91cec0838312497faa7f8d043e2229cf" prefix=" " category="inline-code"></block>정의합니다. 단, 유효한 를<block ref="91cec0838312497faa7f8d043e2229cf" prefix=" " category="inline-code"></block> 관련 파일의 마지막 작업으로 정의해야 합니다.</block>
+  <block id="642cfcbbce916f1fbaf55da894dd19d0" category="paragraph-title">서비스 요청을 동적으로 정의하는 방법</block>
+  <block id="670c97b07533cefe40be4aac57804c4b" category="paragraph">서비스 요청을 동적으로 정의하기 위해 논리 작업을 적용하는 방법에는 여러 가지가 있습니다. 이러한 옵션 중 일부는 다음과 같습니다.</block>
+  <block id="4d737a26bf4fc7dafdf7a809f0d6456e" category="list-text">폴더의 Ansible 작업 파일 사용<block ref="75b40fb77b55e9fe6e2bb6ad402cc693" prefix=" " category="inline-code"></block></block>
+  <block id="9668931f5c5fe85b1273ebbb11423d13" category="list-text">varaible 로 변환하기에 적합한 데이터를 반환하는 사용자 지정 역할 호출<block ref="91cec0838312497faa7f8d043e2229cf" prefix=" " category="inline-code"></block></block>
+  <block id="24b675b237ada681dab72734be84b686" category="list-text">Ansible 환경 외부에서 다른 툴을 호출하여 필요한 데이터를 제공합니다. 예를 들어, Active IQ Unified Manager에 대한 REST API 호출</block>
+  <block id="a44c29e1364fc78ca29fcf641c6e151c" category="paragraph">다음 명령 예는 파일을 사용하여 각 클러스터에 대한 서비스 요청을 동적으로<block ref="3461e44ced274386745e784100511ebe" prefix=" " category="inline-code"></block> 정의합니다.</block>
+  <block id="e8193f08855f1cdb1cfed50f6c9c9a28" category="section-title">6단계: ONTAP Day 0/1 솔루션을 배포합니다</block>
+  <block id="0c066141afce97f7a3de0aed74a65c74" category="paragraph">이 단계에서는 다음을 이미 완료해야 합니다.</block>
+  <block id="5fee68ecdb341fb77aa0a87c556eab05" category="list-text">요구 사항에 따라 의 모든 파일을 검토하고 수정했습니다.<block ref="f3a2a231a2372b03dd8971c98175b25b" prefix=" " category="inline-code"></block> 각 파일에는 변경 작업에 도움이 되는 자세한 설명이 있습니다.</block>
+  <block id="58f144f12d2fa90ef2184a95d4c7b092" category="list-text">필요한 작업 파일을<block ref="75b40fb77b55e9fe6e2bb6ad402cc693" prefix=" " category="inline-code"></block> 디렉토리에 추가했습니다.</block>
+  <block id="7a9f4e65f6716bca20e1aa0e69eb0c99" category="list-text">필요한 데이터 파일을<block ref="f07484dba90f6e0bc7d2ffcceb80f668" prefix=" " category="inline-code"></block> 디렉터리에 추가했습니다.</block>
+  <block id="a8fb95bd698e6619a9db7ba78477e09b" category="paragraph">다음 명령을 사용하여 ONTAP DAY 0/1 솔루션을 배포하고 배포 상태를 확인합니다.</block>
+  <block id="26d103b89c31f51c08d0a902667e4e23" category="admonition">이 단계에서는 이미 파일을 암호 해독하고 수정했으며<block ref="3912b7912aee967aed9396fa22e8992f" prefix=" " category="inline-code"></block> 새 암호로 암호화해야 합니다.</block>
+  <block id="61108e425a34ca2a08e4b6d8de1fdd39" category="list-text">ONTAP Day 0 서비스 실행:</block>
+  <block id="6817b9fa9885bee0930b3b4228ed5388" category="list-text">ONTAP Day 1 서비스 실행:</block>
+  <block id="3d0df78c0fdb280d7b0d885385201695" category="list-text">클러스터 전체 설정 적용:</block>
+  <block id="9d0205d1134f0ab28a2874186a12ec34" category="list-text">상태 점검 실행:</block>
+  <block id="17c761a11951117029007cd93c65d41a" category="summary">ONTAP Day 0/1 자동화 솔루션을 사용하여 Ansible을 사용하여 ONTAP 클러스터를 구축하고 구성할 수 있습니다.</block>
+  <block id="ce1b4b763945d110a649a02482fbcfc8" category="doc">ONTAP Day 0/1 솔루션 개요</block>
+  <block id="938b95aae63a47e32d020b98cc8da4ee" category="paragraph">ONTAP Day 0/1 자동화 솔루션을 사용하여 Ansible을 사용하여 ONTAP 클러스터를 구축하고 구성할 수 있습니다. 이 솔루션은 에서 사용할 <block ref="69fc0bc0dbcda94a1b23d119909bded4" category="inline-link-macro-rx"></block>수 있습니다.</block>
+  <block id="e702c4fe4e434a01bef1ca713c45f0ed" category="section-title">유연한 ONTAP 구축 옵션</block>
+  <block id="2c852cf076c4790c9b25650b6b2701bf" category="paragraph">요구사항에 따라 온프레미스 하드웨어를 사용하거나 ONTAP를 시뮬레이션하여 Ansible을 사용하여 ONTAP 클러스터를 구축 및 구성할 수 있습니다.</block>
+  <block id="1bce5b3d3b7f1e2bd8394a8dc78e10f8" category="paragraph-title">온프레미스 하드웨어</block>
+  <block id="79840ba80cb88b01418916dd4dcb3e90" category="paragraph">FAS 또는 AFF 시스템과 같이 ONTAP을 실행하는 온프레미스 하드웨어를 사용하여 이 솔루션을 배포할 수 있습니다. Ansible을 사용하여 ONTAP 클러스터를 구축하고 구성하려면 Linux VM을 사용해야 합니다.</block>
+  <block id="cd80466b86e7ace47613645fe98bec8f" category="paragraph-title">ONTAP 시뮬레이션</block>
+  <block id="8414d22444023ab6e8f0463b05e00529" category="paragraph">ONTAP 시뮬레이터를 사용하여 이 솔루션을 구축하려면 NetApp Support 사이트에서 Simulate ONTAP의 최신 버전을 다운로드해야 합니다. Simulate ONTAP는 ONTAP 소프트웨어용 가상 시뮬레이터입니다. ONTAP는 Windows, Linux 또는 Mac 시스템의 VMware 하이퍼바이저에서 실행됩니다. Windows 및 Linux 호스트의 경우 VMware Workstation 하이퍼바이저를 사용하여 이 솔루션을 실행해야 합니다. Mac OS를 사용하는 경우 VMware Fusion 하이퍼바이저를 사용하십시오.</block>
+  <block id="10215767cfe452fee1a14c06950c5ac1" category="section-title">레이어드 디자인</block>
+  <block id="d4f5c9af2c0e6b9ebda5816cdc3fa99f" category="paragraph">Ansible 프레임워크는 자동화 실행 및 논리 작업의 개발과 재사용을 간소화합니다. 프레임워크는 의사 결정 작업(논리 계층)과 자동화의 실행 단계(실행 계층)를 구별합니다. 이러한 레이어의 작동 방식을 이해하면 구성을 사용자 정의할 수 있습니다.</block>
+  <block id="abeb6037fedd9150a081f9e2deb33896" category="paragraph">Ansible "플레이북"은 처음부터 끝까지 일련의 작업을 실행합니다. <block ref="b53526f58340b9c206b05605d2b1fe6c" prefix=" " category="inline-code"></block>플레이북에는 플레이북 및<block ref="2d844918803992959a71cda35d64dffa" prefix=" " category="inline-code"></block> 플레이북이 포함되어<block ref="c465de0cece63ea8509a647e635b17c0" prefix=" " category="inline-code"></block> 있습니다.</block>
+  <block id="a4a3a90fa97562006e0497d3e789902c" category="paragraph">요청이 실행되면<block ref="b53526f58340b9c206b05605d2b1fe6c" prefix=" " category="inline-code"></block> Playbook은 먼저 Playbook을 호출한<block ref="c465de0cece63ea8509a647e635b17c0" prefix=" " category="inline-code"></block> 다음<block ref="2d844918803992959a71cda35d64dffa" prefix=" " category="inline-code"></block> Playbook을 호출하여 서비스 요청을 실행합니다.</block>
+  <block id="7198595b648c9d0f51c72f32fd72f708" category="paragraph">프레임워크의 논리 계층을 사용할 필요는 없습니다. 논리 계층은 실행을 위해 하드 코드된 값 이상으로 프레임워크의 기능을 확장하는 옵션을 제공합니다. 따라서 필요한 경우 프레임워크 기능을 사용자 지정할 수 있습니다.</block>
+  <block id="e756b27e6e80d488f5f02c55696cc417" category="paragraph-title">로직 레이어</block>
+  <block id="132132b5cd4d9c6b28bf41f7440e7397" category="paragraph">논리 계층은 다음과 같이 구성됩니다.</block>
+  <block id="7077b0e89e95deb88db1362bdf451185" category="list-text">플레이북<block ref="c465de0cece63ea8509a647e635b17c0" prefix=" " category="inline-code"></block></block>
+  <block id="f67e6a8689ed9b6571414e867c1c542e" category="list-text">디렉토리 내의 논리 작업 파일<block ref="75b40fb77b55e9fe6e2bb6ad402cc693" prefix=" " category="inline-code"></block></block>
+  <block id="f092dd00e304c02ab6c789ec7aa9b765" category="paragraph">논리 계층은 중대한 맞춤형 통합(예: ServiceNow에 연결) 없이도 복잡한 의사 결정을 위한 기능을 제공합니다. 논리 계층은 구성 가능하며 마이크로서비스에 입력을 제공합니다.</block>
+  <block id="d9233d7005e4c541a7b190aff14433fb" category="paragraph">논리 계층을 우회하는 기능도 제공됩니다. 논리 계층을 무시하려면 변수를 정의하지 마십시오<block ref="007b8516a35384c54a7acc9f37b55a7e" prefix=" " category="inline-code"></block>. 플레이북을 직접 호출하면<block ref="c465de0cece63ea8509a647e635b17c0" prefix=" " category="inline-code"></block> 실행 없이 일부 수준의 디버깅을 수행할 수 있습니다. "debug" 문을 사용하여 의 값이 올바른지 확인할 수<block ref="91cec0838312497faa7f8d043e2229cf" prefix=" " category="inline-code"></block> 있습니다.</block>
+  <block id="74c043a4451dd260729a23ce96aa1550" category="paragraph">중요 고려 사항:</block>
+  <block id="7be64e4db9217063872c379ada1cac40" category="list-text"><block ref="c465de0cece63ea8509a647e635b17c0" prefix=" " category="inline-code"></block>플레이북에서<block ref="007b8516a35384c54a7acc9f37b55a7e" prefix=" " category="inline-code"></block> 변수를 검색합니다. 변수가 요청에 정의되어 있으면 디렉터리에서 작업 파일을<block ref="75b40fb77b55e9fe6e2bb6ad402cc693" prefix=" " category="inline-code"></block> 로드합니다. 작업 파일은 .yml 파일이어야 합니다. 일치하는 작업 파일이 없고 변수가 정의된 경우<block ref="007b8516a35384c54a7acc9f37b55a7e" prefix=" " category="inline-code"></block> 논리 계층이 실패합니다.</block>
+  <block id="d98273cf071a1dcdc2914998c9c06f5d" category="list-text">변수의<block ref="007b8516a35384c54a7acc9f37b55a7e" prefix=" " category="inline-code"></block> 기본값은 입니다<block ref="dd757411655313368576c12809f2d3cf" prefix=" " category="inline-code"></block>. 변수가 명시적으로 정의되지 않은 경우 기본값은 로 설정되며, 이 경우<block ref="dd757411655313368576c12809f2d3cf" prefix=" " category="inline-code"></block> 아무 작업도 실행되지 않습니다.</block>
+  <block id="ed1e820275569388321d5a5d43d7366b" category="list-text">변수가 이미 정의되어 있으면<block ref="91cec0838312497faa7f8d043e2229cf" prefix=" " category="inline-code"></block> 실행이 실행 계층으로 진행됩니다. 변수가 정의되지 않으면 논리 계층이 실패합니다.</block>
+  <block id="7d0131c9e53e2fccec17a64c37087928" category="paragraph-title">실행 계층</block>
+  <block id="1dbfcc91f8fc076d5b81299acfb30472" category="paragraph">실행 계층은 다음과 같이 구성됩니다.</block>
+  <block id="1df1f77f9418eb70dab4210490751168" category="list-text">플레이북<block ref="2d844918803992959a71cda35d64dffa" prefix=" " category="inline-code"></block></block>
+  <block id="0733f6600fa53da5bd9bb761c9418926" category="paragraph">실행 계층은 ONTAP 클러스터를 구성하기 위해 API를 호출합니다. <block ref="2d844918803992959a71cda35d64dffa" prefix=" " category="inline-code"></block>Playbook을 사용하려면 실행 시 변수를 정의해야<block ref="91cec0838312497faa7f8d043e2229cf" prefix=" " category="inline-code"></block> 합니다.</block>
+  <block id="2330d9559aba5d875f0a3ace765be9b3" category="section-title">사용자 지정 지원</block>
+  <block id="e5d452109d49c3b233caedcc6c32239a" category="paragraph">요구 사항에 따라 다양한 방법으로 이 솔루션을 사용자 지정할 수 있습니다.</block>
+  <block id="57554042dc669ef71f7be3dae330062d" category="paragraph">사용자 지정 옵션은 다음과 같습니다.</block>
+  <block id="48a32614b3f512ccb52f0ba14a957a8a" category="list-text">Ansible 플레이북 수정</block>
+  <block id="309bb3d46e5674f5b1029bdb94cce9aa" category="list-text">역할을 추가하는 중입니다</block>
+  <block id="c47bd4e498fcf5d8f1e57c89694cbe11" category="paragraph-title">Ansible 파일 사용자 지정</block>
+  <block id="3521b4512d264fbc43c2574fe051e48f" category="paragraph">다음 표에서는 이 솔루션에 포함된 사용자 지정 가능한 Ansible 파일을 설명합니다.</block>
+  <block id="ce5bf551379459c1c61d2a204061c455" category="cell">위치</block>
+  <block id="2ec1d18a1774ea87947142dc46b2f6ce" category="paragraph"><block ref="40a8d919c80f6abb832862b973eef486" prefix="" category="inline-code"></block></block>
+  <block id="4f5bb1bb05259a299bb33eb183164765" category="cell">호스트 및 그룹 목록이 포함된 단일 파일을 포함합니다.</block>
+  <block id="6832bfd7d6c23101956f53eedea9a07e" category="paragraph"><block ref="1989a8aa7d1ca33ab2771c35f6a3b396" prefix="" category="inline-code"></block></block>
+  <block id="4e52f223036927f3d5c8161fa369a276" category="cell">Ansible을 사용하면 여러 호스트에 변수를 한 번에 간편하게 적용할 수 있습니다. 이 폴더에 있는 ,<block ref="29b77f11d52fe65eaad409aca6c3df86" prefix=" " category="inline-code"></block>,<block ref="300f81a8e09fa45753cd33f0805a51b4" prefix=" " category="inline-code"></block>, ,<block ref="445ee136220060a93c1410f85d1e7e15" prefix=" " category="inline-code"></block>,<block ref="291578eb760a4ef42e583c75ce58e4ad" prefix=" " category="inline-code"></block> 및<block ref="3912b7912aee967aed9396fa22e8992f" prefix=" " category="inline-code"></block> 를 포함한 모든 파일을 수정할 수<block ref="36a3449caf99a34cb1d8022e430885db" prefix=" " category="inline-code"></block> 있습니다.</block>
+  <block id="6d5b0238fe29916040f6836fdbca2c10" category="paragraph"><block ref="57e5296f8de4202e7666150e5a07b66c" prefix="" category="inline-code"></block></block>
+  <block id="a1560b23484f75c46c99364f51488483" category="cell">Ansible 내에서 의사 결정 작업을 지원하고 논리와 실행의 분리를 유지합니다. 관련 서비스에 해당하는 파일을 이 폴더에 추가할 수 있습니다.</block>
+  <block id="2556f59c042e988eacc543bf1211576f" category="paragraph"><block ref="ed6b2bace80e9219b3b4b88a28b24931" prefix="" category="inline-code"></block></block>
+  <block id="6c22171e02ab0bcc45503950f8ec8ceb" category="cell">Ansible 플레이북 및 역할에 사용되는 동적인 가치를 제공하여 커스터마이징, 유연성 및 구성 재사용을 지원합니다. 필요한 경우 이 폴더의 모든 파일을 수정할 수 있습니다.</block>
+  <block id="43c0adaca4097ff69ce673d693ae4975" category="paragraph-title">역할을 사용자 정의합니다</block>
+  <block id="63a78ed4647f7c63c2929e35ec1c95e3" category="inline-link-macro">사용자 정의</block>
+  <block id="26a38ade7503c0cd04b8f1b509e4f722" category="paragraph">마이크로서비스라고도 하는 Ansible 역할을 추가 또는 변경하여 솔루션을 사용자 지정할 수도 있습니다. 자세한 내용은 을 참조하십시오<block ref="be6f08049fc3279a78fd26b9aad279b0" category="inline-link-macro-rx"></block>.</block>
+  <block id="a3c705f96125c0b065bb0c0359d448d9" category="summary">자동화 솔루션을 구축하기 전에 ONTAP 환경을 준비하고 Ansible을 설치 및 구성해야 합니다.</block>
+  <block id="bcd7770e98050673b0948646aef5b4a3" category="doc">ONTAP Day 0/1 솔루션을 사용할 준비를 하십시오</block>
+  <block id="511a5e3236e6ca72bc37beb4e00608c8" category="paragraph">자동화 솔루션을 구축하기 전에 ONTAP 환경을 준비하고 Ansible을 설치 및 구성해야 합니다.</block>
+  <block id="1d28d328268f8c328a1aee58ea95652e" category="section-title">초기 계획 고려 사항</block>
+  <block id="f277cee795f27cba0f177ab3e95ca135" category="paragraph">이 솔루션을 사용하여 ONTAP 클러스터를 구축하기 전에 다음 요구 사항 및 고려 사항을 검토해야 합니다.</block>
+  <block id="56aa3ed9dba484ac641c5247a15b1ed6" category="paragraph-title">기본 요구 사항</block>
+  <block id="5884c9830547842831d25bedcd58ba1f" category="paragraph">이 솔루션을 사용하려면 다음 기본 요구 사항을 충족해야 합니다.</block>
+  <block id="8f2ea0775ea9cd7374805c321d8d77ad" category="list-text">온프레미스 또는 ONTAP 시뮬레이터를 통해 ONTAP 소프트웨어에 액세스할 수 있어야 합니다.</block>
+  <block id="9e497289e59c1250a0182732200cca6c" category="list-text">ONTAP 소프트웨어 사용 방법을 알고 있어야 합니다.</block>
+  <block id="601377003d38b13f1e3f7965681ade97" category="list-text">Ansible 자동화 소프트웨어 툴을 사용하는 방법을 알아야 합니다.</block>
+  <block id="228d9e0418aa12bae73676a5743558db" category="paragraph-title">계획 고려 사항</block>
+  <block id="cc2d466572cb7a67e84b523481eda78c" category="paragraph">이 자동화 솔루션을 배포하기 전에 다음을 결정해야 합니다.</block>
+  <block id="1fb86fbde8df965d1c2acc196fdf10b1" category="list-text">Ansible 제어 노드를 실행할 위치입니다.</block>
+  <block id="19d4ab12a3b6b0cbc567984741a386dc" category="list-text">ONTAP 시스템의 온프레미스 하드웨어 또는 ONTAP 시뮬레이터입니다.</block>
+  <block id="8549c360a1bd12719e27ec2c7da6f8f9" category="list-text">사용자 지정 필요 여부.</block>
+  <block id="b96d90d0be7ad23caaf63033f84c36fb" category="section-title">ONTAP 시스템을 준비합니다</block>
+  <block id="fbbff18a3d8c7c1962fe79c6f20fc936" category="paragraph">온프레미스 ONTAP 시스템을 사용하든 ONTAP를 시뮬레이션하든 상관없이 자동화 솔루션을 구축하기 전에 환경을 준비해야 합니다.</block>
+  <block id="2dc4e6ed82f1c6a1ef0440f23a8da7e6" category="section-title">필요에 따라 Simulate ONTAP를 설치 및 구성합니다</block>
+  <block id="bd35b012ab072b51c3bd65dabfb8fbd1" category="paragraph">ONTAP 시뮬레이터를 통해 이 솔루션을 배포하려면 Simulate ONTAP를 다운로드하여 실행해야 합니다.</block>
+  <block id="d01949b1d24fb82fb2b576f4a7471e44" category="list-text">Simulate ONTAP를 실행하는 데 사용할 VMware 하이퍼바이저를 다운로드하고 설치해야 합니다.</block>
+  <block id="65cdd80ab4f7e12f8e5b7f32231e0ab8" category="list-text">Windows 또는 Linux OS를 사용하는 경우 VMware Workstation을 사용하십시오.</block>
+  <block id="f13ede118192ec26954aa9a6645a0f1c" category="list-text">Mac OS를 사용하는 경우 VMware Fusion를 사용합니다.</block>
+  <block id="4966eb364a120a592774d73e21aa726d" category="admonition">Mac OS를 사용하는 경우 Intel 프로세서가 있어야 합니다.</block>
+  <block id="ed4d7e395d1e68d6a963bab9d5840faf" category="paragraph">로컬 환경에 두 개의 ONTAP 시뮬레이터를 설치하려면 다음 절차를 따르십시오.</block>
+  <block id="9c093f14319e8253b8c9b37290597239" category="inline-link-macro">NetApp Support 사이트</block>
+  <block id="14d567f38a663518761cb1833f1b3e04" category="list-text">에서 Simulate ONTAP 를 <block ref="22276e5909ee8e6f4b2080a10ab98923" category="inline-link-macro-rx"></block>다운로드합니다.</block>
+  <block id="7d2f39c9572b8f5bd33d651e0c432667" category="admonition">두 개의 ONTAP 시뮬레이터를 설치하더라도 소프트웨어 복사본 하나만 다운로드하면 됩니다.</block>
+  <block id="9dc91177d3e72633b3eb25a758338604" category="list-text">아직 실행 중이 아닌 경우 VMware 애플리케이션을 시작합니다.</block>
+  <block id="f817b66fcefdb548feab388a90f4e715" category="list-text">다운로드한 시뮬레이터 파일을 찾아 마우스 오른쪽 버튼을 클릭하여 VMware 애플리케이션에서 엽니다.</block>
+  <block id="65abc4fb4b5ba8f24c78873e18a1b878" category="list-text">첫 번째 ONTAP 인스턴스의 이름을 설정합니다.</block>
+  <block id="c4268f119c922c6de8e710fbee3064e0" category="list-text">시뮬레이터가 부팅될 때까지 기다린 다음 지침에 따라 단일 노드 클러스터를 생성합니다.</block>
+  <block id="58db0a84115bdfa853ae2f49a12ac6da" category="paragraph">두 번째 ONTAP 인스턴스에 대해 이 단계를 반복합니다.</block>
+  <block id="418621d9947be870809e9f93dabb19a1" category="list-text">필요에 따라 전체 디스크 보완을 추가합니다.</block>
+  <block id="bad86c77d43d5a9c4a69f2a364388400" category="paragraph">각 클러스터에서 다음 명령을 실행합니다.</block>
+  <block id="c7f1fbea97449df0d856eb5e7f64e5d2" category="section-title">ONTAP 시스템의 상태입니다</block>
+  <block id="8c2526e37a2bc814741b5f158eb6374a" category="paragraph">사내 시스템 또는 ONTAP 시뮬레이터를 통해 ONTAP 시스템의 초기 상태를 확인해야 합니다.</block>
+  <block id="bce68ba5163e4dca18508220abae2333" category="paragraph">다음 ONTAP 시스템 요구 사항이 충족되는지 확인합니다.</block>
+  <block id="1242a14ca5824616337deb53158c160f" category="list-text">아직 정의된 클러스터가 없는 상태에서 ONTAP가 설치되고 실행 중입니다.</block>
+  <block id="ec889d03e2466e36222ccf0d2302c33e" category="list-text">ONTAP가 부팅되고 클러스터에 액세스하기 위한 IP 주소가 표시됩니다.</block>
+  <block id="be9c65783b3e166cd0c4a06bd4df05f3" category="list-text">네트워크에 연결할 수 있습니다.</block>
+  <block id="9234db32de6c3a4b18b1ef67b08e33d8" category="list-text">관리자 자격 증명이 있습니다.</block>
+  <block id="6016c43f78514d8d006c5b95578beb47" category="list-text">MOTD(Message of the Day) 배너에 관리 주소가 표시됩니다.</block>
+  <block id="8ae7456b8e3b101a795597da308c15b0" category="section-title">필요한 자동화 소프트웨어를 설치합니다</block>
+  <block id="4d1c2fab59a1606d930fa3f52885bf32" category="paragraph">이 섹션에서는 Ansible을 설치하고 구축을 위한 자동화 솔루션을 준비하는 방법에 대한 정보를 제공합니다.</block>
+  <block id="f06a93025aaeede884d8afe8b690533e" category="section-title">Ansible 설치</block>
+  <block id="dfc27353fecf2eee84854379dce64230" category="paragraph">Linux 또는 Windows 시스템에 Ansible을 설치할 수 있습니다.</block>
+  <block id="347333d2772f7846f869e069d4074a45" category="paragraph">Ansible이 ONTAP 클러스터와 통신하기 위해 사용하는 기본 통신 방법은 SSH입니다.</block>
+  <block id="f4a4d3f8e378d11233851c0c7c1aeda7" category="inline-link-macro">NetApp 및 Ansible 시작하기: Ansible을 설치하십시오</block>
+  <block id="13a3fef14879af3a42bc85867da607c7" category="paragraph">Ansible 설치에 대해서는 을 <block ref="426579bfbf2afd687281b4f5bf0ad5f3" category="inline-link-macro-rx"></block>참조하십시오.</block>
+  <block id="d1f1475150df79d2b4245454f64db1bc" category="admonition">시스템의 제어 노드에 Ansible을 설치해야 합니다.</block>
+  <block id="db89a51ffa65529021b510690e81a8f1" category="section-title">자동화 솔루션을 다운로드하고 준비합니다</block>
+  <block id="861c58cb30aa77b0dee3d8e16d6a86a9" category="paragraph">다음 단계에 따라 배포를 위한 자동화 솔루션을 다운로드하고 준비할 수 있습니다.</block>
+  <block id="ab84098f73cfd7f11c2b2ddf36e7b9e0" category="inline-link-macro">ONTAP - 1일차 및 1일차; 상태 점검</block>
+  <block id="f11ca6ee3cd53a97d005c40f2c226b5b" category="list-text"><block ref="7d895ad86aecd039f40cc70463ee9858" category="inline-link-macro-rx"></block>BlueXP  웹 UI를 통해 자동화 솔루션을 다운로드합니다. 솔루션은 다음과 같이 패키지되어 있습니다.<block ref="aa320f9d69cdf44a5e391cb56d0298cd" prefix=" " category="inline-code"></block></block>
+  <block id="75286206080ea9682a038a4af04cac12" category="list-text">zip 폴더의 압축을 풀고 Ansible 환경 내의 제어 노드에서 원하는 위치로 파일을 복사합니다.</block>
+  <block id="5821bfa4f7dace2f5ba97b23a8e2c2bf" category="section-title">초기 Ansible 프레임워크 구성</block>
+  <block id="3c82452c939498e2a377a6c3cbdd7221" category="paragraph">Ansible 프레임워크의 초기 구성 수행:</block>
+  <block id="959fda099ad6f3c1beeff00c441e7a0a" category="list-text">로 이동합니다<block ref="f3a2a231a2372b03dd8971c98175b25b" prefix=" " category="inline-code"></block>.</block>
+  <block id="5a3b2d143e4a4d676cde725e34d10c23" category="list-text">파일 암호 해독<block ref="3912b7912aee967aed9396fa22e8992f" prefix=" " category="inline-code"></block>:</block>
+  <block id="32fd1da982d5f727a37350c883aaac89" category="paragraph"><block ref="0fb77ff3c28e82d934cba904bc060915" prefix="" category="inline-code"></block></block>
+  <block id="aa066c1828177006ee0b3447574781e8" category="paragraph">볼트 암호를 입력하라는 메시지가 나타나면 다음 임시 암호를 입력합니다.</block>
+  <block id="e9b64d764b0336fe3124b5030aa0bfc9" category="paragraph"><block ref="0b0ca20ecc3ccf30182fce9ffbd46df6" prefix="" category="inline-code"></block></block>
+  <block id="8116a24c1d2c019a62a318393573f3b4" category="admonition">"NetApp123!"는 파일과 해당 볼트 암호를 해독하기 위한 임시 암호입니다.<block ref="3912b7912aee967aed9396fa22e8992f" prefix=" " category="inline-code"></block> 처음 사용한 후에는 * 자신의 암호를 사용하여 * 파일을 암호화해야 합니다.</block>
+  <block id="21b899ea52a44b8aa42e683b18ead863" category="list-text">다음 Ansible 파일을 수정합니다.</block>
+  <block id="a71ae8daba9a8fea33ff7f0e4e2856ab" category="list-text"><block ref="29b77f11d52fe65eaad409aca6c3df86" prefix="" category="inline-code"></block> - 환경에 맞게 이 파일의 값을 수정합니다.</block>
+  <block id="b0788591a0fc1a1c6363979ac9a9345d" category="list-text"><block ref="3912b7912aee967aed9396fa22e8992f" prefix="" category="inline-code"></block> - 파일을 해독한 후 사용자 환경에 맞게 ONTAP 클러스터, 사용자 이름 및 암호 값을 수정합니다.</block>
+  <block id="a62e977ed9c3008f9de42b20c98167ca" category="list-text"><block ref="36a3449caf99a34cb1d8022e430885db" prefix="" category="inline-code"></block> - 에 대한 파일 경로를<block ref="8bd3278c7bbc2c6ce03d31a4d66eed73" prefix=" " category="inline-code"></block> 설정하고<block ref="011134986548f3458aa3e7e2a7fceb8d" prefix=" " category="inline-code"></block> 을(를) 표시하려면 을<block ref="91cec0838312497faa7f8d043e2229cf" prefix=" " category="inline-code"></block>(를<block ref="f827cf462f62848df37c5e1e94a4da74" prefix=" " category="inline-code"></block>) 로 설정합니다<block ref="6517ae4a61ec8b25b4c8a6f43f077cd2" prefix=" " category="inline-code"></block>.</block>
+  <block id="5001b87047e94f2b12df020cbf099ab5" category="paragraph"><block ref="91cec0838312497faa7f8d043e2229cf" prefix=" " category="inline-code"></block>로그 파일과 실행 중에 변수가 표시됩니다.</block>
+  <block id="005f5bb71ffa6dd33347eb601417afc7" category="admonition">나열된 각 파일에는 요구 사항에 따라 수정하는 방법에 대한 지침이 포함된 설명이 포함되어 있습니다.</block>
+  <block id="e3ce19a673f4610f5c6e7d909363f994" category="list-text">파일 다시 암호화<block ref="3912b7912aee967aed9396fa22e8992f" prefix=" " category="inline-code"></block>:</block>
+  <block id="312cf0c9a9e8b4fe4d3e2a391c5e8ad5" category="paragraph"><block ref="3fd94860277ec192b691f50a27a57027" prefix="" category="inline-code"></block></block>
+  <block id="748fe21b6744e129412727b018bd5545" category="admonition">암호화 시 볼트에 대한 새 암호를 선택하라는 메시지가 표시됩니다.</block>
+  <block id="ed86b492e7aaacfb4190452e2a041c46" category="list-text">유효한 Python 인터프리터를 찾아<block ref="40a8d919c80f6abb832862b973eef486" prefix=" " category="inline-code"></block> 설정합니다.</block>
+  <block id="aad3419677f1e390d63467602a94e899" category="list-text">서비스 구축<block ref="cc41996f61df1a8b6998a42441fc3d0b" prefix=" " category="inline-code"></block>:</block>
+  <block id="c1513da956871d8af86a17a937618a96" category="paragraph">다음 명령을 실행하면<block ref="54c3d6e9a56aa18d1c5601cce779aad8" prefix=" " category="inline-code"></block> 값이 인<block ref="02d915b88810bf056d22248a9aaa5ea5" prefix=" " category="inline-code"></block> 모듈이<block ref="5ea5d50662005a9ac4d6b2bdb8ba8861" prefix=" " category="inline-code"></block> 실행됩니다. 이렇게 하면 기본 구성이 올바른지 확인하고 클러스터와 통신할 수 있는지 확인합니다.</block>
+  <block id="c1162faac9242b1157f7bfbe2794f1ab" category="paragraph">각 클러스터에 대해 명령을 실행합니다.</block>
+  <block id="20681366d6fbf14a1a4e57bfd6d53131" category="paragraph">성공하면 다음 예와 유사한 출력이 표시됩니다.</block>
+  <block id="dc52303dcd5fbb81629bbe258412bd00" category="summary">클라우드 서비스와 NetApp 제품에 대한 자세한 정보를 얻고 이러한 도움말을 보기 위해 사용할 수 있는 추가 리소스가 있습니다.</block>
+  <block id="8cd58c89ff3d51a256ecfe3fe8bab20f" category="doc">추가 리소스</block>
+  <block id="7408932fdad65e4855a5098950fc1a2a" category="section-title">NetApp 개발자 리소스</block>
+  <block id="16761f90ea92726a06e16dfb23549c0a" category="inline-link">NetApp DevNet을 참조하십시오</block>
+  <block id="19f1cb4e1ae35be5e7d353c5a9f02815" category="list-text"><block ref="19f1cb4e1ae35be5e7d353c5a9f02815" category="inline-link-rx"></block></block>
+  <block id="2f05e9dc94da2a63306ded34a65a024a" category="paragraph">NetApp 파트너 및 고객을 지원하는 개발자 리소스를 제공하는 중앙 위치입니다.</block>
+  <block id="8a32f68c174741ac95b09c594c822879" category="inline-link">NetApp 입출력 - 펍</block>
+  <block id="a29fe064588109f2ac8d48595ef06e31" category="list-text"><block ref="a29fe064588109f2ac8d48595ef06e31" category="inline-link-rx"></block></block>
+  <block id="eb64ffee348063568d6b0140fbf3af98" category="paragraph">개발자 및 관리자를 지원하기 위한 블로그 문서 및 기타 리소스.</block>
+  <block id="58bf8b302985815533fd451d770a1b0a" category="section-title">NetApp 클라우드 리소스</block>
+  <block id="1273c8a63109161e6fd1f18d6998523f" category="inline-link">NetApp BlueXP</block>
+  <block id="a3235da3acacf344734cc119c20ba900" category="list-text"><block ref="a3235da3acacf344734cc119c20ba900" category="inline-link-rx"></block></block>
+  <block id="4049649408c78f285cb012e2651847f4" category="paragraph">NetApp 클라우드 솔루션을 위한 중앙 사이트</block>
+  <block id="654f92d3e3cad866eb53b8787cc67444" category="inline-link">NetApp Cloud Central 콘솔</block>
+  <block id="1f45f670e1231774c60ec8b4cae95f3a" category="list-text"><block ref="1f45f670e1231774c60ec8b4cae95f3a" category="inline-link-rx"></block></block>
+  <block id="6b75881aaba9107ac80de75cbb548445" category="paragraph">NetApp Cloud Central 서비스 콘솔(로그인 포함)</block>
+  <block id="f652657a114462923415d96870b111b4" category="summary">NetApp은 제품과 클라우드 서비스를 다양한 방식으로 지원합니다. 기술 자료(KB) 기사 및 커뮤니티 포럼과 같은 광범위한 무료 셀프 지원 옵션이 24x7 제공됩니다.</block>
+  <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">도움을 받으십시오</block>
+  <block id="9a9999d7ae6f03b28df44f9616e27367" category="section-title">자체 지원 옵션</block>
+  <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">기술 자료</block>
+  <block id="9448946e236deca6b076b6cc7c401779" category="list-text"><block ref="9448946e236deca6b076b6cc7c401779" category="inline-link-rx"></block></block>
+  <block id="402610772ffc3bf04855142997297391" category="paragraph">기술 문서를 검색하여 문제를 해결하는 데 도움이 되는 문서를 찾습니다.</block>
+  <block id="14526abd8bda5af347775025cd5342cf" category="inline-link">커뮤니티</block>
+  <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
+  <block id="27f3f3816928465a03369d5a937b657c" category="paragraph">NetApp 커뮤니티에 가입하여 진행 중인 토론을 팔로우하거나 새 토론을 만드십시오.</block>
+  <block id="09ea0908fbfc4cde85bf416e35dc55c8" category="inline-link">NetApp 지원</block>
+  <block id="4e3ffaad45a8ae63f200119be8101498" category="list-text"><block ref="4e3ffaad45a8ae63f200119be8101498" category="inline-link-rx"></block></block>
+  <block id="3d32fc1a126e880a8ed715ad4b9c42f5" category="paragraph">문제 해결 도구, 문서 및 기술 지원 지원을 이용할 수 있습니다.</block>
+  <block id="f48577c579044caf7c623829fc262319" category="sidebar">NetApp에서는 많은 NetApp 제품의 프로그래밍 방식 API에 액세스할 수 있을 뿐만 아니라 NetApp 제품 및 서비스 포트폴리오에 대한 워크로드를 자동화하는 데 도움이 되는 스크립트 자동화 솔루션에 액세스할 수 있습니다.</block>
+  <block id="6c2a9c611f48cae767f6ebea6fca0457" category="sidebar">NetApp 자동화</block>
+  <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">시작하십시오</block>
+  <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">새로운 소식</block>
+  <block id="e4b516b8f9ba094a78bbcef753a1bccc" category="sidebar">주요 솔루션</block>
+  <block id="d6c522b828e70075f2c835bc3591b390" category="sidebar">Azure NetApp Files을 사용하는 Oracle</block>
+  <block id="0ded38c1f1be1ff13d904d6d996c5b69" category="sidebar">Amazon FSx for ONTAP - 재해 복구</block>
+  <block id="e880c82d33a4250426461e7aa14234c8" category="sidebar">ONTAP 1일 1일 배포</block>
+  <block id="0aae180e51442a68c9fbe9225b2bd737" category="sidebar">NetApp 제품 API</block>
+  <block id="253b40ae359ba25b56231803430c4873" category="sidebar">ONTAP</block>
+  <block id="9b9477e579c3b44dd623d5a6e1ea8d78" category="sidebar">BlueXP</block>
+  <block id="0165fb1aec27e9e91320972c89c21d7e" category="sidebar">NetApp 자동화 문서</block>
+  <block id="3b878279a04dc47d60932cb294d96259" category="sidebar">개요</block>
+  <block id="03a85053364f989565c431e1f3cb14b6" category="sidebar">클라우드에 최대 사용량</block>
+  <block id="645a84975202e30700b572b49a5ee29d" category="sidebar">재해 복구</block>
+  <block id="30162ed78b6c10f731411f2fc440c24f" category="sidebar">오라클</block>
+  <block id="096f3522cfa2f31de45d052b740adc65" category="sidebar">AWS용 Cloud Volumes ONTAP</block>
+  <block id="2544021bbaa4bc6eadfddbb17edf7811" category="sidebar">Azure용 Cloud Volumes ONTAP</block>
+  <block id="f540a08b090d18fa948ca4ade8ceb7ff" category="sidebar">Google Cloud용 Cloud Volumes ONTAP</block>
+  <block id="08253f1b3a2c24142d028a71b1585bde" category="sidebar">1일 차</block>
+  <block id="507a3a88cebc46603ce2be8eaa924eee" category="sidebar">구축</block>
+  <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">지식 및 지원</block>
+</blocks>

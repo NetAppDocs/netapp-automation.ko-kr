@@ -1,0 +1,182 @@
+---
+sidebar: sidebar 
+permalink: solutions/ontap-day01-customize.html 
+keywords: bluexp automation catalog, netapp automation solutions, ontap day 0/1, customize, add roles 
+summary: 요구사항에 맞게 ONTAP Day 0/1 솔루션을 사용자 정의하려면 Ansible 역할을 추가하거나 변경할 수 있습니다. 
+---
+= ONTAP Day 0/1 솔루션을 사용자 지정합니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+요구사항에 맞게 ONTAP Day 0/1 솔루션을 사용자 정의하려면 Ansible 역할을 추가하거나 변경할 수 있습니다.
+
+역할은 Ansible 프레임워크 내의 마이크로서비스를 나타냅니다. 각 마이크로서비스는 하나의 작업을 수행합니다. 예를 들어 ONTAP Day 0은 여러 마이크로서비스를 포함하는 서비스입니다.
+
+
+
+== Ansible 역할을 추가합니다
+
+Ansible 역할을 추가하여 환경에 맞게 솔루션을 사용자 지정할 수 있습니다. 필수 역할은 Ansible 프레임워크 내의 서비스 정의에 의해 정의됩니다.
+
+마이크로서비스로 사용하려면 역할이 다음 요구 사항을 충족해야 합니다.
+
+* 변수의 인수 목록을 수락합니다 `args`.
+* 각 블록에 대한 특정 요구 사항이 있는 Ansible "블록, 구조, 항상" 구조를 사용합니다.
+* 단일 Ansible 모듈을 사용하여 블록 내의 단일 작업을 정의합니다.
+* 이 섹션에 설명된 요구 사항에 따라 사용 가능한 모든 모듈 매개 변수를 구현합니다.
+
+
+.필수 마이크로서비스 구조
+각 역할은 다음 변수를 지원해야 합니다.
+
+* `mode`: 모드가 역할로 설정된 경우 `test` 을(를) 가져오려고 시도하면 `test.yml` 실제로 해당 역할이 실행되지 않고 어떤 작업을 수행하는지를 보여줍니다.
++
+
+NOTE: 특정 상호 의존성 때문에 이를 항상 구현할 수는 없습니다.
+
+* `status`: Playbook 실행의 전반적인 상태. 값이 역할로 설정되지 않으면 `success` 실행되지 않습니다.
+* `args` : 역할 매개 변수 이름과 일치하는 키가 있는 역할별 사전 목록입니다.
+* `global_log_messages`: 플레이북 실행 중 로그 메시지를 수집합니다. 역할이 실행될 때마다 하나의 항목이 생성됩니다.
+* `log_name`: 항목 내에서 역할을 참조하는 데 사용되는 이름입니다 `global_log_messages`.
+* `task_descr`: 역할에 대한 간단한 설명입니다.
+* `service_start_time`: 각 역할이 실행되는 시간을 추적하는 데 사용되는 타임 스탬프입니다.
+* `playbook_status`: Ansible 플레이북의 상태.
+* `role_result`: 역할 출력을 포함하고 항목 내의 각 메시지에 포함되는 변수입니다. `global_log_messages`
+
+
+
+
+== 역할 구조의 예
+
+다음 예제에서는 마이크로서비스를 구현하는 역할의 기본 구조를 제공합니다. 이 예제에서는 설정을 위해 변수를 변경해야 합니다.
+
+.예제 보기
+[%collapsible]
+====
+기본 역할 구조:
+
+[source, cli]
+----
+- name:  Set some role attributes
+  set_fact:
+    log_name:     "<LOG_NAME>"
+    task_descr:   "<TASK_DESCRIPTION>"
+
+-  name: "{{ log_name }}"
+   block:
+      -  set_fact:
+            service_start_time: "{{ lookup('pipe', 'date +%Y%m%d%H%M%S') }}"
+
+      -  name: "Provision the new user"
+         <MODULE_NAME>:
+            #-------------------------------------------------------------
+            # COMMON ATTRIBUTES
+            #-------------------------------------------------------------
+            hostname:            "{{ clusters[loop_arg['hostname']]['mgmt_ip'] }}"
+            username:            "{{ clusters[loop_arg['hostname']]['username'] }}"
+            password:            "{{ clusters[loop_arg['hostname']]['password'] }}"
+
+            cert_filepath:       "{{ loop_arg['cert_filepath']                | default(omit) }}"
+            feature_flags:       "{{ loop_arg['feature_flags']                | default(omit) }}"
+            http_port:           "{{ loop_arg['http_port']                    | default(omit) }}"
+            https:               "{{ loop_arg['https']                        | default('true') }}"
+            ontapi:              "{{ loop_arg['ontapi']                       | default(omit) }}"
+            key_filepath:        "{{ loop_arg['key_filepath']                 | default(omit) }}"
+            use_rest:            "{{ loop_arg['use_rest']                     | default(omit) }}"
+            validate_certs:      "{{ loop_arg['validate_certs']               | default('false') }}"
+
+            <MODULE_SPECIFIC_PARAMETERS>
+            #-------------------------------------------------------------
+            # REQUIRED ATTRIBUTES
+            #-------------------------------------------------------------
+            required_parameter:     "{{ loop_arg['required_parameter'] }}"
+            #-------------------------------------------------------------
+            # ATTRIBUTES w/ DEFAULTS
+            #-------------------------------------------------------------
+            defaulted_parameter:    "{{ loop_arg['defaulted_parameter'] | default('default_value') }}"
+            #-------------------------------------------------------------
+            # OPTIONAL ATTRIBUTES
+            #-------------------------------------------------------------
+            optional_parameter:     "{{ loop_arg['optional_parameter'] | default(omit) }}"
+         loop:    "{{ args }}"
+         loop_control:
+            loop_var:   loop_arg
+         register:   role_result
+
+   rescue:
+      -  name: Set role status to FAIL
+         set_fact:
+            playbook_status:   "failed"
+
+   always:
+      -  name: add log msg
+         vars:
+            role_log:
+               role: "{{ log_name }}"
+               timestamp:
+                  start_time: "{{service_start_time}}"
+                  end_time: "{{ lookup('pipe', 'date +%Y-%m-%d@%H:%M:%S') }}"
+               service_status: "{{ playbook_status }}"
+               result: "{{role_result}}"
+         set_fact:
+            global_log_msgs:   "{{ global_log_msgs + [ role_log ] }}"
+----
+====
+.예제 역할에 사용되는 변수:
+* `<NAME>`: 각 마이크로서비스에 대해 제공되어야 하는 대체 가능한 값입니다.
+* `<LOG_NAME>`: 로깅 목적으로 사용되는 역할의 짧은 형식 이름입니다.  `ONTAP_VOLUME`예를 들어,
+* `<TASK_DESCRIPTION>`: 마이크로 서비스가 수행하는 작업에 대한 간략한 설명.
+* `<MODULE_NAME>`: 작업에 대한 Ansible 모듈 이름.
++
+
+NOTE: 최상위 `execute.yml` Playbook에서 `netapp.ontap` 컬렉션을 지정합니다. 모듈이 컬렉션의 일부인 경우 `netapp.ontap` 모듈 이름을 완전히 지정할 필요가 없습니다.
+
+* `<MODULE_SPECIFIC_PARAMETERS>`: 마이크로 서비스를 구현하는 데 사용되는 모듈에 고유한 Ansible 모듈 매개 변수입니다. 다음 목록에서는 매개 변수 유형과 매개 변수를 그룹화하는 방법을 설명합니다.
++
+** 필수 매개변수: 모든 필수 매개변수는 기본값 없이 지정됩니다.
+** 마이크로서비스에 고유한 기본값을 갖는 매개 변수(모듈 설명서에 지정된 기본값과 다름)
+** 나머지 모든 매개 변수는 `default(omit)` 기본값으로 사용됩니다.
+
+
+
+
+
+
+== 다중 수준 사전을 모듈 매개 변수로 사용
+
+일부 NetApp에서 제공하는 Ansible 모듈은 모듈 매개 변수에 대해 다중 수준 사전을 사용합니다(예: 고정 및 적응형 QoS 정책 그룹).
+
+이러한 사전이 둘 이상 있고 서로 배타적인 경우에는 을 `default(omit)` 단독으로 사용할 수 없습니다.
+
+다중 수준 사전을 모듈 매개 변수로 사용해야 하는 경우 각 사전이 관련 사전에 대해 최소 1개의 2단계 사전 값을 제공하도록 여러 마이크로서비스(역할)로 기능을 분할해야 합니다.
+
+다음 예에서는 고정 및 적응형 QoS 정책 그룹이 두 마이크로서비스로 분할되는 것을 보여 줍니다.
+
+첫 번째 마이크로서비스에는 고정된 QoS 정책 그룹 값이 포함되어 있습니다.
+
+[listing]
+----
+fixed_qos_options:
+  capacity_shared:           "{{ loop_arg['fixed_qos_options']['capacity_shared']         | default(omit) }}"
+  max_throughput_iops:       "{{ loop_arg['fixed_qos_options']['max_throughput_iops']     | default(omit) }}"
+  min_throughput_iops:       "{{ loop_arg['fixed_qos_options']['min_throughput_iops']     | default(omit) }}"
+  max_throughput_mbps:       "{{ loop_arg['fixed_qos_options']['max_throughput_mbps']     | default(omit) }}"
+  min_throughput_mbps:       "{{ loop_arg['fixed_qos_options']['min_throughput_mbps']     | default(omit) }}"
+
+----
+두 번째 마이크로서비스에는 적응형 QoS 정책 그룹 값이 포함됩니다.
+
+[listing]
+----
+adaptive_qos_options:
+  absolute_min_iops:         "{{ loop_arg['adaptive_qos_options']['absolute_min_iops'] | default(omit) }}"
+  expected_iops:             "{{ loop_arg['adaptive_qos_options']['expected_iops']     | default(omit) }}"
+  peak_iops:                 "{{ loop_arg['adaptive_qos_options']['peak_iops']         | default(omit) }}"
+
+----

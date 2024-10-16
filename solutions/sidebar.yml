@@ -1,0 +1,40 @@
+---
+section: solutions
+title: BlueXP 자동화 카탈로그
+entries:
+- title: 개요
+  url: "/solutions/bac-overview.html"
+- title: NetApp ONTAP용 Amazon FSx
+  entries:
+  - title: 클라우드에 최대 사용량
+    url: "/solutions/fsxn-burst-to-cloud.html"
+  - title: 재해 복구
+    url: "/solutions/fsxn-disaster-recovery.html"
+- title: Azure NetApp Files
+  entries:
+  - title: 오라클
+    url: "/solutions/anf-oracle.html"
+- title: AWS용 Cloud Volumes ONTAP
+  entries:
+  - title: 클라우드에 최대 사용량
+    url: "/solutions/cvo-aws-burst-to-cloud.html"
+- title: Azure용 Cloud Volumes ONTAP
+  entries:
+  - title: 클라우드에 최대 사용량
+    url: "/solutions/cvo-azure-burst-to-cloud.html"
+- title: Google Cloud용 Cloud Volumes ONTAP
+  entries:
+  - title: 클라우드에 최대 사용량
+    url: "/solutions/cvo-gcp-burst-to-cloud.html"
+- title: ONTAP
+  entries:
+  - title: 1일 차
+    entries:
+    - title: 개요
+      url: "/solutions/ontap-day01-overview.html"
+    - title: 준비
+      url: "/solutions/ontap-day01-prepare.html"
+    - title: 구축
+      url: "/solutions/ontap-day01-deploy.html"
+    - title: 사용자 정의
+      url: "/solutions/ontap-day01-customize.html"

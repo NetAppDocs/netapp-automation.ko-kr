@@ -1,0 +1,844 @@
+---
+sidebar: sidebar 
+permalink: solutions/ontap-day01-deploy.html 
+keywords: bluexp automation catalog, netapp automation solutions, ontap day 0/1, deploy 
+summary: 준비 및 계획을 완료하면 ONTAP Day 0/1 솔루션을 사용하여 Ansible을 사용하여 ONTAP 클러스터를 신속하게 구성할 수 있습니다. 
+---
+= 솔루션을 사용하여 ONTAP 클러스터를 구축합니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+준비 및 계획을 완료하면 ONTAP Day 0/1 솔루션을 사용하여 Ansible을 사용하여 ONTAP 클러스터를 신속하게 구성할 수 있습니다.
+
+이 섹션의 단계 중 언제든지 요청을 실제로 실행하는 대신 테스트할 수 있습니다. 요청을 테스트하려면 명령줄에서 플레이북을 로 `logic.yml` 변경합니다 `site.yml`.
+
+
+NOTE:  `docs/tutorial-requests.txt`위치에는 이 절차 전반에 걸쳐 사용된 모든 서비스 요청의 최종 버전이 포함되어 있습니다. 서비스 요청을 실행하는 데 문제가 있는 경우 파일에서 `playbooks/inventory/group_vars/all/tutorial-requests.yml` 위치로 관련 요청을 복사하고 필요에 따라 하드 코드된 값(IP 주소, 집계 이름 등)을 수정할 수 `tutorial-requests.txt` 있습니다. 그러면 요청을 성공적으로 실행할 수 있습니다.
+
+
+
+== 시작하기 전에
+
+* Ansible을 설치해야 합니다.
+* ONTAP DAY 0/1 솔루션을 다운로드하고 Ansible 제어 노드의 원하는 위치에 폴더를 추출해야 합니다.
+* ONTAP 시스템 상태는 요구사항을 충족해야 하고 필요한 자격 증명이 있어야 합니다.
+* 섹션에 요약된 모든 필수 작업을 완료해야 link:ontap-day01-prepare.html["준비"]합니다.
+
+
+
+NOTE: 이 솔루션의 예에서는 두 클러스터의 이름으로 "Cluster_01"과 "Cluster_02"를 사용합니다. 이러한 값은 사용자 환경에서 클러스터의 이름으로 대체해야 합니다.
+
+
+
+== 1단계: 초기 클러스터 구성
+
+이 단계에서는 몇 가지 초기 클러스터 구성 단계를 수행해야 합니다.
+
+.단계
+. 위치로 `playbooks/inventory/group_vars/all/tutorial-requests.yml` 이동하여 `cluster_initial` 파일의 요청을 검토합니다. 사용자 환경에 필요한 변경 작업을 수행합니다.
+. 서비스 요청에 대한 폴더에 파일을 만듭니다 `logic-tasks`. 예를 들어, 이라는 파일을 `cluster_initial.yml` 만듭니다.
++
+다음 줄을 새 파일에 복사합니다.
+
++
+[source, cli]
+----
+- name: Validate required inputs
+  ansible.builtin.assert:
+    that:
+    - service is defined
+
+- name: Include data files
+  ansible.builtin.include_vars:
+    file:   "{{ data_file_name }}.yml"
+  loop:
+  - common-site-stds
+  - user-inputs
+  - cluster-platform-stds
+  - vserver-common-stds
+  loop_control:
+    loop_var:    data_file_name
+
+- name: Initial cluster configuration
+  set_fact:
+    raw_service_request:
+----
+.  `raw_service_request`변수를 정의합니다.
++
+다음 옵션 중 하나를 사용하여 폴더에 만든 파일의 `logic-tasks` 변수를 `cluster_initial.yml` 정의할 수 `raw_service_request` 있습니다.
+
++
+** * 옵션 1 *: 변수를 수동으로 `raw_service_request` 정의합니다.
++
+ `tutorial-requests.yml`편집기를 사용하여 파일을 열고 11줄의 콘텐츠를 165줄로 복사합니다. 다음 예제와 같이 새 파일의 변수 `cluster_initial.yml` 아래에 내용을 붙여 넣습니다 `raw service request`.
+
++
+image::../media/cluster_initial_line.png[복사할 파일 줄의 이미지]
+
++
+.예제 보기
+[%collapsible]
+====
+ `cluster_initial.yml`예제 파일:
+
+[listing]
+----
+- name: Validate required inputs
+  ansible.builtin.assert:
+    that:
+    - service is defined
+
+- name: Include data files
+  ansible.builtin.include_vars:
+    file:   "{{ data_file_name }}.yml"
+  loop:
+  - common-site-stds
+  - user-inputs
+  - cluster-platform-stds
+  - vserver-common-stds
+  loop_control:
+    loop_var:    data_file_name
+
+- name: Initial cluster configuration
+  set_fact:
+    raw_service_request:
+     service:          cluster_initial
+     operation:         create
+     std_name:           none
+     req_details:
+
+      ontap_aggr:
+      - hostname:                   "{{ cluster_name }}"
+        disk_count:                 24
+        name:                       n01_aggr1
+        nodes:                      "{{ cluster_name }}-01"
+        raid_type:                  raid4
+
+      - hostname:                   "{{ peer_cluster_name }}"
+        disk_count:                 24
+        name:                       n01_aggr1
+        nodes:                      "{{ peer_cluster_name }}-01"
+        raid_type:                  raid4
+
+      ontap_license:
+      - hostname:                   "{{ cluster_name }}"
+        license_codes:
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+
+    - hostname:                   "{{ peer_cluster_name }}"
+      license_codes:
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+        - XXXXXXXXXXXXXXAAAAAAAAAAAAAA
+
+    ontap_motd:
+    - hostname:                   "{{ cluster_name }}"
+      vserver:                    "{{ cluster_name }}"
+      message:                    "New MOTD"
+
+    - hostname:                   "{{ peer_cluster_name }}"
+      vserver:                    "{{ peer_cluster_name }}"
+      message:                    "New MOTD"
+
+    ontap_interface:
+    - hostname:                   "{{ cluster_name }}"
+      vserver:                    "{{ cluster_name }}"
+      interface_name:             ic01
+      role:                       intercluster
+      address:                    10.0.0.101
+      netmask:                    255.255.255.0
+      home_node:                  "{{ cluster_name }}-01"
+      home_port:                  e0c
+      ipspace:                    Default
+      use_rest:                   never
+
+    - hostname:                   "{{ cluster_name }}"
+      vserver:                    "{{ cluster_name }}"
+      interface_name:             ic02
+      role:                       intercluster
+      address:                    10.0.0.101
+      netmask:                    255.255.255.0
+      home_node:                  "{{ cluster_name }}-01"
+      home_port:                  e0c
+      ipspace:                    Default
+      use_rest:                   never
+
+    - hostname:                   "{{ peer_cluster_name }}"
+      vserver:                    "{{ peer_cluster_name }}"
+      interface_name:             ic01
+      role:                       intercluster
+      address:                    10.0.0.101
+      netmask:                    255.255.255.0
+      home_node:                  "{{ peer_cluster_name }}-01"
+      home_port:                  e0c
+      ipspace:                    Default
+      use_rest:                   never
+
+    - hostname:                   "{{ peer_cluster_name }}"
+      vserver:                    "{{ peer_cluster_name }}"
+      interface_name:             ic02
+      role:                       intercluster
+      address:                    10.0.0.101
+      netmask:                    255.255.255.0
+      home_node:                  "{{ peer_cluster_name }}-01"
+      home_port:                  e0c
+      ipspace:                    Default
+      use_rest:                   never
+
+    ontap_cluster_peer:
+    - hostname:                   "{{ cluster_name }}"
+      dest_cluster_name:          "{{ peer_cluster_name }}"
+      dest_intercluster_lifs:     "{{ peer_lifs }}"
+      source_cluster_name:        "{{ cluster_name }}"
+      source_intercluster_lifs:   "{{ cluster_lifs }}"
+      peer_options:
+        hostname:                 "{{ peer_cluster_name }}"
+
+----
+====
+** * 옵션 2 * : Jinja 템플릿을 사용하여 요청을 정의합니다.
++
+다음 Jinja 템플릿 형식을 사용하여 값을 가져올 수도 `raw_service_request` 있습니다.
+
++
+`raw_service_request:      "{{ cluster_initial }}"`
+
+
+
+. 첫 번째 클러스터에 대한 초기 클러스터 구성을 수행합니다.
++
+[source, cli]
+----
+ansible-playbook -i inventory/hosts site.yml -e cluster_name=<Cluster_01>
+----
++
+계속하기 전에 오류가 없는지 확인하십시오.
+
+. 두 번째 클러스터에 대해 명령을 반복합니다.
++
+[source, cli]
+----
+ansible-playbook -i inventory/hosts site.yml -e cluster_name=<Cluster_02>
+----
++
+두 번째 클러스터에 오류가 없는지 확인합니다.
+
++
+Ansible 출력 시작 부분으로 스크롤하면 다음 예제에 표시된 것처럼 프레임워크로 전송된 요청을 볼 수 있습니다.
+
++
+.예제 보기
+[%collapsible]
+====
+[listing]
+----
+TASK [Show the raw_service_request] ************************************************************************************************************
+ok: [localhost] => {
+    "raw_service_request": {
+        "operation": "create",
+        "req_details": {
+            "ontap_aggr": [
+                {
+                    "disk_count": 24,
+                    "hostname": "Cluster_01",
+                    "name": "n01_aggr1",
+                    "nodes": "Cluster_01-01",
+                    "raid_type": "raid4"
+                }
+            ],
+            "ontap_license": [
+                {
+                    "hostname": "Cluster_01",
+                    "license_codes": [
+                        "XXXXXXXXXXXXXXXAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA",
+                        "XXXXXXXXXXXXXXAAAAAAAAAAAAA"
+                    ]
+                }
+            ],
+            "ontap_motd": [
+                {
+                    "hostname": "Cluster_01",
+                    "message": "New MOTD",
+                    "vserver": "Cluster_01"
+                }
+            ]
+        },
+        "service": "cluster_initial",
+        "std_name": "none"
+    }
+}
+----
+====
+. 각 ONTAP 인스턴스에 로그인하고 요청이 성공했는지 확인합니다.
+
+
+
+
+== 2단계: 인터클러스터 LIF를 구성합니다
+
+이제 LIF 정의를 요청에 추가하고 `ontap_interface` 마이크로서비스를 정의하여 인터클러스터 LIF를 구성할 수 있습니다 `cluster_initial`.
+
+서비스 정의와 요청이 함께 작동하여 조치를 결정합니다.
+
+* 서비스 정의에 없는 마이크로서비스에 대한 서비스 요청을 제공하면 요청이 실행되지 않습니다.
+* 서비스 정의에 정의된 마이크로서비스가 하나 이상 있지만 요청에서 생략된 서비스 요청을 제공하는 경우 요청이 실행되지 않습니다.
+
+
+ `execution.yml`Playbook은 나열된 순서대로 마이크로서비스 목록을 스캔하여 서비스 정의를 평가합니다.
+
+* 요청에 마이크로서비스 정의에 포함된 항목과 일치하는 사전 키가 있는 항목이 있으면 `args` 요청이 실행됩니다.
+* 서비스 요청에 일치하는 항목이 없으면 오류 없이 요청을 건너뜁니다.
+
+
+.단계
+.  `cluster_initial.yml`이전에 만든 파일로 이동하고 요청 정의에 다음 행을 추가하여 요청을 수정합니다.
++
+[source, cli]
+----
+    ontap_interface:
+    - hostname:                   "{{ cluster_name }}"
+      vserver:                    "{{ cluster_name }}"
+      interface_name:             ic01
+      role:                       intercluster
+      address:                    <ip_address>
+      netmask:                    <netmask_address>
+      home_node:                  "{{ cluster_name }}-01"
+      home_port:                  e0c
+      ipspace:                    Default
+      use_rest:                   never
+
+    - hostname:                   "{{ cluster_name }}"
+      vserver:                    "{{ cluster_name }}"
+      interface_name:             ic02
+      role:                       intercluster
+      address:                    <ip_address>
+      netmask:                    <netmask_address>
+      home_node:                  "{{ cluster_name }}-01"
+      home_port:                  e0c
+      ipspace:                    Default
+      use_rest:                   never
+
+    - hostname:                   "{{ peer_cluster_name }}"
+      vserver:                    "{{ peer_cluster_name }}"
+      interface_name:             ic01
+      role:                       intercluster
+      address:                    <ip_address>
+      netmask:                    <netmask_address>
+      home_node:                  "{{ peer_cluster_name }}-01"
+      home_port:                  e0c
+      ipspace:                    Default
+      use_rest:                   never
+
+    - hostname:                   "{{ peer_cluster_name }}"
+      vserver:                    "{{ peer_cluster_name }}"
+      interface_name:             ic02
+      role:                       intercluster
+      address:                    <ip_address>
+      netmask:                    <netmask_address>
+      home_node:                  "{{ peer_cluster_name }}-01"
+      home_port:                  e0c
+      ipspace:                    Default
+      use_rest:                   never
+----
+. 다음 명령을 실행합니다.
++
+[source, cli]
+----
+ansible-playbook -i inventory/hosts  site.yml -e cluster_name=<Cluster_01> -e peer_cluster_name=<Cluster_02>
+----
+. 각 인스턴스에 로그인하여 LIF가 클러스터에 추가되었는지 확인합니다.
++
+.예제 보기
+[%collapsible]
+====
+[listing]
+----
+Cluster_01::> net int show
+  (network interface show)
+            Logical    Status     Network            Current       Current Is
+Vserver     Interface  Admin/Oper Address/Mask       Node          Port    Home
+----------- ---------- ---------- ------------------ ------------- ------- ----
+Cluster_01
+            Cluster_01-01_mgmt up/up 10.0.0.101/24   Cluster_01-01 e0c     true
+            Cluster_01-01_mgmt_auto up/up 10.101.101.101/24 Cluster_01-01 e0c true
+            cluster_mgmt up/up    10.0.0.110/24      Cluster_01-01 e0c     true
+5 entries were displayed.
+----
+====
++
+출력은 LIF가 추가되지 않았음을 보여줍니다 *. 이는 마이크로 서비스를 `services.yml` 파일에 정의해야 하기 `ontap_interface` 때문입니다.
+
+. LIF가 변수에 추가되었는지 확인 `raw_service_request`
++
+.예제 보기
+[%collapsible]
+====
+다음 예제는 LIF가 요청에 추가되었음을 보여줍니다.
+
+[listing]
+----
+           "ontap_interface": [
+                {
+                    "address": "10.0.0.101",
+                    "home_node": "Cluster_01-01",
+                    "home_port": "e0c",
+                    "hostname": "Cluster_01",
+                    "interface_name": "ic01",
+                    "ipspace": "Default",
+                    "netmask": "255.255.255.0",
+                    "role": "intercluster",
+                    "use_rest": "never",
+                    "vserver": "Cluster_01"
+                },
+                {
+                    "address": "10.0.0.101",
+                    "home_node": "Cluster_01-01",
+                    "home_port": "e0c",
+                    "hostname": "Cluster_01",
+                    "interface_name": "ic02",
+                    "ipspace": "Default",
+                    "netmask": "255.255.255.0",
+                    "role": "intercluster",
+                    "use_rest": "never",
+                    "vserver": "Cluster_01"
+                },
+                {
+                    "address": "10.0.0.101",
+                    "home_node": "Cluster_02-01",
+                    "home_port": "e0c",
+                    "hostname": "Cluster_02",
+                    "interface_name": "ic01",
+                    "ipspace": "Default",
+                    "netmask": "255.255.255.0",
+                    "role": "intercluster",
+                    "use_rest": "never",
+                    "vserver": "Cluster_02"
+                },
+                {
+                    "address": "10.0.0.126",
+                    "home_node": "Cluster_02-01",
+                    "home_port": "e0c",
+                    "hostname": "Cluster_02",
+                    "interface_name": "ic02",
+                    "ipspace": "Default",
+                    "netmask": "255.255.255.0",
+                    "role": "intercluster",
+                    "use_rest": "never",
+                    "vserver": "Cluster_02"
+                }
+            ],
+----
+====
+.  `ontap_interface` `services.yml`파일에서 마이크로서비스를 `cluster_initial` 정의합니다.
++
+마이크로서비스를 정의하려면 파일에 다음 줄을 복사합니다.
+
++
+[source, cli]
+----
+        - name: ontap_interface
+          args: ontap_interface
+          role: na/ontap_interface
+----
+. 이제 마이크로 서비스가 요청과 `services.yml` 파일에 정의되었으므로 `ontap_interface` 요청을 다시 실행합니다.
++
+[source, cli]
+----
+ansible-playbook -i inventory/hosts  site.yml -e cluster_name=<Cluster_01> -e peer_cluster_name=<Cluster_02>
+----
+. 각 ONTAP 인스턴스에 로그인하여 LIF가 추가되었는지 확인합니다.
+
+
+
+
+== 3단계: 필요에 따라 여러 클러스터를 구성합니다
+
+필요한 경우 동일한 요청으로 여러 클러스터를 구성할 수 있습니다. 요청을 정의할 때 각 클러스터에 대해 가변 이름을 제공해야 합니다.
+
+.단계
+. 파일에 두 번째 클러스터에 대한 항목을 `cluster_initial.yml` 추가하여 동일한 요청에서 두 클러스터를 구성합니다.
++
+다음 예제에서는 `ontap_aggr` 두 번째 항목이 추가된 후 필드를 표시합니다.
+
++
+[listing]
+----
+   ontap_aggr:
+    - hostname:                   "{{ cluster_name }}"
+      disk_count:                 24
+      name:                       n01_aggr1
+      nodes:                      "{{ cluster_name }}-01"
+      raid_type:                  raid4
+
+    - hostname:                   "{{ peer_cluster_name }}"
+      disk_count:                 24
+      name:                       n01_aggr1
+      nodes:                      "{{ peer_cluster_name }}-01"
+      raid_type:                  raid4
+----
+. 에서 다른 모든 항목에 대한 변경 내용을 `cluster_initial` 적용합니다.
+. 다음 줄을 파일에 복사하여 요청에 클러스터 피어링을 추가합니다.
++
+[source, cli]
+----
+    ontap_cluster_peer:
+    - hostname:                   "{{ cluster_name }}"
+      dest_cluster_name:          "{{ cluster_peer }}"
+      dest_intercluster_lifs:     "{{ peer_lifs }}"
+      source_cluster_name:        "{{ cluster_name }}"
+      source_intercluster_lifs:   "{{ cluster_lifs }}"
+      peer_options:
+        hostname:                 "{{ cluster_peer }}"
+----
+. Ansible 요청 실행:
++
+[source, cli]
+----
+ansible-playbook -i inventory/hosts -e cluster_name=<Cluster_01>
+site.yml -e peer_cluster_name=<Cluster_02> -e cluster_lifs=<cluster_lif_1_IP_address,cluster_lif_2_IP_address>
+-e peer_lifs=<peer_lif_1_IP_address,peer_lif_2_IP_address>
+----
+
+
+
+
+== 4단계: 초기 SVM 구성
+
+절차의 이 단계에서는 클러스터에서 SVM을 구성합니다.
+
+.단계
+.  `svm_initial`파일에서 요청을 `tutorial-requests.yml` 업데이트하여 SVM 및 SVM 피어 관계 구성
++
+다음을 구성해야 합니다.
+
++
+** SVM은
+** SVM 피어 관계
+** 각 SVM의 SVM 인터페이스
+
+
+. 요청 정의에서 변수 정의를 `svm_initial` 업데이트합니다. 다음 변수 정의를 수정해야 합니다.
++
+** `cluster_name`
+** `vserver_name`
+** `peer_cluster_name`
+** `peer_vserver`
++
+정의를 업데이트하려면 정의에 대한 `svm_initial` 뒤에 * '{}' * 를 `req_details` 제거하고 올바른 정의를 추가하십시오.
+
+
+
+. 서비스 요청에 대한 폴더에 파일을 만듭니다 `logic-tasks`. 예를 들어, 이라는 파일을 `svm_initial.yml` 만듭니다.
++
+다음 줄을 파일에 복사합니다.
+
++
+[source, cli]
+----
+- name: Validate required inputs
+  ansible.builtin.assert:
+    that:
+    - service is defined
+
+- name: Include data files
+  ansible.builtin.include_vars:
+    file:   "{{ data_file_name }}.yml"
+  loop:
+  - common-site-stds
+  - user-inputs
+  - cluster-platform-stds
+  - vserver-common-stds
+  loop_control:
+    loop_var:    data_file_name
+
+- name: Initial SVM configuration
+  set_fact:
+    raw_service_request:
+----
+.  `raw_service_request`변수를 정의합니다.
++
+다음 옵션 중 하나를 사용하여 `logic-tasks` 폴더에서 변수를 `svm_initial` 정의할 수 `raw_service_request` 있습니다.
+
++
+** * 옵션 1 *: 변수를 수동으로 `raw_service_request` 정의합니다.
++
+ `tutorial-requests.yml`편집기를 사용하여 파일을 열고 179줄의 내용을 222줄로 복사합니다. 다음 예제와 같이 새 파일의 변수 `svm_initial.yml` 아래에 내용을 붙여 넣습니다 `raw service request`.
+
++
+image::../media/svm_inital_line.png[복사할 파일 줄의 이미지]
+
++
+.예제 보기
+[%collapsible]
+====
+ `svm_initial.yml`예제 파일:
+
+[listing]
+----
+- name: Validate required inputs
+  ansible.builtin.assert:
+    that:
+    - service is defined
+
+- name: Include data files
+  ansible.builtin.include_vars:
+    file:   "{{ data_file_name }}.yml"
+  loop:
+  - common-site-stds
+  - user-inputs
+  - cluster-platform-stds
+  - vserver-common-stds
+  loop_control:
+    loop_var:    data_file_name
+
+- name: Initial SVM configuration
+  set_fact:
+    raw_service_request:
+     service:          svm_initial
+     operation:        create
+     std_name:         none
+     req_details:
+
+      ontap_vserver:
+      - hostname:                   "{{ cluster_name }}"
+        name:                       "{{ vserver_name }}"
+        root_volume_aggregate:      n01_aggr1
+
+      - hostname:                   "{{ peer_cluster_name }}"
+       name:                       "{{ peer_vserver }}"
+       root_volume_aggregate:      n01_aggr1
+
+      ontap_vserver_peer:
+      - hostname:                   "{{ cluster_name }}"
+        vserver:                    "{{ vserver_name }}"
+        peer_vserver:               "{{ peer_vserver }}"
+        applications:               snapmirror
+        peer_options:
+          hostname:                 "{{ peer_cluster_name }}"
+
+      ontap_interface:
+      - hostname:                   "{{ cluster_name }}"
+        vserver:                    "{{ vserver_name }}"
+        interface_name:             data01
+        role:                       data
+        address:                    10.0.0.200
+        netmask:                    255.255.255.0
+        home_node:                  "{{ cluster_name }}-01"
+        home_port:                  e0c
+        ipspace:                    Default
+        use_rest:                   never
+
+      - hostname:                   "{{ peer_cluster_name }}"
+        vserver:                    "{{ peer_vserver }}"
+        interface_name:             data01
+        role:                       data
+        address:                    10.0.0.201
+        netmask:                    255.255.255.0
+        home_node:                  "{{ peer_cluster_name }}-01"
+        home_port:                  e0c
+        ipspace:                    Default
+        use_rest:                   never
+----
+====
+** * 옵션 2 * : Jinja 템플릿을 사용하여 요청을 정의합니다.
++
+다음 Jinja 템플릿 형식을 사용하여 값을 가져올 수도 `raw_service_request` 있습니다.
+
++
+[listing]
+----
+raw_service_request: "{{ svm_initial }}"
+----
+
+
+. 다음 요청을 실행합니다.
++
+[source, cli]
+----
+ansible-playbook -i inventory/hosts -e cluster_name=<Cluster_01> -e peer_cluster_name=<Cluster_02> -e peer_vserver=<SVM_02>  -e vserver_name=<SVM_01> site.yml
+----
+. 각 ONTAP 인스턴스에 로그인하고 구성을 검증합니다.
+. SVM 인터페이스를 추가합니다.
++
+ `ontap_interface` `services.yml`파일에서 서비스를 `svm_initial` 정의하고 요청을 다시 실행합니다.
+
++
+[source, cli]
+----
+ansible-playbook -i inventory/hosts -e cluster_name=<Cluster_01> -e peer_cluster_name=<Cluster_02> -e peer_vserver=<SVM_02>  -e vserver_name=<SVM_01> site.yml
+----
+. 각 ONTAP 인스턴스에 로그인하고 SVM 인터페이스가 구성되었는지 확인합니다.
+
+
+
+
+== 5단계: 필요에 따라 서비스 요청을 동적으로 정의합니다
+
+이전 단계에서 `raw_service_request` 변수는 하드 코딩됩니다. 이 기능은 학습, 개발 및 테스트에 유용합니다. 서비스 요청을 동적으로 생성할 수도 있습니다.
+
+다음 섹션에서는 Required 를 상위 시스템과 통합하지 않으려는 경우 동적으로 생성할 수 있는 옵션을 `raw_service_request` 제공합니다.
+
+[IMPORTANT]
+====
+* 명령에서 변수가 정의되지 않은 `logic.yml` 경우 `logic_operation` 파일은 폴더에서 파일을 가져오지 `logic-tasks` 않습니다. 이는 `raw_service_request` Ansible 외부에서 정의되고 실행 프레임워크에 제공되어야 함을 의미합니다.
+* 폴더의 작업 파일 이름은 `logic-tasks` .yml 확장자가 없는 변수 값과 일치해야 `logic_operation` 합니다.
+* 폴더의 작업 파일이 `logic-tasks` 동적으로 을 `raw_service_request`정의합니다. 단, 유효한 를 `raw_service_request` 관련 파일의 마지막 작업으로 정의해야 합니다.
+
+
+====
+.서비스 요청을 동적으로 정의하는 방법
+서비스 요청을 동적으로 정의하기 위해 논리 작업을 적용하는 방법에는 여러 가지가 있습니다. 이러한 옵션 중 일부는 다음과 같습니다.
+
+* 폴더의 Ansible 작업 파일 사용 `logic-tasks`
+* varaible 로 변환하기에 적합한 데이터를 반환하는 사용자 지정 역할 호출 `raw_service_request`
+* Ansible 환경 외부에서 다른 툴을 호출하여 필요한 데이터를 제공합니다. 예를 들어, Active IQ Unified Manager에 대한 REST API 호출
+
+
+다음 명령 예는 파일을 사용하여 각 클러스터에 대한 서비스 요청을 동적으로 `tutorial-requests.yml` 정의합니다.
+
+[source, cli]
+----
+ansible-playbook -i inventory/hosts -e cluster2provision=Cluster_01
+-e logic_operation=tutorial-requests site.yml
+----
+[source, cli]
+----
+ansible-playbook -i inventory/hosts -e cluster2provision=Cluster_02
+-e logic_operation=tutorial-requests site.yml
+----
+
+
+== 6단계: ONTAP Day 0/1 솔루션을 배포합니다
+
+이 단계에서는 다음을 이미 완료해야 합니다.
+
+* 요구 사항에 따라 의 모든 파일을 검토하고 수정했습니다. `playbooks/inventory/group_vars/all` 각 파일에는 변경 작업에 도움이 되는 자세한 설명이 있습니다.
+* 필요한 작업 파일을 `logic-tasks` 디렉토리에 추가했습니다.
+* 필요한 데이터 파일을 `playbook/vars` 디렉터리에 추가했습니다.
+
+
+다음 명령을 사용하여 ONTAP DAY 0/1 솔루션을 배포하고 배포 상태를 확인합니다.
+
+
+NOTE: 이 단계에서는 이미 파일을 암호 해독하고 수정했으며 `vault.yml` 새 암호로 암호화해야 합니다.
+
+* ONTAP Day 0 서비스 실행:
++
+[source, cli]
+----
+ansible-playbook -i playbooks/inventory/hosts playbooks/site.yml -e logic_operation=cluster_day_0 -e service=cluster_day_0 -vvvv --ask-vault-pass <your_vault_password>
+----
+* ONTAP Day 1 서비스 실행:
++
+[source, cli]
+----
+ansible-playbook -i playbooks/inventory/hosts playbooks/site.yml -e logic_operation=cluster_day_1 -e service=cluster_day_0 -vvvv --ask-vault-pass <your_vault_password>
+----
+* 클러스터 전체 설정 적용:
++
+[source, cli]
+----
+ansible-playbook -i playbooks/inventory/hosts playbooks/site.yml -e logic_operation=cluster_wide_settings -e service=cluster_wide_settings -vvvv --ask-vault-pass <your_vault_password>
+----
+* 상태 점검 실행:
++
+[source, cli]
+----
+ansible-playbook -i playbooks/inventory/hosts playbooks/site.yml -e logic_operation=health_checks -e service=health_checks -e enable_health_reports=true -vvvv --ask-vault-pass <your_vault_password>
+----
+

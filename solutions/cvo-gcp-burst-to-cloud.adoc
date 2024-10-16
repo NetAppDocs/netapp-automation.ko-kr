@@ -1,0 +1,397 @@
+---
+sidebar: sidebar 
+permalink: solutions/cvo-gcp-burst-to-cloud.html 
+keywords: bluexp automation catalog, netapp automation solutions, gcp, cloud volumes ontap, burst to cloud 
+summary: 이 기사에서는 NetApp Cloud Volumes ONTAP for Google Cloud Automation 솔루션을 지원하며, NetApp 고객은 BlueXP  자동화 카탈로그 에서 이용할 수 있습니다. 
+---
+= Google Cloud용 Cloud Volumes ONTAP - 클라우드 사용 급증
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+이 기사에서는 NetApp Cloud Volumes ONTAP for Google Cloud Automation 솔루션을 지원하며, NetApp 고객은 BlueXP  자동화 카탈로그 에서 이용할 수 있습니다.
+
+Google Cloud Automation용 Cloud Volumes ONTAP 솔루션은 Cloud Volumes ONTAP for Google Cloud를 컨테이너식으로 구축하여 수동 개입 없이 Google Cloud용 Cloud Volumes ONTAP를 빠르게 배포할 수 있도록 합니다.
+
+.시작하기 전에
+* BlueXP  웹 UI를 통해 자동화 솔루션을 다운로드해야 link:https://console.bluexp.netapp.com/automationCatalog["Google Cloud용 Cloud Volumes ONTAP - 클라우드 사용 급증"^]합니다. 솔루션은 다음과 같이 패키지되어 있습니다. `cvo_gcp_flexcache.zip`
+* Cloud Volumes ONTAP와 동일한 네트워크에 Linux VM을 설치해야 합니다.
+* Linux VM을 설치한 후에는 이 솔루션의 단계에 따라 필요한 종속성을 설치해야 합니다.
+
+
+
+
+== 1단계: Docker 및 Docker Compose를 설치합니다
+
+
+
+=== Docker를 설치합니다
+
+다음 단계에서는 Ubuntu 20.04 Debian Linux 배포 소프트웨어를 예로 사용합니다. 실행하는 명령은 사용 중인 Linux 배포 소프트웨어에 따라 다릅니다. 해당 구성에 대한 자세한 내용은 해당 Linux 배포 소프트웨어 설명서를 참조하십시오.
+
+.단계
+. 다음 명령을 실행하여 Docker를 설치합니다.
++
+[source, cli]
+----
+sudo apt-get update
+sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+----
+. 설치를 확인합니다.
++
+[source, cli]
+----
+docker –version
+----
+. Linux 시스템에 "docker"라는 그룹이 생성되었는지 확인합니다. 필요한 경우 그룹을 생성합니다.
++
+[source, cli]
+----
+sudo groupadd docker
+----
+. Docker에 액세스해야 하는 사용자를 그룹에 추가합니다.
++
+[source, cli]
+----
+sudo usermod -aG docker $(whoami)
+----
+. 변경 사항은 로그아웃한 후 터미널에 다시 로그인하면 적용됩니다. 또는 변경 사항을 즉시 적용할 수 있습니다.
++
+[source, cli]
+----
+newgrp docker
+----
+
+
+
+
+=== Docker Compose를 설치합니다
+
+.단계
+. 다음 명령을 실행하여 Docker Compose를 `sudo` 설치합니다.
++
+[source, cli]
+----
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+sudo chmod +x /usr/local/bin/docker-compose
+----
+. 설치를 확인합니다.
++
+[source, cli]
+----
+docker-compose –version
+----
+
+
+
+
+== 2단계: Docker 이미지 준비
+
+.단계
+.  `cvo_gcp_flexcache.zip`Cloud Volumes ONTAP를 배포하는 데 사용할 Linux VM에 폴더를 복사합니다.
++
+[source, cli]
+----
+scp -i ~/private-key.pem -r cvo_gcp_flexcache.zip gcpuser@IP_ADDRESS_OF_VM:LOCATION_TO_BE_COPIED
+----
++
+** `private-key.pem` 은(는) 암호 없이 로그인할 수 있는 개인 키 파일입니다.
+** `gcpuser` VM 사용자 이름입니다.
+** `IP_ADDRESS_OF_VM` VM IP 주소입니다.
+** `LOCATION_TO_BE_COPIED` 폴더가 복사될 위치입니다.
+
+
+. 폴더 압축을 `cvo_gcp_flexcache.zip` 풉니다. 현재 디렉터리나 사용자 지정 위치에서 폴더의 압축을 풀 수 있습니다.
++
+현재 디렉터리에서 폴더를 추출하려면 다음을 실행합니다.
+
++
+[source, cli]
+----
+unzip cvo_gcp_flexcache.zip
+----
++
+사용자 지정 위치에서 폴더를 추출하려면 다음을 실행합니다.
+
++
+[source, cli]
+----
+unzip cvo_gcp_flexcache.zip -d ~/<your_folder_name>
+----
+. 콘텐츠를 추출한 후 다음 명령을 실행하여 파일을 봅니다.
++
+[source, cli]
+----
+ ls -la
+----
++
+다음 예제와 유사한 파일 목록이 표시됩니다.
+
++
+[listing]
+----
+    total 32
+    drwxr-xr-x   8 user  staff   256 Mar 23 12:26 .
+    drwxr-xr-x   6 user  staff   192 Mar 22 08:04 ..
+    -rw-r--r--   1 user  staff   324 Apr 12 21:37 .env
+    -rw-r--r--   1 user  staff  1449 Mar 23 13:19 Dockerfile
+    drwxr-xr-x  15 user  staff   480 Mar 23 13:19 cvo_gcp_source_code
+    drwxr-xr-x   4 user  staff   128 Apr 27 13:43 cvo_gcp_variables
+    -rw-r--r--   1 user  staff   996 Mar 24 04:06 docker-compose-deploy.yml
+    -rw-r--r--   1 user  staff  1041 Mar 24 04:06 docker-compose-destroy.yml
+----
+. 파일을 찾습니다 `cvo_gcp_flexcache_ubuntu_image.tar`. Cloud Volumes ONTAP for Google Cloud를 구축하는 데 필요한 Docker 이미지가 포함되어 있습니다.
+. 파일의 압축을 풉니다.
++
+[source, cli]
+----
+docker load -i cvo_gcp_flexcache_ubuntu_image.tar
+----
+. Docker 이미지가 로드될 때까지 몇 분 기다린 다음 Docker 이미지가 성공적으로 로드되었는지 확인합니다.
++
+[source, cli]
+----
+docker images
+----
++
+다음 예와 같이 태그와 함께 `latest` 이름이 지정된 Docker 이미지가 표시됩니다 `cvo_gcp_flexcache_ubuntu_image`.
+
++
+[listing]
+----
+REPOSITORY                            TAG        IMAGE ID       CREATED      SIZE
+    cvo_gcp_flexcache_ubuntu_image     latest    18db15a4d59c   2 weeks ago   1.14GB
+----
++
+
+NOTE: 필요한 경우 Docker 이미지 이름을 변경할 수 있습니다. Docker 이미지 이름을 변경하는 경우 및 `docker-compose-destroy` 파일에서 Docker 이미지 이름을 업데이트해야 `docker-compose-deploy` 합니다.
+
+
+
+
+
+== 단계 3: JSON 파일을 업데이트합니다
+
+이 단계에서는 Google Cloud 공급자를 인증하기 위해 서비스 계정 키로 파일을 업데이트해야 `cxo-automation-gcp.json` 합니다.
+
+. Cloud Volumes ONTAP 및 BlueXP  커넥터를 배포할 수 있는 권한이 있는 서비스 계정을 만듭니다. link:https://cloud.google.com/iam/docs/service-accounts-create["서비스 계정 만들기에 대해 자세히 알아보십시오."^]
+. 계정의 키 파일을 다운로드하고 주요 파일 정보로 파일을 업데이트합니다 `cxo-automation-gcp.json`.  `cxo-automation-gcp.json`파일이 `cvo_gcp_variables` 폴더에 있습니다.
++
+.예
+[listing]
+----
+{
+  "type": "service_account",
+  "project_id": "",
+  "private_key_id": "",
+  "private_key": "",
+  "client_email": "",
+  "client_id": "",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "",
+  "universe_domain": "googleapis.com"
+}
+----
++
+파일 형식은 위에 표시된 것과 정확히 일치해야 합니다.
+
+
+
+
+
+== 4단계: BlueXP 에 가입합니다
+
+Google Cloud 마켓플레이스에서 NetApp BlueXP 을 구독할 수 있습니다.
+
+.단계
+. 로 link:https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Google Cloud 콘솔"^]이동하여 * NetApp BlueXP 에 가입 * 을 선택합니다.
+. BlueXP  포털을 구성하여 SaaS 구독을 BlueXP 로 가져옵니다.
++
+이 구성은 Google Cloud Platform에서 직접 구성할 수 있습니다. 구성을 확인하기 위해 BlueXP  포털로 리디렉션됩니다.
+
+. BlueXP  포털에서 * 저장 * 을 선택하여 구성을 확인합니다.
+
+
+자세한 내용은 을 link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-gcp-accounts.html#associate-a-marketplace-subscription-with-google-cloud-credentials["BlueXP용 Google Cloud 자격 증명 및 구독을 관리합니다"^]참조하십시오.
+
+
+
+== 5단계: 필요한 Google Cloud API를 활성화합니다
+
+Cloud Volumes ONTAP 및 Connector를 배포하려면 프로젝트에서 다음 Google Cloud API를 활성화해야 합니다.
+
+* Cloud Deployment Manager V2 API
+* 클라우드 로깅 API
+* Cloud Resource Manager API를 참조하십시오
+* 컴퓨팅 엔진 API
+* IAM(Identity and Access Management) API
+
+
+link:https://cloud.google.com/apis/docs/getting-started#enabling_apis["API 사용에 대해 자세히 알아보십시오"^]
+
+
+
+== 6단계: 외부 볼륨을 만듭니다
+
+Terraform 상태 파일 및 기타 중요한 파일을 영구적으로 유지하려면 외부 볼륨을 만들어야 합니다. Terraform에서 워크플로 및 배포를 실행하려면 파일을 사용할 수 있는지 확인해야 합니다.
+
+.단계
+. Docker 외부에서 외부 볼륨 생성 Compose:
++
+[source, cli]
+----
+docker volume create <volume_name>
+----
++
+예:
+
++
+[listing]
+----
+docker volume create cvo_gcp_volume_dst
+----
+. 다음 옵션 중 하나를 사용합니다.
++
+.. 환경 파일에 외부 볼륨 경로를 추가합니다 `.env`.
++
+아래 표시된 형식을 정확히 따라야 합니다.
+
++
+형식:
+
++
+`PERSISTENT_VOL=path/to/external/volume:/cvo_gcp`
+
++
+예:
+`PERSISTENT_VOL=cvo_gcp_volume_dst:/cvo_gcp`
+
+.. NFS 공유를 외부 볼륨으로 추가합니다.
++
+Docker 컨테이너가 NFS 공유와 통신할 수 있으며 읽기/쓰기와 같은 올바른 권한이 구성되어 있는지 확인합니다.
+
++
+... 다음과 같이 NFS 공유 경로를 Docker Compose 파일의 외부 볼륨에 대한 경로로 추가합니다. 형식:
++
+`PERSISTENT_VOL=path/to/nfs/volume:/cvo_gcp`
+
++
+예:
+`PERSISTENT_VOL=nfs/mnt/document:/cvo_gcp`
+
+
+
+
+
+.  `cvo_gcp_variables`폴더로 이동합니다.
++
+폴더에 다음 파일이 표시됩니다.
+
++
+** `terraform.tfvars`
+** `variables.tf`
+
+
+. 요구 사항에 따라 파일 내의 값을 `terraform.tfvars` 변경합니다.
++
+파일의 변수 값을 수정할 때는 특정 지원 문서를 읽어야 `terraform.tfvars` 합니다. 값은 지역, 가용 영역 및 Cloud Volumes ONTAP for Google Cloud에서 지원하는 기타 요인에 따라 달라질 수 있습니다. 여기에는 단일 노드에 대한 라이센스, 디스크 크기, VM 크기 및 고가용성(HA) 쌍이 포함됩니다.
+
++
+커넥터 및 Cloud Volumes ONTAP Terraform 모듈에 대한 모든 지원 변수가 파일에 이미 정의되어 `variables.tf` 있습니다. 파일에 추가하기 전에 파일의 `terraform.tfvars` 변수 이름을 참조해야 `variables.tf` 합니다.
+
+. 요구 사항에 따라 다음 옵션을 또는 `false` 로 설정하여 FlexCache 및 FlexClone를 활성화하거나 비활성화할 수 `true` 있습니다.
++
+다음 예에서는 FlexCache 및 FlexClone를 사용합니다.
+
++
+** `is_flexcache_required = true`
+** `is_flexclone_required = true`
+
+
+
+
+
+
+== 7단계: Google Cloud용 Cloud Volumes ONTAP를 배포합니다
+
+다음 단계에 따라 Google Cloud용 Cloud Volumes ONTAP를 구축하십시오.
+
+.단계
+. 루트 폴더에서 다음 명령을 실행하여 배포를 트리거합니다.
++
+[source, cli]
+----
+docker-compose -f docker-compose-deploy.yml up -d
+----
++
+두 개의 컨테이너가 트리거되고 첫 번째 컨테이너가 Cloud Volumes ONTAP를 배포하며 두 번째 컨테이너가 원격 측정 데이터를 AutoSupport로 전송합니다.
+
++
+두 번째 컨테이너는 첫 번째 컨테이너가 모든 단계를 성공적으로 완료할 때까지 대기합니다.
+
+. 로그 파일을 사용하여 배포 프로세스의 진행 상황을 모니터링합니다.
++
+[source, cli]
+----
+docker-compose -f docker-compose-deploy.yml logs -f
+----
++
+이 명령은 실시간으로 출력을 제공하고 다음 로그 파일에 데이터를 캡처합니다.
+`deployment.log`
+
++
+`telemetry_asup.log`
+
++
+다음 환경 변수를 사용하여 파일을 편집하여 이러한 로그 파일의 이름을 변경할 수 `.env` 있습니다.
+
++
+`DEPLOYMENT_LOGS`
+
++
+`TELEMETRY_ASUP_LOGS`
+
++
+다음 예제에서는 로그 파일 이름을 변경하는 방법을 보여 줍니다.
+
++
+`DEPLOYMENT_LOGS=<your_deployment_log_filename>.log`
+
++
+`TELEMETRY_ASUP_LOGS=<your_telemetry_asup_log_filename>.log`
+
+
+
+.작업을 마친 후
+다음 단계에 따라 임시 환경을 제거하고 배포 프로세스 중에 만든 항목을 정리할 수 있습니다.
+
+.단계
+. FlexCache를 배포한 경우 파일에 다음 옵션을 `terraform.tfvars` 설정하면 FlexCache 볼륨이 지워지고 이전에 생성된 임시 환경이 제거됩니다.
++
+`flexcache_operation = "destroy"`
+
++
+
+NOTE: 가능한 옵션은  `deploy`및 `destroy`입니다.
+
+. FlexClone를 배포한 경우 파일에 다음 옵션을 `terraform.tfvars` 설정하면 FlexClone 볼륨이 지워지고 이전에 생성된 임시 환경이 제거됩니다.
++
+`flexclone_operation = "destroy"`
+
++
+
+NOTE: 가능한 옵션은 `deploy` 및 `destroy`입니다.
+
+
