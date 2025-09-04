@@ -17,7 +17,7 @@ summary: Astra Control은 여러 환경에서 Kubernetes 클러스터의 애플�
 Astra Control은 여러 환경에서 Kubernetes 클러스터의 애플리케이션 인식 데이터 관리를 제공하는 NetApp 소프트웨어 제품입니다. 두 구축 모델은 공통 REST API를 공유합니다. Astra Control REST API를 사용한 Astra 배포 자동화를 시작하려면 아래 제공된 문서 및 관련 리소스를 참조하십시오.
 
 .Astra Control REST API
-REST API를 사용하여 Astra Control Service 및 Astra Control Center 구축 관리를 자동화할 수 있습니다.
+REST API를 사용하여 Astra Control Service 및 Astra Control Center 배포 관리를 자동화할 수 있습니다.
 
 * https://docs.netapp.com/us-en/astra-automation/["Astra Control Automation 설명서"^]
 
