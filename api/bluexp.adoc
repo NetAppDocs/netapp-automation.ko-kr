@@ -1,29 +1,9 @@
 ---
 sidebar: sidebar 
 permalink: api/bluexp.html 
-keywords: netapp products, product api, rest, rest api, bluexp, bluexp control plane 
-summary: NetApp BlueXP 온프레미스와 퍼블릭 클라우드 환경 모두에서 스토리지와 데이터 서비스를 관리하기 위한 하이브리드 멀티클라우드 플랫폼을 제공하는 통합 제어 평면입니다.  이는 여러 개의 서로 다른 서비스나 구성 요소로 구성되며, 각각은 연관된 REST API를 노출합니다.  BlueXP 환경 자동화를 시작하려면 아래에 제공된 설명서와 관련 리소스를 참조하세요. 
+redirect: netapp-automation/api/netapp-console.html 
 ---
-= BlueXP  컨트롤 플레인
-:hardbreaks:
+= 
 :allow-uri-read: 
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
-
-[role="lead"]
-NetApp BlueXP 온프레미스와 퍼블릭 클라우드 환경 모두에서 스토리지와 데이터 서비스를 관리하기 위한 하이브리드 멀티클라우드 플랫폼을 제공하는 통합 제어 평면입니다.  이는 여러 개의 서로 다른 서비스나 구성 요소로 구성되며, 각각은 연관된 REST API를 노출합니다.  BlueXP REST API를 사용하여 BlueXP 환경 자동화를 시작하려면 아래에 제공된 설명서와 관련 리소스를 참조하세요.
-
-.BlueXP  REST API
-다양한 REST API를 사용하여 BlueXP 가 관리하는 저장소 및 데이터 서비스 관리를 자동화할 수 있습니다.
-
-* https://docs.netapp.com/us-en/bluexp-automation/["BlueXP API 설명서"^]
-
-
-.BlueXP  제품군
-BlueXP  제품군 설명서에는 BlueXP  컨트롤 플레인을 시작하는 데 필요한 모든 내용이 포함되어 있습니다.
-
-* https://docs.netapp.com/us-en/bluexp-family/["BlueXP 설명서"^]
 

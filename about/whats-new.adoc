@@ -30,13 +30,13 @@ Cloud Volumes ONTAP 지원은 퍼블릭 클라우드 환경별로 구성됩니�
 
 == 2023년 6월 4일
 
-NetApp https://console.bluexp.netapp.com/automationCatalog["BlueXP 자동화 카탈로그"^]는 BlueXP  웹 사용자 인터페이스를 통해 사용할 수 있습니다. 자동화 카탈로그는 NetApp 제품의 자동화된 배포 및 통합을 지원하는 솔루션에 액세스할 수 있습니다. 이러한 솔루션에 대한 문서는 아래에 설명된 대로 여러 가지 제품 또는 기능 영역으로 구성되어 있습니다.
+그만큼 https://console.netapp.com/automationCatalog["NetApp 콘솔 자동화 카탈로그"^] 콘솔 웹 사용자 인터페이스를 통해 사용할 수 있습니다.  자동화 카탈로그는 NetApp 제품의 자동 배포 및 통합에 도움이 되는 솔루션에 대한 액세스를 제공합니다.  이러한 솔루션에 대한 설명서는 아래 설명된 대로 여러 가지 제품 또는 기능 영역으로 구성되어 있습니다.
 
-.NetApp ONTAP용 Amazon FSx
-두 가지 Amazon FSx for NetApp ONTAP 솔루션이 다음과 같이 제공됩니다.
+.Amazon FSx for NetApp ONTAP
+다음과 같이 두 가지 Amazon FSx for NetApp ONTAP 관리 솔루션이 제공됩니다.
 
 * link:../solutions/fsxn-burst-to-cloud.html["Amazon FSx for NetApp ONTAP - 클라우드로의 버스트"]
-* link:../solutions/fsxn-disaster-recovery.html["Amazon FSx for NetApp ONTAP - 재해 복구"]
+* link:../solutions/fsxn-disaster-recovery.html["Amazon FSx for NetApp ONTAP 관리 - 재해 복구"]
 
 
 .Azure NetApp Files

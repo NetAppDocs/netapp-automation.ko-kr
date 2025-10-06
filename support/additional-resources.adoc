@@ -32,9 +32,9 @@ NetApp 파트너 및 고객을 지원하는 개발자 리소스를 제공하는 
 
 
 
-== NetApp 클라우드 리소스
+== NetApp 콘솔 리소스
 
-* https://bluexp.netapp.com/["NetApp BlueXP"^]
+* https://console.netapp.com/["NetApp 콘솔"^]
 +
 NetApp 클라우드 솔루션을 위한 중앙 사이트
 

@@ -1,10 +1,10 @@
 ---
 section: solutions
-title: BlueXP 자동화 카탈로그
+title: NetApp 콘솔 자동화 카탈로그
 entries:
 - title: 개요
   url: "/solutions/bac-overview.html"
-- title: NetApp ONTAP용 Amazon FSx
+- title: Amazon FSx for NetApp ONTAP
   entries:
   - title: 클라우드에 최대 사용량
     url: "/solutions/fsxn-burst-to-cloud.html"

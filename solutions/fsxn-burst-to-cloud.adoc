@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: solutions/fsxn-burst-to-cloud.html 
-keywords: bluexp automation catalog, netapp automation solutions, fsx for ontap, burst to cloud 
-summary: 이 자동화 솔루션을 사용하여 볼륨 및 관련 FlexCache에 Amazon FSx for NetApp ONTAP을 프로비저닝할 수 있습니다. 
+keywords: bluexp automation catalog, netapp automation solutions, fsx for ontap, burst to cloud, netapp console 
+summary: 이 자동화 솔루션을 사용하면 볼륨과 관련 FlexCache 를 사용하여 Amazon FSx for NetApp ONTAP 프로비저닝할 수 있습니다. 
 ---
 = Amazon FSx for NetApp ONTAP - 클라우드로의 버스트
 :hardbreaks:
@@ -14,10 +14,10 @@ summary: 이 자동화 솔루션을 사용하여 볼륨 및 관련 FlexCache에 
 
 
 [role="lead"]
-이 자동화 솔루션을 사용하여 볼륨 및 관련 FlexCache에 Amazon FSx for NetApp ONTAP을 프로비저닝할 수 있습니다.
+이 자동화 솔루션을 사용하면 볼륨과 관련 FlexCache 를 사용하여 Amazon FSx for NetApp ONTAP 프로비저닝할 수 있습니다.
 
 
-NOTE: Amazon FSx for NetApp ONTAP는 * FSx for ONTAP * 라고도 합니다.
+NOTE: Amazon FSx for NetApp ONTAP 관리 기능은 *FSx for ONTAP*라고도 합니다.
 
 .살펴봅니다
 이 솔루션과 함께 제공되는 자동화 코드는 개략적으로 다음과 같은 작업을 수행합니다.
@@ -35,7 +35,7 @@ NOTE: Amazon FSx for NetApp ONTAP는 * FSx for ONTAP * 라고도 합니다.
 .시작하기 전에
 프로비저닝 및 구성을 완료하려면 다음이 있어야 합니다.
 
-* BlueXP  웹 UI를 통해 자동화 솔루션을 다운로드해야 https://console.bluexp.netapp.com/automationCatalog["Amazon FSx for NetApp ONTAP - 클라우드로의 버스트"^] 합니다. 솔루션은 파일로 패키지됩니다. `AWS_FSxN_BTC.zip`
+* 다운로드가 필요합니다 https://console.netapp.com/automationCatalog["Amazon FSx for NetApp ONTAP - 클라우드로의 버스트"^] NetApp 콘솔 웹 UI를 통한 자동화 솔루션.  솔루션은 파일로 패키징됩니다. `AWS_FSxN_BTC.zip` .
 * 소스 시스템과 대상 시스템 간의 네트워크 연결
 * 다음과 같은 특성을 가진 Linux VM:
 +
@@ -239,9 +239,9 @@ PERSISTENT_VOL=aws_fsxn_volume:/aws_fsxn_flexcache
 
 
 
-== 6단계: Amazon FSx for NetApp ONTAP 및 FlexCache 프로비저닝
+== 6단계: NetApp ONTAP 관리 및 FlexCache Amazon FSx for NetApp ONTAP 프로비저닝
 
-Amazon FSx for NetApp ONTAP 및 FlexCache를 프로비저닝할 수 있습니다.
+NetApp ONTAP 관리 및 FlexCache 를 Amazon FSx for NetApp ONTAP 프로비저닝할 수 있습니다.
 
 .단계
 . 폴더 루트(AWS_FSXN_BTC)로 이동하여 provisioning 명령을 실행합니다.
@@ -266,9 +266,9 @@ docker-compose -f docker-compose-provision.yml logs -f
 
 
 
-== 7단계: Amazon FSx for NetApp ONTAP 및 FlexCache를 폐기합니다
+== 7단계: NetApp ONTAP 관리 및 FlexCache Amazon FSx for NetApp ONTAP 삭제
 
-필요에 따라 Amazon FSx for NetApp ONTAP 및 FlexCache을 삭제하고 제거할 수 있습니다.
+선택적으로 Amazon FSx for NetApp ONTAP 관리 및 FlexCache 삭제하고 제거할 수 있습니다.
 
 .  `terraform.tfvars`파일의 변수를 `flexcache_operation` "destroy"로 설정합니다.
 . 루트 폴더(AWS_FSXN_BTC)로 이동하여 다음 명령을 실행합니다.

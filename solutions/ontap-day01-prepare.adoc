@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: solutions/ontap-day01-prepare.html 
-keywords: bluexp automation catalog, netapp automation solutions, ontap day 0/1, prepare 
+keywords: bluexp automation catalog, netapp automation solutions, ontap day 0/1, prepare, netapp console 
 summary: 자동화 솔루션을 구축하기 전에 ONTAP 환경을 준비하고 Ansible을 설치 및 구성해야 합니다. 
 ---
 = ONTAP Day 0/1 솔루션을 사용할 준비를 하십시오
@@ -133,7 +133,7 @@ NOTE: 시스템의 제어 노드에 Ansible을 설치해야 합니다.
 
 다음 단계에 따라 배포를 위한 자동화 솔루션을 다운로드하고 준비할 수 있습니다.
 
-. link:https://console.bluexp.netapp.com/automationCatalog["ONTAP - 1일차 및 1일차; 상태 점검"^]BlueXP  웹 UI를 통해 자동화 솔루션을 다운로드합니다. 솔루션은 다음과 같이 패키지되어 있습니다. `ONTAP_DAY0_DAY1.zip`
+. 다운로드link:https://console.netapp.com/automationCatalog["ONTAP - 1일차 및 1일차; 상태 점검"^] 콘솔 웹 UI를 통한 자동화 솔루션.  솔루션은 다음과 같이 패키지됩니다. `ONTAP_DAY0_DAY1.zip` .
 . zip 폴더의 압축을 풀고 Ansible 환경 내의 제어 노드에서 원하는 위치로 파일을 복사합니다.
 
 

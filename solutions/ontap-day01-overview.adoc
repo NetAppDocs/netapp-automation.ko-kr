@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: solutions/ontap-day01-overview.html 
-keywords: bluexp automation catalog, netapp automation solutions, ontap day 0/1, overview, introduction 
+keywords: bluexp automation catalog, netapp automation solutions, ontap day 0/1, overview, introduction, netapp console 
 summary: ONTAP Day 0/1 자동화 솔루션을 사용하여 Ansible을 사용하여 ONTAP 클러스터를 구축하고 구성할 수 있습니다. 
 ---
 = ONTAP Day 0/1 솔루션 개요
@@ -14,7 +14,7 @@ summary: ONTAP Day 0/1 자동화 솔루션을 사용하여 Ansible을 사용하�
 
 
 [role="lead"]
-ONTAP Day 0/1 자동화 솔루션을 사용하여 Ansible을 사용하여 ONTAP 클러스터를 구축하고 구성할 수 있습니다. 이 솔루션은 에서 사용할 link:https://console.bluexp.netapp.com/automationCatalog["BlueXP 자동화 카탈로그"^]수 있습니다.
+ONTAP 0/1일 자동화 솔루션을 사용하면 Ansible을 사용하여 ONTAP 클러스터를 배포하고 구성할 수 있습니다.  솔루션은 다음에서 제공됩니다.link:https://console.netapp.com/automationCatalog["NetApp 콘솔 자동화 카탈로그"^] .
 
 
 

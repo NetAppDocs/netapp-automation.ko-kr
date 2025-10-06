@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: solutions/anf-oracle.html 
-keywords: bluexp automation catalog, netapp automation solutions, azure, azure netapp files, oracle 
+keywords: bluexp automation catalog, netapp automation solutions, azure, azure netapp files, oracle, console 
 summary: 이 자동화 솔루션을 사용하여 Azure NetApp Files 볼륨을 프로비저닝하고 사용 가능한 가상 머신에 Oracle을 설치할 수 있습니다. 그런 다음 Oracle은 이 볼륨을 데이터 스토리지에 사용합니다. 
 ---
 = Azure NetApp Files를 사용하여 Oracle을 설치합니다
@@ -34,7 +34,7 @@ summary: 이 자동화 솔루션을 사용하여 Azure NetApp Files 볼륨을 �
 .시작하기 전에
 설치를 완료하려면 다음이 필요합니다.
 
-* BlueXP  웹 UI를 통해 자동화 솔루션을 다운로드해야 https://console.bluexp.netapp.com/automationCatalog["Azure NetApp Files를 사용하는 Oracle"^] 합니다. 솔루션은 파일로 패키지됩니다. `na_oracle19c_deploy-master.zip`
+* 다운로드가 필요합니다 https://console.netapp.com/automationCatalog["Azure NetApp Files를 사용하는 Oracle"^] NetApp 콘솔 웹 UI를 통한 자동화 솔루션.  솔루션은 파일로 패키징됩니다. `na_oracle19c_deploy-master.zip` .
 * 다음과 같은 특성을 가진 Linux VM:
 +
 ** RHEL 8(Standard_D8s_v3-RHEL-8)

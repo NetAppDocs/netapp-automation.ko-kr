@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: solutions/cvo-azure-burst-to-cloud.html 
-keywords: bluexp automation catalog, netapp automation solutions, azure, cloud volumes ontap, burst to cloud 
+keywords: bluexp automation catalog, netapp automation solutions, azure, cloud volumes ontap, burst to cloud. netapp, console 
 summary: 이 자동화 솔루션을 사용하여 Terraform을 사용하여 Cloud Volumes ONTAP for Azure를 배포할 수 있습니다. 
 ---
 = Cloud Volumes ONTAP for Azure - 클라우드 사용 급증
@@ -14,12 +14,12 @@ summary: 이 자동화 솔루션을 사용하여 Terraform을 사용하여 Cloud
 
 
 [role="lead"]
-이 기사에서는 NetApp Cloud Volumes ONTAP for Azure Automation Solution을 지원하며, NetApp 고객은 BlueXP  자동화 카탈로그 에서 이용할 수 있습니다.
+이 문서에서는 NetApp 고객이 NetApp 콘솔 자동화 카탈로그에서 사용할 수 있는 Azure Automation 솔루션용 NetApp Cloud Volumes ONTAP 지원합니다.
 
 Cloud Volumes ONTAP for Azure Automation 솔루션은 Terraform을 사용하여 Cloud Volumes ONTAP for Azure 컨테이너식 구축을 자동화하므로 수동 개입 없이 Azure용 Cloud Volumes ONTAP를 빠르게 배포할 수 있습니다.
 
 .시작하기 전에
-* BlueXP  웹 UI를 통해 자동화 솔루션을 다운로드해야 link:https://console.bluexp.netapp.com/automationCatalog["Cloud Volumes ONTAP Azure - 클라우드 사용 급증"^]합니다. 솔루션은 다음과 같이 패키지되어 있습니다. `CVO-Azure-Burst-To-Cloud.zip`
+* 다운로드해야 합니다link:https://console.netapp.com/automationCatalog["Cloud Volumes ONTAP Azure - 클라우드 사용 급증"^] 콘솔 웹 UI를 통한 자동화 솔루션.  솔루션은 다음과 같이 패키지됩니다. `CVO-Azure-Burst-To-Cloud.zip` .
 * Cloud Volumes ONTAP와 동일한 네트워크에 Linux VM을 설치해야 합니다.
 * Linux VM을 설치한 후에는 이 솔루션의 단계에 따라 필요한 종속성을 설치해야 합니다.
 
@@ -179,7 +179,7 @@ cvo_azure_flexcache_ubuntu_image latest 18db15a4d59c 2 weeks ago 1.14GB
 
 == 3단계: 환경 변수 파일을 만듭니다
 
-이 단계에서는 두 개의 환경 변수 파일을 만들어야 합니다. 한 파일은 서비스 사용자 자격 증명을 사용하여 Azure Resource Manager API를 인증하는 파일입니다. 두 번째 파일은 BlueXP  Terraform 모듈이 Azure API를 찾고 인증할 수 있도록 환경 변수를 설정하는 것입니다.
+이 단계에서는 두 개의 환경 변수 파일을 만들어야 합니다.  한 파일은 서비스 주체 자격 증명을 사용하여 Azure Resource Manager API를 인증하기 위한 것입니다.  두 번째 파일은 콘솔 Terraform 모듈이 Azure API를 찾아 인증할 수 있도록 환경 변수를 설정하는 데 사용됩니다.
 
 .단계
 . 서비스 보안 주체를 만듭니다.
@@ -255,24 +255,24 @@ Azure_Tenant_ID=<> Azure_client_secret=<> Azure_client_ID=<> Azure_subscription_
 
 
 
-== 4단계: BlueXP 에 Cloud Volumes ONTAP 라이선스를 추가하거나 BlueXP 에 가입합니다
+== 4단계: NetApp Intelligent Services에 가입하세요
 
-Cloud Volumes ONTAP 라이선스를 BlueXP 에 추가하거나 Azure 마켓플레이스에서 NetApp BlueXP 에 가입할 수 있습니다.
+클라우드 공급업체를 통해 NetApp Intelligent Services에 가입하여 시간당 요금(PAYGO)을 지불하거나 연간 계약을 맺으세요. NetApp Intelligent Services에는 NetApp 백업 및 복구, Cloud Volumes ONTAP, NetApp 클라우드 계층화, NetApp 랜섬웨어 복원력 및 NetApp 재해 복구가 포함됩니다. NetApp 데이터 분류는 추가 비용 없이 구독에 포함됩니다.
 
 .단계
-. Azure 포털에서 * SaaS * 로 이동하고 * Subscribe to NetApp BlueXP  * 를 선택합니다.
+. Azure Portal에서 *SaaS*로 이동하여 * NetApp Intelligent Services 구독*을 선택합니다.
 . Cloud Manager(시간당 Cap PYGO, WORM 및 데이터 서비스 기준) * 계획을 선택합니다.
 +
 Cloud Volumes ONTAP와 동일한 리소스 그룹을 사용하거나 다른 리소스 그룹을 사용할 수 있습니다.
 
-. BlueXP  포털을 구성하여 SaaS 구독을 BlueXP 로 가져옵니다.
+. 콘솔 포털을 구성하여 SaaS 구독을 콘솔로 가져옵니다.
 +
 Azure 포털에서 * 제품 및 계획 세부 정보 * 로 이동하고 * 지금 계정 구성 * 옵션을 선택하여 직접 구성할 수 있습니다.
 
 +
-그런 다음 BlueXP  포털로 리디렉션되어 구성을 확인합니다.
+그러면 구성을 확인하기 위해 콘솔 포털로 리디렉션됩니다.
 
-. BlueXP  포털에서 * 저장 * 을 선택하여 구성을 확인합니다.
+. 콘솔 포털에서 *저장*을 선택하여 구성을 확인합니다.
 
 
 
@@ -344,7 +344,7 @@ Docker 컨테이너가 NFS 공유와 통신할 수 있으며 읽기/쓰기와 �
 파일의 변수 값을 수정할 때는 특정 지원 문서를 읽어야 `terraform.tfvars` 합니다. 값은 지역, 가용 영역 및 Cloud Volumes ONTAP for Azure에서 지원하는 기타 요인에 따라 달라질 수 있습니다. 여기에는 단일 노드에 대한 라이센스, 디스크 크기, VM 크기 및 고가용성(HA) 쌍이 포함됩니다.
 
 +
-커넥터 및 Cloud Volumes ONTAP Terraform 모듈에 대한 모든 지원 변수가 파일에 이미 정의되어 `variables.tf` 있습니다. 파일에 추가하기 전에 파일의 `terraform.tfvars` 변수 이름을 참조해야 `variables.tf` 합니다.
+Console 에이전트 및 Cloud Volumes ONTAP Terraform 모듈에 대한 모든 지원 변수는 이미 정의되어 있습니다. `variables.tf` 파일.  변수 이름을 참조해야 합니다. `variables.tf` 추가하기 전에 파일 `terraform.tfvars` 파일.
 
 . 요구 사항에 따라 다음 옵션을 또는 `false` 로 설정하여 FlexCache 및 FlexClone를 활성화하거나 비활성화할 수 `true` 있습니다.
 +
